@@ -40,11 +40,6 @@ gulp.task('watch', function () {
   gulp.watch(Paths.JS,   ['js-min']);
 })
 
-gulp.task('docs', ['server'], function () {
-  gulp.src(__filename)
-    .pipe(open({uri: 'http://localhost:9001/docs/'}))
-})
-
 gulp.task('server', function () {
   connect.server({
     root: 'docs',
