@@ -29,7 +29,14 @@ var Paths = {
       './js/bootstrap/popover.js',
       './js/bootstrap/scrollspy.js',
       './js/bootstrap/tab.js',
-      './js/custom/*'
+      './js/custom/vendor/chart.js',
+      './js/custom/vendor/datepicker.js',
+      './js/custom/vendor/drawer.js',
+      './js/custom/vendor/moment.min.js',
+      './js/custom/vendor/fullcalendar.js',
+      './js/custom/vendor/tablesorter.min.js',
+      './js/custom/chartjs-data-api.js',
+      './js/custom/application.js',
     ]
 }
 

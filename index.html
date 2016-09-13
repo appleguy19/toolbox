@@ -10,18 +10,8 @@
     <title>Home &middot; Logistics Toolbox</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
-
     <link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.css" rel="stylesheet">
-    <link href="dist/toolbox-light.css" rel="stylesheet">
-    <!-- <link href="bower_components/bootstrap-drawer/dist/css/bootstrap-drawer.css" rel="stylesheet"> -->
-    <style>
-
-    .sidebar .nav {
-      margin-top: 60px;
-      text-align:right;
-    }
-    @media screen and (max-width: 767px){.sidebar .nav {text-align: left;}}
-    </style>
+    <link href="dist/toolbox.css" rel="stylesheet">
 
 </head>
 
@@ -513,30 +503,22 @@
 
 
 
-    <!-- Include jQuery (required) and the JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Include jQuery (required) and the JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="dist/toolbox.js"></script>
 
-    <script src="docs/assets/js/chart.js"></script>
-    <script src="docs/assets/js/tablesorter.min.js"></script>
-    <script src="docs/assets/js/toolkit.js"></script>
-    <script src="docs/assets/js/application.js"></script>
-    <!-- <script src="dist/toolbox.js"></script> -->
-
-    <script src="bower_components/bootstrap-drawer/dist/js/drawer.js"></script>
-    <script src="bower_components/moment/min/moment.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      $('#calendar').fullCalendar({
-        header : {  left:   '',
-                    center: '',
-                    right:  ''
-                 },
-       });
-       if($(window).width() > 768){$('#calendar').fullCalendar('option', 'aspectRatio', 1.7); }
-       else{$('#calendar').fullCalendar('option', 'aspectRatio', .9);}
+  <script>
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      header : {  left:   '',
+                  center: '',
+                  right:  ''
+               },
      });
-    </script>
+     if($(window).width() > 768){$('#calendar').fullCalendar('option', 'aspectRatio', 1.7); }
+     else{$('#calendar').fullCalendar('option', 'aspectRatio', .9);}
+   });
+  </script>
 </body>
 
 </html>
