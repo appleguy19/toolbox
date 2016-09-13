@@ -14,43 +14,38 @@ var Paths = {
   HERE                 : './',
   DIST                 : 'dist',
   DIST_TOOLBOX_JS      : 'dist/toolbox.js',
-  LESS_TOOLBOX_SOURCES : './less/toolbox*',
-  LESS                 : './less/**/**',
+  CSS                  : './src/css/**',
+  LESS_TOOLBOX_SOURCES : './src/less/toolbox*',
+  LESS                 : './src/less/**/**',
   JS                   : [
-      './js/bootstrap/transition.js',
-      './js/bootstrap/alert.js',
-      './js/bootstrap/affix.js',
-      './js/bootstrap/button.js',
-      './js/bootstrap/carousel.js',
-      './js/bootstrap/collapse.js',
-      './js/bootstrap/dropdown.js',
-      './js/bootstrap/modal.js',
-      './js/bootstrap/tooltip.js',
-      './js/bootstrap/popover.js',
-      './js/bootstrap/scrollspy.js',
-      './js/bootstrap/tab.js',
-      './js/custom/*'
+      './src/js/bootstrap/transition.js',
+      './src/js/bootstrap/alert.js',
+      './src/js/bootstrap/affix.js',
+      './src/js/bootstrap/button.js',
+      './src/js/bootstrap/carousel.js',
+      './src/js/bootstrap/collapse.js',
+      './src/js/bootstrap/dropdown.js',
+      './src/js/bootstrap/modal.js',
+      './src/js/bootstrap/tooltip.js',
+      './src/js/bootstrap/popover.js',
+      './src/js/bootstrap/scrollspy.js',
+      './src/js/bootstrap/tab.js',
+      './src/js/custom/vendor/chart.js',
+      './src/js/custom/vendor/datepicker.js',
+      './src/js/custom/vendor/drawer.js',
+      './src/js/custom/vendor/moment.min.js',
+      './src/js/custom/vendor/fullcalendar.js',
+      './src/js/custom/vendor/tablesorter.min.js',
+      './src/js/custom/chartjs-data-api.js',
+      './src/js/custom/application.js',
     ]
 }
 
-gulp.task('default', ['less-min', 'js-min'])
+gulp.task('default', ['less-min', 'js-min', 'move'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.LESS, ['less-min']);
   gulp.watch(Paths.JS,   ['js-min']);
-})
-
-gulp.task('docs', ['server'], function () {
-  gulp.src(__filename)
-    .pipe(open({uri: 'http://localhost:9001/docs/'}))
-})
-
-gulp.task('server', function () {
-  connect.server({
-    root: 'docs',
-    port: 9001,
-    livereload: true
-  })
 })
 
 gulp.task('less', function () {
@@ -89,3 +84,8 @@ gulp.task('js-min', ['js'], function () {
     }))
     .pipe(gulp.dest(Paths.DIST))
 })
+
+gulp.task('move', function(){
+  gulp.src(Paths.CSS)
+  .pipe(gulp.dest(Paths.DIST));
+});

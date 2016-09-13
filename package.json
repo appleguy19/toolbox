@@ -5,9 +5,6 @@
   "description": "A bootstrap toolkit.",
   "main": "gulpfile.js",
   "author": "Colossal",
-  "scripts": {
-    "start": "./node_modules/.bin/gulp docs"
-  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
