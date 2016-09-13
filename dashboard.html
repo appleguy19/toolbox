@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dashboard  &middot; Logistics Toolbox</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+    <link href="dist/toolbox-light.css" rel="stylesheet">
+
+    <style>
+    </style>
+
+  </head>
+
+  <body>
+
+
+
+
+  <div class="with-iconav">
+
+    <nav class="iconav">
+      <a class="iconav-brand" href="index.html">
+        <span class="icon icon-tools iconav-brand-icon"></span>
+      </a>
+      <div class="iconav-slider">
+        <ul class="nav nav-pills iconav-nav">
+          <li class="active">
+            <a href="dashboard.html" title="Dashboard" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-gauge"></span>
+              <small class="iconav-nav-label visible-xs-block">Dashboard</small>
+            </a>
+          </li>
+          <li >
+            <a href="shipment-status.html" title="Shipment Status" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-address"></span>
+              <small class="iconav-nav-label visible-xs-block">Shipment Status</small>
+            </a>
+          </li>
+          <li >
+            <a href="#" title="Reports" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-clipboard"></span>
+              <small class="iconav-nav-label visible-xs-block">Reports</small>
+            </a>
+          </li>
+          <li >
+            <a href="#" title="More Charts" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-area-graph"></span>
+              <small class="iconav-nav-label visible-xs-block">More Charts</small>
+            </a>
+          </li>
+          <li >
+            <a href="#" title="Captain's Log" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-open-book"></span>
+              <small class="iconav-nav-label visible-xs-block">Captain's Log</small>
+            </a>
+          </li>
+          <li >
+            <a href="#" title="Quick Stats" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-flash"></span>
+              <small class="iconav-nav-label visible-xs-block">Quick Stats</small>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Signed in as applej" data-toggle="tooltip" data-placement="right" data-container="body">
+              <img src="img/misc/avatar-applej.png" alt="" class="img-circle img-responsive">
+              <small class="iconav-nav-label visible-xs-block">applej</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid container-fluid-spacious">
+      <div class="dashhead">
+        <div class="dashhead-titles">
+          <h6 class="dashhead-subtitle">Dashboard</h6>
+          <h3 class="dashhead-title">Overview</h3>
+        </div>
+
+        <div class="dashhead-toolbar">
+          <div class="input-with-icon dashhead-toolbar-item">
+            <input type="text" value="08/15/16 - 08/21/16" class="form-control" data-provide="datepicker">
+            <span class="icon icon-calendar"></span>
+          </div>
+          <span class="dashhead-toolbar-divider hidden-xs"></span>
+          <div class="btn-group dashhead-toolbar-item btn-group-thirds">
+            <button type="button" class="btn btn-primary-outline">Day</button>
+            <button type="button" class="btn btn-primary-outline active">Week</button>
+            <button type="button" class="btn btn-primary-outline">Month</button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav nav-bordered m-t m-b-0" role="tablist">
+        <li class="active" role="presentation">
+          <a href="#shift-one" role="tab" data-toggle="tab" aria-controls="shift 1">Shift 1</a>
+        </li>
+        <li role="presentation">
+          <a href="#shift-two" role="tab" data-toggle="tab" aria-controls="shift 2">Shift 2</a>
+        </li>
+        <li role="presentation">
+          <a href="#shift-three" role="tab" data-toggle="tab" aria-controls="shift 3">Shift 3</a>
+        </li>
+      </ul>
+
+      <hr class="m-t-0 m-b-lg">
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="shift-one">
+          <div class="row text-center m-t-md">
+            <div class="col-sm-4 m-b-md">
+              <div class="w-lg m-x-auto">
+                <canvas
+                  class="ex-graph"
+                  width="200" height="200"
+                  data-chart="doughnut"
+                  data-value="[{ value: 230, color: '#42a5f5', label: 'Checked In' }, { value: 130, color: '#1bc98e', label: 'Checked Out' }]"
+                  data-segment-stroke-color="#eee">
+                </canvas>
+              </div>
+              <strong class="text-muted">Checked In vs Checked Out</strong>
+              <h3>Shift 1</h3>
+            </div>
+            <div class="col-sm-8 m-b-md">
+              <div class="ex-line-graphs m-b-md">
+                <canvas
+                  class="ex-line-graph"
+                  width="600" height="400"
+                  data-chart="bar"
+                  data-scale-line-color="transparent"
+                  data-scale-grid-line-color="rgba(255,255,255,.05)"
+                  data-scale-font-color="#a2a2a2"
+                  data-labels="['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']"
+                  data-value="[{ label: 'First dataset', data: [65, 59, 80, 81, 56, 55, 40] }, { label: 'Second dataset', data: [28, 48, 40, 19, 86, 27, 90] }]">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="shift-two">
+          <div class="row text-center m-t-md">
+            <div class="col-sm-4 m-b-md">
+              <div class="w-lg m-x-auto">
+                <canvas
+                  class="ex-graph"
+                  width="200" height="200"
+                  data-chart="doughnut"
+                  data-value="[{ value: 330, color: '#42a5f5', label: 'Checked In' }, { value: 30, color: '#1bc98e', label: 'Checked Out' }]"
+                  data-segment-stroke-color="#eee">
+                </canvas>
+              </div>
+              <strong class="text-muted">Checked In vs Checked Out</strong>
+              <h3>Shift 2</h3>
+            </div>
+            <div class="col-sm-8 m-b-md">
+              <div class="ex-line-graphs m-b-md">
+                <canvas
+                  class="ex-line-graph"
+                  width="600" height="400"
+                  data-chart="line"
+                  data-scale-line-color="transparent"
+                  data-scale-grid-line-color="rgba(255,255,255,.05)"
+                  data-scale-font-color="#a2a2a2"
+                  data-labels="['','Monday','','','Tuesday','','','Wednesday','','','Thursday','','','Friday','','','Saturday','','','Sunday','']"
+                  data-value="[{data: [2500, 3300, 2512, 2775, 2498, 3512, 2925, 4275, 3507, 3825, 3445, 3985, 3445, 3985, 2512, 2775, 2498, 3985, 3445, 3985, 2512]}]">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="shift-three">
+          <div class="row text-center m-t-md">
+            <div class="col-sm-4 m-b-md">
+              <div class="w-lg m-x-auto">
+                <canvas
+                  class="ex-graph"
+                  width="200" height="200"
+                  data-chart="doughnut"
+                  data-value="[{ value: 100, color: '#42a5f5', label: 'Checked In' }, { value: 260, color: '#1bc98e', label: 'Checked Out' }]"
+                  data-segment-stroke-color="#eee">
+                </canvas>
+              </div>
+              <strong class="text-muted">Checked In vs Checked Out</strong>
+              <h3>Shift 3</h3>
+            </div>
+            <div class="col-sm-8 m-b-md">
+              <div class="ex-line-graphs m-b-md">
+                <canvas
+                  class="ex-line-graph"
+                  width="600" height="400"
+                  data-chart="bar"
+                  data-scale-line-color="transparent"
+                  data-scale-grid-line-color="rgba(255,255,255,.05)"
+                  data-scale-font-color="#a2a2a2"
+                  data-labels="['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']"
+                  data-value="[{ label: 'First dataset', data: [15, 24, 90, 24, 45, 77, 12] }, { label: 'Second dataset', data: [38, 44, 11, 87, 42, 20, 67] }]">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr-divider m-t m-b">
+        <h3 class="hr-divider-content hr-divider-heading">Quick stats</h3>
+      </div>
+
+      <div class="row statcards">
+        <div class="col-sm-3 m-b">
+          <div class="statcard statcard-success">
+            <div class="p-a">
+              <span class="statcard-desc">Users Logged in (RF)</span>
+              <h3 class="statcard-number">
+                42-50-40-70-59
+              </h3>
+              <hr class="statcard-hr m-b-0">
+            </div>
+            <canvas id="sparkline1" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[42,50,40,70,59]}]" data-labels="['a','b','c','d','e']" style="width: 189px; height: 47px;"></canvas>
+          </div>
+        </div>
+        <div class="col-sm-3 m-b">
+          <div class="statcard statcard-danger">
+            <div class="p-a">
+              <span class="statcard-desc">Remaining Outbounds</span>
+              <h3 class="statcard-number">
+                18-20-23-50-19
+              </h3>
+              <hr class="statcard-hr m-b-0">
+            </div>
+            <canvas id="sparkline1" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[18,20,23,50,19]}]" data-labels="['a','b','c','d','e']" style="width: 189px; height: 47px;"></canvas>
+          </div>
+        </div>
+        <div class="col-sm-3 m-b">
+          <div class="statcard statcard-info">
+            <div class="p-a">
+              <span class="statcard-desc">Trailers to Receive</span>
+              <h3 class="statcard-number">
+                14-21-33-41-40
+              </h3>
+              <hr class="statcard-hr m-b-0">
+            </div>
+            <canvas id="sparkline1" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[14,21,33,41,40]}]" data-labels="['a','b','c','d','e']" style="width: 189px; height: 47px;"></canvas>
+          </div>
+        </div>
+        <div class="col-sm-3 m-b">
+          <div class="statcard statcard-warning">
+            <div class="p-a">
+              <span class="statcard-desc">Remaining Cases to Pick (k)</span>
+              <h3 class="statcard-number">
+                2.3-8.1-4.1-11-5.4
+              </h3>
+              <hr class="statcard-hr m-b-0">
+            </div>
+            <canvas id="sparkline1" width="378" height="94" class="sparkline" data-chart="spark-line" data-value="[{data:[2300,8100,4100,10000,5400]}]" data-labels="['a','b','c','d','e']" style="width: 189px; height: 47px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr-divider m-t m-b">
+        <h3 class="hr-divider-content hr-divider-heading">
+          Work Check
+        </h3>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 m-b-md">
+          <table class="table table-bordered table-hover" title="High Reach">
+          	<thead>
+              <tr class="active">
+                <th colspan="3">
+                  <h4 class="text-center">High Reach</h4>
+                </th>
+              </tr>
+          		<tr>
+          			<th>Operation</th>
+          			<th>Priority</th>
+          			<th>Count</th>
+          		</tr>
+          	</thead>
+          	<tfoot>
+          		<tr>
+          			<th>Total</th>
+          			<th></th>
+          			<th>1436</th>
+          		</tr>
+          	</tfoot>
+          	<tbody>
+          		<tr>
+          			<td>EPRP</td>
+          			<td>0-9</td>
+          			<td>1</td>
+          		</tr>
+          		<tr>
+          			<td>FROMWRAP</td>
+          			<td>0-9</td>
+          			<td>4</td>
+          		</tr>
+          		<tr>
+          			<td>PRP</td>
+          			<td>0-9</td>
+          			<td>1</td>
+          		</tr>
+          		<tr>
+          			<td>STO</td>
+          			<td>0-9</td>
+          			<td>97</td>
+          		</tr>
+          		<tr>
+          			<td>TRN</td>
+          			<td>0-9</td>
+          			<td>3</td>
+          		</tr>
+          		<tr>
+          			<td>DPRP</td>
+          			<td>10-19</td>
+          			<td>2</td>
+          		</tr>
+          		<tr>
+          			<td>FROMDROP</td>
+          			<td>10-19</td>
+          			<td>15</td>
+          		</tr>
+          		<tr>
+          			<td>FROMWRAP</td>
+          			<td>10-19</td>
+          			<td>7</td>
+          		</tr>
+          		<tr>
+          			<td>PCK</td>
+          			<td>10-19</td>
+          			<td>41</td>
+          		</tr>
+          		<tr>
+          			<td>TPRP</td>
+          			<td>10-19</td>
+          			<td>13</td>
+          		</tr>
+          		<tr>
+          			<td>DPLN</td>
+          			<td>20-29</td>
+          			<td>2</td>
+          		</tr>
+          		<tr>
+          			<td>PCK</td>
+          			<td>20-29</td>
+          			<td>74</td>
+          		</tr>
+          		<tr>
+          			<td>TPRP</td>
+          			<td>20-29</td>
+          			<td>6</td>
+          		</tr>
+          		<tr>
+          			<td>TRN</td>
+          			<td>20-29</td>
+          			<td>10</td>
+          		</tr>
+          		<tr>
+          			<td>FROMWRAP</td>
+          			<td>30-39</td>
+          			<td>2</td>
+          		</tr>
+          		<tr>
+          			<td>PCK</td>
+          			<td>30-39</td>
+          			<td>155</td>
+          		</tr>
+          		<tr>
+          			<td>COPCK</td>
+          			<td>40-49</td>
+          			<td>93</td>
+          		</tr>
+          		<tr>
+          			<td>PCK</td>
+          			<td>40-49</td>
+          			<td>39</td>
+          		</tr>
+          		<tr>
+          			<td>STO</td>
+          			<td>50-59</td>
+          			<td>870</td>
+          		</tr>
+          		<tr>
+          			<td>FROMWRAP</td>
+          			<td>60-69</td>
+          			<td>1</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+        <div class="col-md-4 m-b-md">
+          <table class="table table-bordered table-hover" title="Dock">
+          	<thead>
+              <tr class="active">
+                <th colspan="3">
+                  <h4 class="text-center">Dock</h4>
+                </th>
+              </tr>
+          		<tr>
+          			<th>Operation</th>
+          			<th>Priority</th>
+          			<th>Count</th>
+          		</tr>
+          	</thead>
+          	<tfoot>
+          		<tr>
+          			<th>Total</th>
+          			<th></th>
+          			<th>43</th>
+          		</tr>
+          	</tfoot>
+          	<tbody>
+          		<tr>
+          			<td>LOD</td>
+          			<td>0-9</td>
+          			<td>1</td>
+          		</tr>
+          		<tr>
+          			<td>RCV</td>
+          			<td>0-9</td>
+          			<td>4</td>
+          		</tr>
+          		<tr>
+          			<td>LOD</td>
+          			<td>20-29</td>
+          			<td>2</td>
+          		</tr>
+          		<tr>
+          			<td>RCV</td>
+          			<td>20-29</td>
+          			<td>5</td>
+          		</tr>
+          		<tr>
+          			<td>CPK</td>
+          			<td>30-39</td>
+          			<td>1</td>
+          		</tr>
+          		<tr>
+          			<td>LOD</td>
+          			<td>40-49</td>
+          			<td>2</td>
+          		</tr>
+          		<tr>
+          			<td>RCV</td>
+          			<td>40-49</td>
+          			<td>5</td>
+          		</tr>
+          		<tr>
+          			<td>LOD</td>
+          			<td>60-69</td>
+          			<td>6</td>
+          		</tr>
+          		<tr>
+          			<td>RCV</td>
+          			<td>60-69</td>
+          			<td>17</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+        <div class="col-md-4 m-b-md">
+          <table class="table table-bordered table-hover" title="Walkie">
+          	<thead>
+              <tr class="active">
+                <th colspan="3">
+                  <h4 class="text-center">Walkie</h4>
+                </th>
+              </tr>
+          		<tr>
+          			<th>Operation</th>
+          			<th>Priority</th>
+          			<th>Count</th>
+          		</tr>
+          	</thead>
+          	<tfoot>
+          		<tr>
+          			<th>Total</th>
+          			<th></th>
+          			<th>49</th>
+          		</tr>
+          	</tfoot>
+          	<tbody>
+          		<tr>
+          			<td>LPCK</td>
+          			<td>40-49</td>
+          			<td>45</td>
+          		</tr>
+          		<tr>
+          			<td>LPCK</td>
+          			<td>50-59</td>
+          			<td>4</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+        <div class="col-md-4 m-b-md">
+          <table class="table table-bordered table-hover" title="Yard">
+          	<thead>
+              <tr class="active">
+                <th colspan="3">
+                  <h4 class="text-center">Yard</h4>
+                </th>
+              </tr>
+          		<tr>
+          			<th>Operation</th>
+          			<th>Priority</th>
+          			<th>Count</th>
+          		</tr>
+          	</thead>
+          	<tfoot>
+          		<tr>
+          			<th>Total</th>
+          			<th></th>
+          			<th>1</th>
+          		</tr>
+          	</tfoot>
+          	<tbody>
+          		<tr>
+          			<td>TRL</td>
+          			<td>50-59</td>
+          			<td>1</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+        <div class="col-md-4 m-b-md">
+          <table class="table table-bordered table-hover" title="Other">
+          	<thead>
+              <tr class="active">
+                <th colspan="3">
+                  <h4 class="text-center">Other</h4>
+                </th>
+              </tr>
+          		<tr>
+          			<th>Operation</th>
+          			<th>Priority</th>
+          			<th>Count</th>
+          		</tr>
+          	</thead>
+          	<tfoot>
+          		<tr>
+          			<th>Total</th>
+          			<th></th>
+          			<th>1532</th>
+          		</tr>
+          	</tfoot>
+          	<tbody>
+          		<tr>
+          			<td>CNTAUD</td>
+          			<td>60-69</td>
+          			<td>1519</td>
+          		</tr>
+          		<tr>
+          			<td>CNTAUD</td>
+          			<td>70-79</td>
+          			<td>12</td>
+          		</tr>
+          		<tr>
+          			<td>CNTZERO</td>
+          			<td>90+</td>
+          			<td>1</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- Include jQuery (required) and the JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="docs/assets/js/chart.js"></script>
+    <script src="docs/assets/js/tablesorter.min.js"></script>
+    <script src="docs/assets/js/toolkit.js"></script>
+    <script src="docs/assets/js/application.js"></script>
+    <!-- <script src="dist/toolbox.min.js"></script> -->
+  </body>
+</html>
