@@ -64,7 +64,7 @@ toolkit/
 The `theme-docs` directory contains all the static resources for your Themes docs and examples. To view, just open in your favorite browser!
 
 ```
-$ open docs/index.html
+$ open theme-docs/index.html
 ```
 
 
