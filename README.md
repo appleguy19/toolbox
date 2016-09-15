@@ -7,28 +7,56 @@ toolkit/
   ├── gulpfile.js
   ├── package.json
   ├── README.md
+  ├── BOOTSTRAP-THEME-LICENSE.md
   ├── theme-docs/
-  ├── less/
-  │   ├── bootstrap/
-  │   ├── custom/
-  │   ├── variables.less
-  │   └── toolkit.less
-  ├── js/
-  │   ├── bootstrap/
-  │   └── custom/
+  ├── img/
+  ├── views/
+  │   ├── login.html
+  │   ├── index.html
+  │   └── ...
   ├── fonts/
   │   ├── bootstrap-entypo.eot
   │   ├── bootstrap-entypo.svg
   │   ├── bootstrap-entypo.ttf
   │   ├── bootstrap-entypo.woff
   │   └── bootstrap-entypo.woff2
+  ├── src
+  │   ├──less/
+  │   │   ├── bootstrap/
+  │   │   ├── custom/
+  │   │   ├── variables.less
+  │   │   └── toolkit.less
+  │   ├── js/
+  │   │   ├── bootstrap/
+  │   │   └── custom/
+  │   │       └── vendor/
+  │   │           ├── chart.js
+  │   │           ├── datepicker.js
+  │   │           ├── drawer.js
+  │   │           ├── fullcalendar.js
+  │   │           ├── moment.min.js
+  │   │           └── tablesorter.min.js
+  │   └── css/
+  │       └── vendor/
+  │           ├── fullcalendar.css
+  │           ├── fullcalendar.min.css
+  │           └── fullcalendar.print.css
   └── dist/
-      ├── toolkit.css
-      ├── toolkit.css.map
-      ├── toolkit.min.css
-      ├── toolkit.min.css.map
-      ├── toolkit.js
-      └── toolkit.min.js
+      ├── toolbox.css
+      ├── toolbox.css.map
+      ├── toolbox.min.css
+      ├── toolbox.min.css.map
+      ├── toolbox-dark.css          //Not in use
+      ├── toolbox-dark.css.map      //Not in use
+      ├── toolbox-dark.min.css      //Not in use
+      ├── toolbox-dark.min.css.map  //Not in use
+      ├── toolbox.js
+      ├── toolbox.min.js
+      └── vendor/
+          ├── fullcalendar.css
+          ├── fullcalendar.min.css
+          └── fullcalendar.print.css
+
 ```
 
 #### Docs and Examples
@@ -60,7 +88,8 @@ $ npm install
 
 From here on out, simply run `gulp` from your terminal and you're good to go!
 
-+ `gulp` - recompiles and minifies your theme assets.
++ `gulp` - recompiles and minifies your theme assets. It will drop them off in the `/dist` directory.
+
 
 
 #### Support
