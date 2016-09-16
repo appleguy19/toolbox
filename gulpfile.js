@@ -35,6 +35,7 @@ var Paths = {
       './src/js/custom/vendor/drawer.js',
       './src/js/custom/vendor/moment.min.js',
       './src/js/custom/vendor/fullcalendar.js',
+      './src/js/custom/vendor/list.js',
       './src/js/custom/vendor/tablesorter.min.js',
       './src/js/custom/chartjs-data-api.js',
       './src/js/custom/application.js',
