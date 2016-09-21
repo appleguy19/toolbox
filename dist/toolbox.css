@@ -9834,6 +9834,9 @@ body.has-drawer {
   bottom: 0;
   left: 0;
 }
+.is-searched .drawer-footer {
+  display: none;
+}
 .dw-xs-12 {
   width: 100%;
 }
