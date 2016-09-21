@@ -5,7 +5,7 @@ var App = {
   init: function () {
     App._tableSorters()
     App._tooltips()
-    App._listSearch()
+    App._quickLinksSearch()
 
     $(window).on('resize', App._tooltips)
 
@@ -32,12 +32,8 @@ var App = {
     $('[data-sort="table"]').tablesorter( {sortList: [[1,0]]} );
   },
 
-  _listSearch: function() {
-    var options = {
-      valueNames: [ 'quick-link' ]
-    };
-
-    var userList = new List('quick-links-drawer', options);
+  _quickLinksSearch: function() {
+        $('#quick-links-search').quickSearch($('#quick-links-content'));
   }
 }
 
