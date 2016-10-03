@@ -136,17 +136,13 @@
 .iconav-nav-label {
   font-size: 11px;
   display: none;
-  //Below not quite working, but I want it to break on spaces...
-  -ms-word-break: break-all;
-     word-break: break-all;
-     // Non standard for webkit
-     word-break: break-word;
+  white-space: pre-line;
 
   // Show text labels for xs viewports or when we're on a touch device
   .touchevents & {
     display: block !important;
-    //margin-left: -10px;
-    //margin-right: -10px;
+    margin-left: -8px;
+    margin-right: -8px;
   }
 
   @media (max-width: @screen-xs-max) {
