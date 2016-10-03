@@ -3,6 +3,9 @@
 # Compiled Output #
 dist/
 
+# Resources #
+node_modules/
+
 # OS Generated Files #
 .DS_Store
 .DS_Store?
