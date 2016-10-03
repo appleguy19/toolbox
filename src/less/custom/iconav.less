@@ -133,15 +133,28 @@
   }
 }
 
+.iconav-nav-label {
+  font-size: 11px;
+  display: none;
+  white-space: pre-line;
+
+  // Show text labels for xs viewports or when we're on a touch device
+  .touchevents & {
+    display: block !important;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    display: block !important;
+  }
+
+}
+
 
 // Slider nav
 //
 // Move from a horizontal slider nav like iOS's tab bar to a stacked nav easily.
-
-// Show text labels for xs viewports (uses inline utility classes for toggling visibility)
-.iconav-nav-label {
-  font-size: 11px;
-}
 
 // Make it slide
 @media (max-width: @screen-sm-min) {
