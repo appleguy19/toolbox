@@ -511,19 +511,7 @@
   <!-- Include jQuery (required) and the JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="../dist/toolbox.js"></script>
-
-  <script>
-  $(document).ready(function() {
-    $('#calendar').fullCalendar({
-      header : {  left:   '',
-                  center: '',
-                  right:  ''
-               },
-     });
-     if($(window).width() > 768){$('#calendar').fullCalendar('option', 'aspectRatio', 1.7); }
-     else{$('#calendar').fullCalendar('option', 'aspectRatio', .9);}
-   });
-  </script>
+  
 </body>
 
 </html>

@@ -6,8 +6,10 @@ var App = {
     App._tableSorters()
     App._tooltips()
     App._quickLinksSearch()
+    App._calendar()
 
     $(window).on('resize', App._tooltips)
+    $(window).on('resize', App._calendar)
 
     $(document).on('shown.bs.tab', function () {
       $(document).trigger('redraw.bs.charts')
@@ -33,8 +35,23 @@ var App = {
   },
 
   _quickLinksSearch: function() {
-        $('#quick-links-search').quickSearch($('#quick-links-content'));
-  }
-}
+    $('#quick-links-search').quickSearch($('#quick-links-content'));
+  },
+
+  _calendar: function() {
+    $('#calendar').fullCalendar({
+      header : {  left:   '',
+                  center: '',
+                  right:  ''
+               },
+     });
+     if ($(window).width() > 768) {
+       $('#calendar').fullCalendar('option', 'aspectRatio', 1.7)
+
+     } else{
+       $('#calendar').fullCalendar('option', 'aspectRatio', .9)
+     }
+   }
+ }
 
 App.init()
