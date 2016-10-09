@@ -1,7 +1,6 @@
 var App = {
 
   _isWithTooltips: false,
-  _isWithStickyTableColumns: false,
 
   init: function () {
     App._tableSorters()

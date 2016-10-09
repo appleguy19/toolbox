@@ -1,7 +1,7 @@
 /* ========================================================================
  * Sticky Column Tables.js v0.1
  # jQuery dependant tool for making the first column sticky on properly formed tables
- # @appleguy
+ #  @appleguy
  * ========================================================================
 */
 
