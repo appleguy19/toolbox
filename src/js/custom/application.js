@@ -1,15 +1,18 @@
 var App = {
 
   _isWithTooltips: false,
+  _isWithStickyTableColumns: false,
 
   init: function () {
     App._tableSorters()
     App._tooltips()
     App._quickLinksSearch()
     App._calendar()
+    App._stickyColumnTables()
 
     $(window).on('resize', App._tooltips)
     $(window).on('resize', App._calendar)
+    $(window).on('resize', App._stickyColumnTables)
 
     $(document).on('shown.bs.tab', function () {
       $(document).trigger('redraw.bs.charts')
@@ -51,7 +54,16 @@ var App = {
      } else{
        $('#calendar').fullCalendar('option', 'aspectRatio', .9)
      }
+   },
+
+   _stickyColumnTables: function() {
+     $('.table-responsive-sticky-column').stickyColumnTables();
+
+     //$(window).load(updateTables);
+     //$(window).on("redraw",function(){isWithStickyTableColumns=false;updateTables();}); // An event to listen for
+     //$(window).on("resize", updateTables);
    }
+
  }
 
 App.init()

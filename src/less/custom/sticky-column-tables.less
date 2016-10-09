@@ -1,0 +1,67 @@
+/* http://zurb.com/playground/responsive-tables */
+/* ZURB style responsive tables */
+
+
+//table th { font-weight: bold; }
+//table td, table th { padding: 9px 10px; text-align: left; }
+
+// Responsive tables with sticky first column
+//
+// Describe how this is different than normal bootstrap responsive tables
+//  OLD                   NEW
+//  table.responsive  -> .table-responsive-sticky-column
+//  div.table-wrapper -> .sticky-column-table-wrapper
+
+@media screen and (max-width: @screen-xs-max) {
+
+	.sticky-column-table-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-right: 1px solid @table-border-color;
+
+    .pinned {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: @table-bg;
+      width: 35%;
+      overflow: hidden;
+      overflow-x: scroll;
+      border-right: 1px solid @table-border-color;
+      border-left: 1px 1px solid @table-border-color;
+
+      table {
+        border-right: none;
+        border-left: none;
+        width: 100%;
+
+        th,td { white-space: nowrap; }
+
+        td:last-child { border-bottom: 0; }
+      }
+    }
+
+    .scrollable {
+      margin-left: 35%;
+      overflow: scroll;
+      overflow-y: hidden;
+    }
+
+  }
+
+  .table-responsive-sticky-column {
+
+    td,th {
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    th:first-child,
+    td:first-child,
+        .pinned td {
+          display: none;
+    }
+  }
+
+}

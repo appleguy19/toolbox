@@ -37,6 +37,7 @@ var Paths = {
       './src/js/custom/vendor/moment.min.js',
       './src/js/custom/vendor/fullcalendar.js',
       './src/js/custom/vendor/tablesorter.min.js',
+      './src/js/custom/vendor/stickyColumnTables.js',
       './src/js/custom/vendor/quickSearch.js',
       './src/js/custom/chartjs-data-api.js',
       './src/js/custom/application.js',
