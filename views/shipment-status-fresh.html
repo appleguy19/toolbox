@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Shipment Status &middot; Logistics Toolbox</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+    <link href="../dist/toolbox.css" rel="stylesheet">
+    <link href="../dist/datatables.css" rel="stylesheet">
+
+</head>
+
+<body class="has-drawer">
+  <div id="quick-links-drawer" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="quick-links-drawer">
+      <div class="drawer-contents">
+          <div class="drawer-heading row">
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <span class="input-group-addon" id="sizing-addon2"><span class="icon icon-magnifying-glass"></span></span>
+                  <input type="search" id="quick-links-search" class="form-control" placeholder="Search">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <a href="#quick-links-drawer" data-toggle="drawer" aria-foldedopen="false" aria-controls="quick-links-drawer" class="btn btn-primary pull-right">Close</a>
+              </div>
+          </div>
+          <ul id="quick-links-content" class="drawer-fullnav nav">
+            <li class="nav-header">Web Links</li>
+            <li>
+              <a href="#" class="quick-link">Linked In</a>
+            </li>
+            <li>
+              <a href="#" class="quick-link">MacGregor Partners</a>
+            </li>
+            <li>
+              <a href="#" class="quick-link">Ogden Intranet</a>
+            </li>
+            <li>
+              <a href="#" class="quick-link">Request a Report</a>
+            </li>
+            <li>
+              <a href="#" class="quick-link">SAP</a>
+            </li>
+
+            <li class="nav-header">Departments</li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#casepick-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Casepick <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="casepick-menu">
+                <li><a href="#" class="quick-link">Aged Product in Pickface</a></li>
+                <li><a href="#" class="quick-link">Casepick Totals</a></li>
+                <li><a href="#" class="quick-link">Items in Multiple Pickfaces</a></li>
+                <li><a href="#" class="quick-link">Items Not Forecast</a></li>
+                <li><a href="#" class="quick-link">Pick Zone Map by Crush Class</a></li>
+                <li><a href="#" class="quick-link">Pickface Data</a></li>
+                <li><a href="#" class="quick-link">Slotting Tool</a></li>
+                <li><a href="#" class="quick-link">Uncommitted Unassigned Pickfaces</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#co-pack-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Co-pack <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="co-pack-menu">
+                <li><a href="#" class="quick-link">Co-Pack Pallets Picked</a></li>
+                <li><a href="#" class="quick-link">Co-Pack Pallets Received</a></li>
+                <li><a href="#" class="quick-link">Co-Pack Status</a></li>
+                <li><a href="#" class="quick-link">Compare Copack &amp; Dlx</a></li>
+                <li><a href="#" class="quick-link">Delete and Insert Compare Data</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#ferrero-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Ferrero <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="ferrero-menu">
+                <li><a href="#" class="quick-link">Ferrero Cycle Counts</a></li>
+                <li><a href="#" class="quick-link">Ferrero Inbounds Received</a></li>
+                <li><a href="#" class="quick-link">Ferrero Inventory Adjustments</a></li>
+                <li><a href="#" class="quick-link">Ferrero Inventory Snapshot</a></li>
+                <li><a href="#" class="quick-link">Ferrero Inventory Status Changes - Yesterday</a></li>
+                <li><a href="#" class="quick-link">Ferrero Order Cuts</a></li>
+                <li><a href="#" class="quick-link">Ferrero Potential Shorts</a></li>
+                <li><a href="#" class="quick-link">Inbound and Outbound Pallets</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#hr-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                HR <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="hr-menu">
+                <li><a href="#" class="quick-link">Teammate Name Game</a></li>
+                <li><a href="#" class="quick-link">Change Employee Password</a></li>
+                <li><a href="#" class="quick-link">Manage Employees</a></li>
+                <li><a href="#" class="quick-link">Add Employee</a></li>
+                <li><a href="#" class="quick-link">Add Employer</a></li>
+                <li><a href="#" class="quick-link">Add Event</a></li>
+                <li><a href="#" class="quick-link">Add Point</a></li>
+                <li><a href="#" class="quick-link">Add Point Type</a></li>
+                <li><a href="#" class="quick-link">Add Position</a></li>
+                <li><a href="#" class="quick-link">Add Shift</a></li>
+                <li><a href="#" class="quick-link">Add Teammate</a></li>
+                <li><a href="#" class="quick-link">Add Term</a></li>
+                <li><a href="#" class="quick-link">Add Type</a></li>
+                <li><a href="#" class="quick-link">Add Vacation Type</a></li>
+                <li><a href="#" class="quick-link">Add Work Status</a></li>
+                <li><a href="#" class="quick-link">Change Teammate Password</a></li>
+                <li><a href="#" class="quick-link">Custom Roster</a></li>
+                <li><a href="#" class="quick-link">Employee Dashboard</a></li>
+                <li><a href="#" class="quick-link">Employee Roster</a></li>
+                <li><a href="#" class="quick-link">Manage Employers</a></li>
+                <li><a href="#" class="quick-link">Manage Point Types</a></li>
+                <li><a href="#" class="quick-link">Manage Positions</a></li>
+                <li><a href="#" class="quick-link">Manage Teammates</a></li>
+                <li><a href="#" class="quick-link">Manage Terms</a></li>
+                <li><a href="#" class="quick-link">Manage Types</a></li>
+                <li><a href="#" class="quick-link">Manage Vacation Types</a></li>
+                <li><a href="#" class="quick-link">Manage Work Statuses</a></li>
+                <li><a href="#" class="quick-link">Perfect Attendance</a></li>
+                <li><a href="#" class="quick-link">Point Report</a></li>
+                <li><a href="#" class="quick-link">Seminar Calendar - Supervisors</a></li>
+                <li><a href="#" class="quick-link">Set Maximum Vacation Slots</a></li>
+                <li><a href="#" class="quick-link">Submit Counsel Form</a></li>
+                <li><a href="#" class="quick-link">Supervisor Assignments</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar - First Shift</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar - Salaried</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar - Second Shift</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar - Support Staff</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar - Weekend Shfit</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar Count - First Shift</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar Count - Second Shift</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar Count - Support</a></li>
+                <li><a href="#" class="quick-link">Vacation Calendar Count - Weekend Shift</a></li>
+                <li><a href="#" class="quick-link">Vacation Report</a></li>
+                <li><a href="#" class="quick-link">View Counsel Forms</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#inventory-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Inventory <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="inventory-menu">
+                <li><a href="#" class="quick-link">Active Holds</a></li>
+                <li><a href="#" class="quick-link">All Inventory on Hold</a></li>
+                <li><a href="#" class="quick-link">Area Honeycombing</a></li>
+                <li><a href="#" class="quick-link">Available Inventory in IHLD Status</a></li>
+                <li><a href="#" class="quick-link">Available Putaway Locations</a></li>
+                <li><a href="#" class="quick-link">Count History Detail &amp; Summary</a></li>
+                <li><a href="#" class="quick-link">Create Barcode</a></li>
+                <li><a href="#" class="quick-link">Cycle Count Totals</a></li>
+                <li><a href="#" class="quick-link">Damage Locations</a></li>
+                <li><a href="#" class="quick-link">Damage Summary Report</a></li>
+                <li><a href="#" class="quick-link">Delete Item Footprint</a></li>
+                <li><a href="#" class="quick-link">Empty Double-Deep Locations</a></li>
+                <li><a href="#" class="quick-link">Empty or Partial Locations by Row</a></li>
+                <li><a href="#" class="quick-link">Full Pallets in Partial Racks</a></li>
+                <li><a href="#" class="quick-link">Hold History</a></li>
+                <li><a href="#" class="quick-link">IHLD Inventory in Available Status</a></li>
+                <li><a href="#" class="quick-link">Inventory Adjustments in Pickface</a></li>
+                <li><a href="#" class="quick-link">Inventory by Row</a></li>
+                <li><a href="#" class="quick-link">Inventory In BARRELDROP</a></li>
+                <li><a href="#" class="quick-link">Inventory in Crescent Rack</a></li>
+                <li><a href="#" class="quick-link">Inventory on Future Hold</a></li>
+                <li><a href="#" class="quick-link">Inventory on Hold</a></li>
+                <li><a href="#" class="quick-link">Inventory on Inverters</a></li>
+                <li><a href="#" class="quick-link">Inventory on Wrappers</a></li>
+                <li><a href="#" class="quick-link">KPMG Inventory Summary</a></li>
+                <li><a href="#" class="quick-link">Last Rack Location for LPN</a></li>
+                <li><a href="#" class="quick-link">Locations in Error</a></li>
+                <li><a href="#" class="quick-link">Locations Last Cycle Count by Date</a></li>
+                <li><a href="#" class="quick-link">Locations with Counts in Progress</a></li>
+                <li><a href="#" class="quick-link">Locations with Inventory Not Counted in X Days</a></li>
+                <li><a href="#" class="quick-link">Locked Inventory Older than Oldest Available</a></li>
+                <li><a href="#" class="quick-link">Locked Pickfaces</a></li>
+                <li><a href="#" class="quick-link">Locked Rack Locations</a></li>
+                <li><a href="#" class="quick-link">Locked Staging Lanes</a></li>
+                <li><a href="#" class="quick-link">LPN Inventory</a></li>
+                <li><a href="#" class="quick-link">LPN Tracking Add</a></li>
+                <li><a href="#" class="quick-link">LPN Tracking List</a></li>
+                <li><a href="#" class="quick-link">LPN Tracking Manage</a></li>
+                <li><a href="#" class="quick-link">MWDC Inventory Snapshot</a></li>
+                <li><a href="#" class="quick-link">Pending Counts</a></li>
+                <li><a href="#" class="quick-link">QRC Retrieval</a></li>
+                <li><a href="#" class="quick-link">QRC Retrieval - Storage Trailers</a></li>
+                <li><a href="#" class="quick-link">Rack Locations by Inventory Status</a></li>
+                <li><a href="#" class="quick-link">Recoup Status Change Activity</a></li>
+                <li><a href="#" class="quick-link">Update Speed Aisles</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#it-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                IT <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="it-menu">
+                <li><a href="#" class="quick-link">Archive Verification</a></li>
+                <li><a href="#" class="quick-link">Check For Database Locks</a></li>
+                <li><a href="#" class="quick-link">Check for Hub Errors</a></li>
+                <li><a href="#" class="quick-link">DLx Users-Operations</a></li>
+                <li><a href="#" class="quick-link">DLx Users-Roles</a></li>
+                <li><a href="#" class="quick-link">HVAC Cisco Mediator</a></li>
+                <li><a href="#" class="quick-link">I.T. Asset Management DB</a></li>
+                <li><a href="#" class="quick-link">Integrator Errors</a></li>
+                <li><a href="#" class="quick-link">iPad Assets</a></li>
+                <li><a href="#" class="quick-link">IT Tag Out</a></li>
+                <li><a href="#" class="quick-link">Item Master Compare and Update</a></li>
+                <li><a href="#" class="quick-link">Item Master Comparison</a></li>
+                <li><a href="#" class="quick-link">Open Report Requests</a></li>
+                <li><a href="#" class="quick-link">Oracle DB Comments</a></li>
+                <li><a href="#" class="quick-link">Super Users</a></li>
+                <li><a href="#" class="quick-link">Users with Inventory Adjustment</a></li>
+                <li><a href="#" class="quick-link">Verification Code Generator</a></li>
+                <li><a href="#" class="quick-link">Camera - Battery Room</a></li>
+                <li><a href="#" class="quick-link">Camera - Breakroom 1</a></li>
+                <li><a href="#" class="quick-link">Camera - Breakroom 2</a></li>
+                <li><a href="#" class="quick-link">Camera - Maintenance 1</a></li>
+                <li><a href="#" class="quick-link">Camera - Maintenance 2 </a></li>
+                <li><a href="#" class="quick-link">Camera - Welcome Center</a></li>
+                <li><a href="#" class="quick-link">APC Portal - Server Room A</a></li>
+                <li><a href="#" class="quick-link">APC Portal - Server Room B</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#leads-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Leads <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="leads-menu">
+                <li><a href="#" class="quick-link">Lead Training Op</a></li>
+                <li><a href="#" class="quick-link">Pallet Tally</a></li>
+                <li><a href="#" class="quick-link">Red Light - Check &amp; Override Log</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#maintenance-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Maintenance <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="maintenance-menu">
+                <li><a href="#" class="quick-link">Daily Job Report
+                <li><a href="#" class="quick-link">HVAC Summary</a></li>
+                <li><a href="#" class="quick-link">MHE Dashboard</a></li>
+                <li><a href="#" class="quick-link">Red Light/Chock &amp; Override Log</a></li>
+                <li><a href="#" class="quick-link">Truck Hours Until PM Due</a></li>
+                <li><a href="#" class="quick-link">Trucks Due for PM</a></li>
+                <li><a href="#" class="quick-link">Update Truck Hours</a></li>
+                <li><a href="#" class="quick-link">Vehicle History</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#recoup-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Recoup <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="recoup-menu">
+                <li><a href="#" class="quick-link">Components Needing Ordered</a></li>
+                <li><a href="#" class="quick-link">Forms Login</a></li>
+                <li><a href="#" class="quick-link">Items to Pull</a></li>
+                <li><a href="#" class="quick-link">Items to Pull - FAKE</a></li>
+                <li><a href="#" class="quick-link">Manage Components</a></li>
+                <li><a href="#" class="quick-link">Repack Items</a></li>
+                <li><a href="#" class="quick-link">Unneeded Orders</a></li>
+                <li><a href="#" class="quick-link">Unreceived Orders</a></li>
+                <li><a href="#" class="quick-link">Unreceived Orders by Plant</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#supervisors-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Supervisors <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="supervisors-menu">
+                <li><a href="#" class="quick-link">Components Needing Ordered</a></li>
+                <li><a href="#" class="quick-link">Labor Daily Detail</a></li>
+                <li><a href="#" class="quick-link">Labor Observation Report</a></li>
+                <li><a href="#" class="quick-link">Labor Report by Hire Date</a></li>
+                <li><a href="#" class="quick-link">Labor Report with Numbers by Hire Date</a></li>
+                <li><a href="#" class="quick-link">Labor Summary Reports</a></li>
+                <li><a href="#" class="quick-link">Metrics Report</a></li>
+                <li><a href="#" class="quick-link">Facility Performance Report</a></li>
+                <li><a href="#" class="quick-link">Facility Performance - Indirect</a></li>
+                <li><a href="#" class="quick-link">On Time Loading</a></li>
+                <li><a href="#" class="quick-link">On Time Unloading</a></li>
+                <li><a href="#" class="quick-link">Damage &amp; Recoup Totals</a></li>
+                <li><a href="#" class="quick-link">Historic Inbounds per Shift</a></li>
+                <li><a href="#" class="quick-link">Historic Outbounds per Shift</a></li>
+                <li><a href="#" class="quick-link">Kronos Hours by Paycode</a></li>
+                <li><a href="#" class="quick-link">Labor Metrics</a></li>
+                <li><a href="#" class="quick-link">Labor Planning Tool</a></li>
+                <li><a href="#" class="quick-link">Morning Report Archive</a></li>
+                <li><a href="#" class="quick-link">Shift Hand-Off</a></li>
+                <li><a href="#" class="quick-link">Shift Hand-Off Archive</a></li>
+                <li><a href="#" class="quick-link">Tag Out Vehicle</a></li>
+                <li><a href="#" class="quick-link">Teammates Using Indirect Codes</a></li>
+                <li><a href="#" class="quick-link">Training Opportunity</a></li>
+                <li><a href="#" class="quick-link">Training Opportunity History</a></li>
+                <li><a href="#" class="quick-link">Update Single Truck</a></li>
+                <li><a href="#" class="quick-link">Vehicle Type Snapshot</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#supply-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Supply <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="supply-menu">
+                <li><a href="#" class="quick-link">Accident Form</a></li>
+                <li><a href="#" class="quick-link">Add Employee Certification</a></li>
+                <li><a href="#" class="quick-link">Add Employee Qualification</a></li>
+                <li><a href="#" class="quick-link">Certification Report</a></li>
+                <li><a href="#" class="quick-link">Equipment Damage Form</a></li>
+                <li><a href="#" class="quick-link">Find Accident Forms</a></li>
+                <li><a href="#" class="quick-link">Hours by Date</a></li>
+                <li><a href="#" class="quick-link">Import Data Files</a></li>
+                <li><a href="#" class="quick-link">Injury Form</a></li>
+                <li><a href="#" class="quick-link">Order Filling</a></li>
+                <li><a href="#" class="quick-link">Order Filling by BLDG/DATE/SUP</a></li>
+                <li><a href="#" class="quick-link">Qualification Report</a></li>
+                <li><a href="#" class="quick-link">Receiving</a></li>
+                <li><a href="#" class="quick-link">Register Vehicle</a></li>
+                <li><a href="#" class="quick-link">RSR</a></li>
+                <li><a href="#" class="quick-link">RSR By BLDG/DATE/SUP</a></li>
+                <li><a href="#" class="quick-link">Search Accident Forms</a></li>
+                <li><a href="#" class="quick-link">Shipping</a></li>
+                <li><a href="#" class="quick-link">Shipping by BLDG/DTE/SUP</a></li>
+                <li><a href="#" class="quick-link">Vehicle Pass Report</a></li>
+                <li><a href="#" class="quick-link">View Equipment Damage</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#transportation-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Transportation <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="transportation-menu">
+                <li><a href="#" class="quick-link">Carrier Loading</a></li>
+                <li><a href="#" class="quick-link">Carrier On-Time Arrival</a></li>
+                <li><a href="#" class="quick-link">CPU Weekly Report</a></li>
+                <li><a href="#" class="quick-link">Inbound LTO Questions &amp; Answers</a></li>
+                <li><a href="#" class="quick-link">Outbound LTO Questions &amp; Answers</a></li>
+                <li><a href="#" class="quick-link">Peco Pallet Count</a></li>
+                <li><a href="#" class="quick-link">Peco Pallet Report</a></li>
+                <li><a href="#" class="quick-link">Peco Requirements</a></li>
+                <li><a href="#" class="quick-link">PLMC Trailer Status</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#welcome-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                Welcome <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="welcome-menu">
+                <li><a href="#" class="quick-link">Duplicate Smart Search eBOLs</a></li>
+                <li><a href="#" class="quick-link">eBOL History</a></li>
+                <li><a href="#" class="quick-link">Inspected Inbounds: Not in Dlx</a></li>
+                <li><a href="#" class="quick-link">Orders Shipped</a></li>
+                <li><a href="#" class="quick-link">Outbound Pallet Count</a></li>
+                <li><a href="#" class="quick-link">Remove SS License</a></li>
+                <li><a href="#" class="quick-link">Trailer History</a></li>
+                <li><a href="#" class="quick-link">Trailer Inspection (iPad Only)</a></li>
+                <li><a href="#" class="quick-link">View EBOL</a></li>
+                <li><a href="#" class="quick-link">Yard Audits Performed</a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+              <a data-toggle="collapse" href="#wms-menu" role="button" aria-haspopup="true" aria-expanded="false">
+                WMS <span class="caret"></span>
+              </a>
+              <ul class="collapse" id="wms-menu">
+                <li><a href="#" class="quick-link">Best Suggested Dock Door Configuration</a></li>
+                <li><a href="#" class="quick-link">Calculate Putaway</a></li>
+                <li><a href="#" class="quick-link">Carrier Move Status Display</a></li>
+                <li><a href="#" class="quick-link">Closed Trailers by Date</a></li>
+                <li><a href="#" class="quick-link">Dispatch Storage Trailer</a></li>
+                <li><a href="#" class="quick-link">Dispatched Trailers with Uncompleted Receipts</a></li>
+                <li><a href="#" class="quick-link">Fix RFT Location</a></li>
+                <li><a href="#" class="quick-link">Fix Trailer In Transit</a></li>
+                <li><a href="#" class="quick-link">Inactive Devices Still Logged In</a></li>
+                <li><a href="#" class="quick-link">Inventory Activity</a></li>
+                <li><a href="#" class="quick-link">Inventory Display</a></li>
+                <li><a href="#" class="quick-link">Inventory Movements</a></li>
+                <li><a href="#" class="quick-link">Items Received on Same Inbound &amp; Slotted for Different Buildings</a></li>
+                <li><a href="#" class="quick-link">Location Lock Out</a></li>
+                <li><a href="#" class="quick-link">Master Receipt Detail</a></li>
+                <li><a href="#" class="quick-link">Multiple Lockout Location</a></li>
+                <li><a href="#" class="quick-link">Order Analysis</a></li>
+                <li><a href="#" class="quick-link">Order Status Display</a></li>
+                <li><a href="#" class="quick-link">Over, Short, and Damage</a></li>
+                <li><a href="#" class="quick-link">Override Shipment Confirmation</a></li>
+                <li><a href="#" class="quick-link">Pick Work Report</a></li>
+                <li><a href="#" class="quick-link">Print BOL</a></li>
+                <li><a href="#" class="quick-link">Putaway Location Short Report</a></li>
+                <li><a href="#" class="quick-link">Rand Daily Shipment Report</a></li>
+                <li><a href="#" class="quick-link">Receipt Needing Closed</a></li>
+                <li><a href="#" class="quick-link">Receive RF Messages</a></li>
+                <li><a href="#" class="quick-link">Receiving by Item and Date</a></li>
+                <li><a href="#" class="quick-link">Receiving by Item and Date with Original LPN</a></li>
+                <li><a href="#" class="quick-link">Receiving by Vendor and Date</a></li>
+                <li><a href="#" class="quick-link">Send Message to RF</a></li>
+                <li><a href="#" class="quick-link">Shipped History</a></li>
+                <li><a href="#" class="quick-link">Trailer Activity</a></li>
+                <li><a href="#" class="quick-link">Untied Orders Previously Tied</a></li>
+                <li><a href="#" class="quick-link">Update Staging Lane Resource Code</a></li>
+                <li><a href="#" class="quick-link">Update Trailer Number</a></li>
+                <li><a href="#" class="quick-link">Work Queue Display</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="drawer-footer">
+              <small>&copy; Macgregor Partners</small>
+          </div>
+      </div>
+  </div>
+  <div class="with-iconav">
+
+    <nav class="iconav">
+      <a class="iconav-brand" href="index.html">
+        <svg width="40" height="46" class="iconav-brand-icon">
+          <use xlink:href="../img/icons.svg#logo"></use>
+        </svg>
+      </a>
+      <div class="iconav-slider">
+        <ul class="nav nav-pills iconav-nav">
+          <li>
+            <a href="#quick-links-drawer" title="Quick Links" data-toggle="drawer" data-placement="right" data-container="body">
+              <span class="icon icon-menu"></span>
+              <small class="iconav-nav-label visible-xs-block">Quick Links</small>
+            </a>
+          </li>
+          <li >
+            <a href="dashboard.html" title="Dashboard" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-gauge"></span>
+              <small class="iconav-nav-label visible-xs-block">Dashboard</small>
+            </a>
+          </li>
+          <li class="active">
+            <a href="shipment-status.html" title="Shipment Status" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-address"></span>
+              <small class="iconav-nav-label visible-xs-block">Shipment Status</small>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Reports" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-clipboard"></span>
+              <small class="iconav-nav-label visible-xs-block">Reports</small>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="More Charts" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-area-graph"></span>
+              <small class="iconav-nav-label visible-xs-block">More Charts</small>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Captain's Log" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-open-book"></span>
+              <small class="iconav-nav-label visible-xs-block">Captain's Log</small>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Quick Stats" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-flash"></span>
+              <small class="iconav-nav-label visible-xs-block">Quick Stats</small>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Signed in as applej" data-toggle="tooltip" data-placement="right" data-container="body">
+              <img src="../img/misc/avatar-applej.png" alt="" class="img-circle img-responsive">
+              <small class="iconav-nav-label visible-xs-block">applej</small>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Logout" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-log-out"></span>
+              <small class="iconav-nav-label visible-xs-block">Logout</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid container-fluid-spacious">
+      <div class="dashhead">
+          <div class="dashhead-titles">
+              <h6 class="dashhead-subtitle">Report ran on Monday, August 22nd at 10am</h6>
+              <h3 class="dashhead-title">Shipment Status</h3>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="table-fullx">
+            <div class="table-responsivex
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{{MessageVersion.Subject}}</title>
+<style type="text/css">
+/* Client-specific Styles */
+div, p, a, li, td, table {-webkit-text-size-adjust:none;}
+         #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+         html{width: 100%; }
+         body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+         /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+         .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing. */
+         #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+         img {outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;}
+         a img {border:none;}
+         .image_fix {display:block;}
+		 td[class="header"] img{-ms-interpolation-mode:bicubic; max-width:100% !important; width:100% !important; height:auto !important;}
+         p {margin: 0px 0px !important;}
+         table td {border-collapse: collapse;}
+         table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+		 table[class="button-main"] {margin:auto !important; min-width:150px !important; max-width:460px !important; font-size:20px !important;}
+		 td[class="button-container"] {padding:7px 0 7px 0 !important;}
+		 table[class="button-wrap"] {width:100% !important;}
+         a {text-decoration: none;text-decoration:none!important;}
+		 a {color:#3F51B5;}
+		 /* footer */
+		 table[class="footer-img"] td img{-ms-interpolation-mode:bicubic; max-width:300px !important; height:auto !important;}
+         /*STYLES*/
+         table[class=full] { width: 100%; clear: both; }
+         /*IPAD STYLES*/
+         @media only screen and (max-width: 640px) {
+         a[href^="tel"], a[href^="sms"] {
+         text-decoration: none;
+         color: #258cda; /* or whatever your want */
+         pointer-events: none;
+         cursor: default;
+         }
+         .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+         text-decoration: default;
+         color: #258cda !important;
+         pointer-events: auto;
+         cursor: default;
+         }
+         table[class=devicewidth] {width: 440px!important;text-align:center!important;}
+         table[class=devicewidthinner] {width: 420px!important;text-align:center!important;}
+         img[class=banner] {width: 440px!important;height:auto!important;}
+		 img[class=MEOheader] {width: 440px!important;height:auto!important;}
+		 img[class=footerImage] {width: 440px!important;height:auto!important;}
+         img[class=col2img] {width: 440px!important;height:auto!important;}
+         }
+		 table[class="mobi-hide"] {display:none !important;}
+         /*IPHONE STYLES*/
+         @media only screen and (max-width: 480px) {
+         a[href^="tel"], a[href^="sms"] {
+         text-decoration: none;
+         color: #258cda; /* or whatever your want */
+         pointer-events: none;
+         cursor: default;
+         }
+         .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+         text-decoration: default;
+         color: #258cda !important;
+         pointer-events: auto;
+         cursor: default;
+         }
+         table[class=devicewidth] {width: 280px!important;text-align:center!important;}
+         table[class=devicewidthinner] {width: 260px!important;text-align:center!important;}
+         img[class=banner] {width: 280px!important;height:auto!important;}
+		 img[class=MEOheader] {width: 280px!important;height:auto!important;}
+		 img[class=footerImage] {width: 280px!important;text-align:center !important; height:auto!important;}
+         img[class=col2img] {width: 280px!important;height:auto!important;}
+         }
+      </style>
+   </head>
+   <body>
+<!-- Start of preheader -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader" >
+   <tbody>
+      <tr>
+      		<td>
+            		<!-- Start preheader -->
+                    <table style="margin-left: auto; margin-right:auto;" width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                      <tr>
+                        <td style="font-family:Helvetica, Arial, sans-serif; color:#ffffff; font-size:8px; text-align:center; display:none">A Special Facial Aesthetics Event</td>
+                      </tr>
+                    </table>
+                    <!-- End preheader -->
+
+            </td>
+     <tr>
+     <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                           <tbody>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="20"></td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #889098" st-content="preheader">
+                                    Email not displaying correctly? <a href="{{MessageVersion.Url}}" style="color:#258cda; text-decoration: none;">View Web Version</a>
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="20"></td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+     </tr>
+   </tbody>
+</table>
+<!-- End of prehead er -->
+
+
+<!-- Start of MEO BANNER -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="banner">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="600">
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                           <tbody>
+                              <tr>
+                                 <!-- start of image -->
+                                 <td align="center" st-image="banner-image">
+                                    <!-- <div class="imgpop"> -->
+                                       <a href="http://www.alice1059.com" target="_blank"><img src="http://media.secondstreetapp.com/148616?width=600" style="max-width:100%; height:auto; width:600px; display:block; outline:none; text-decoration:none; vertical-align:top;" class="MEOheader" width="600" border="0" alt="My Email Offers - Alice 105.9 FM" /></a>
+                                   <!--  </div> -->
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <!-- end of image -->
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of MEO BANNER -->
+
+
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+
+<!-- Start of header -->
+<!-- End of Header -->
+
+<!-- Start of header -->
+
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="header">
+   <tbody>
+      <tr>
+         <td>&nbsp;
+
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of Header -->
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="10" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+
+
+<!-- Start of MAIN BANNER -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="banner">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td style="width:600px;" width="600">
+                        <table style="margin:0px auto; text-align:center;" width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                           <tbody>
+                              <tr>
+                                 <!-- start of image -->
+                                 <td style="margin:0px auto; text-align:center;" align="center" st-image="banner-image">
+                                    <!--<div style="margin:0px auto; text-align:center;" class="imgpop"> -->
+                                       <a target="_blank" href="http://www.facialaestheticsinc.com/coolsculpting-denver.html#cooladvantage">
+                                       		<img border="0" src="https://media.secondstreetapp.com/210944?width=1200" alt="" style="max-width:100%; width:600px; height:auto; display:block; outline:none; text-decoration:none;" width="600" class="banner"></a>
+                                    <!-- </div> -->
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <!-- end of image -->
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of MAIN BANNER -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+<!-- start of Full text -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="full-text">
+
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+
+
+                             <tr>
+                                 <td>
+                                    <table width="560" align="center" cellpadding="0" cellspacing="0" border="0" class="devicewidthinner">
+                                       <tbody>
+                                          <!-- Title -->
+
+                                          <tr>
+                                             <td>
+                                             </td>
+                                          </tr>
+
+                                          <!-- End of Title -->
+                                          <!-- spacing -->
+                                          <tr>
+                                             <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                          </tr>
+                                          <!-- End of spacing -->
+                                          <!-- content -->
+                                          <!-- Start of text -->
+
+                                          <tr>
+                                          	<td>
+                                          		<table width="100%" style="width:100%;">
+                                                	<tr>
+                                                       <td style="width:100%; font-family: Helvetica, arial, sans-serif; font-size: 16px; color: #889098; text-align:left; line-height: 28px;"><mark style="color: inherit; background-color: inherit; font-family: Georgia;"><mark style="color: inherit; background-color: inherit; font-size: 11px;"><mark style="color: inherit; background-color: inherit; font-size: 14px;"><mark style="color: inherit; background-color: inherit; font-family: monospace;"><mark style="color: inherit; background-color: inherit; font-family: Helvetica;"><mark style="color: inherit; background-color: inherit; font-family: Arial;"><mark style="background-color: inherit; color: rgb(7, 55, 99);"></mark></mark></mark></mark></mark></mark></mark><div style="text-align: justify;"><div>For many people, healthy eating and exercise alone aren't always enough to get rid of stubborn fat bulges. Fortunately there are a variety of treatments out there that could help you to slim down and achieve your desired results. Facial Aesthetics proudly offers patients CoolSculpting, a clinically proven, FDA-approved, non-surgical contouring treatment.</div><div><br />
+</div><div>CoolSculpting is a revolutionary procedure that uses cryolipolysis, a unique technology that uses controlled cooling to freeze stubborn fat cells, which are then naturally eliminated from your body over the course of 2 to 3 months. The cooling of adipose tissue to induce lipolysis allows the fat cells to break down without causing damage to other tissues.</div><div><br />
+</div><div>Facial Aesthetics is proud to offer two dedicated CoolSculpting University trained specialists to ensure you are thoroughly assessed, properly treated and that you receive the best results.</div><div><br />
+</div></div></td>
+                                                     </tr>
+                                                 </table>
+                                             </td>
+                                          </tr>
+
+                                          <!-- End of text -->
+
+                                          <!-- Start of button -->
+
+                                           <!-- Spacing -->
+
+                                            <tr>
+                                               <td width="100%" height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly; text-align:center;">&nbsp;</td>
+                                            </tr>
+                                            <!-- /Spacing -->
+
+                                           <tr>
+                                                <td width="100%" align="center" style="margin:0px auto; text-align:center;">
+
+                                                        <table height="40" bgcolor="#0079c2" align="center" valign="middle" border="0" cellpadding="0" cellspacing="0" style="max-width:450px; border-radius:3px;color:#ffffff" st-button="learnmore">
+                                                               <tbody>
+                                                                    <tr>
+                                                                         <td height="9" align="center" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                                                    </tr>
+
+
+                                                                    <tr>
+                                                                    	<td style="width:100%;" align="center">
+                                                                        	<table style="text-align:center;color:#ffffff" align="center">
+                                                                               <tr>
+                                                                                  <td class="button-container" style="text-align:center; margin-left: auto; margin-right:auto;color:#ffffff" align="center">
+
+                                                                        	          <table align="center" class="button-main" style="text-align:center;">
+                                                                                          <tr>
+                                                                         		               <td height="22" align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; padding:0px 12px 0px 12px; text-indent: 0; font-weight:bold; text-align:center; color:#ffffff; -webkit-text-size-adjust:none; " st-title="fulltext-btn">
+
+                                                                         <a style="text-decoration:none; color:#ffffff; margin:0px auto; line-height:22px; text-align:center; text-indent: 0; font-weight:bold;" href="http://www.facialaestheticsinc.com/coolsculpting-denver.html#cooladvantage">LEARN MORE</a>
+
+                                                                         	                   </td>
+                                                                                          </tr>
+                                                                                     </table>
+
+
+                                                                                </td>
+                                                                               </tr>
+                                                                         </table>
+                                                                         </td>
+                                                                    </tr>
+
+                                                                      <tr>
+                                                                         <td height="9" align="center" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                                                      </tr>
+                                                                </tbody>
+                                                          </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- End of button -->
+
+            <!--  <tr><td>
+            <table class="button-wrap" border="0" cellspacing="0" cellpadding="0" style="width:340px;">
+              <tr>
+                <td class="button-container" style="padding:0 0 20px 15px;">
+                	<table class="button-main" style="min-width:200px; max-width:275px;" border="0" cellspacing="0" cellpadding="0">
+                    	<tr>
+                      		<td style="background-color:#0079c2; font-family:'Arial Black', Gadget, sans-serif; font-size:24px; color:#ffffff; padding:10px 20px; text-align:center; vertical-align:middle; border-radius:5px; -webkit-box-shadow: 4px 4px 2px 0px rgba(176,176,176,1); -moz-box-shadow: 4px 4px 2px 0px rgba(176,176,176,1); box-shadow: 4px 4px 2px 0px rgba(176,176,176,1);"><a style="color:#ffffff; text-decoration:none;" href="http://www.facialaestheticsinc.com/coolsculpting-denver.html#cooladvantage">LEARN MORE</a></td>
+                   		 </tr>
+                    </table>
+                  </td>
+              </tr>
+          </table>
+          </td>
+          </tr> -->
+
+
+
+                                          <!-- End of content -->
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                          </tr>
+                                          <!-- Spacing -->
+
+                                    </table>
+                                 </td>
+                              </tr>
+
+                        </table>
+                     </td>
+                  </tr>
+
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of Full Text -->
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+
+
+<!-- start of Full text -->
+
+<!-- Start of footer -->
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="footer">
+   <tbody>
+      <tr>
+         <td>
+
+            <table width="600" bgcolor="#f7f7f7" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#f7f7f7" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                           <tbody>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td>
+                                    <!-- Social icons -->
+
+                                        <!-- Start Social Icons -->
+      <table class="social-icons" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="100" style="background-color:#f7f7f7; text-align:center;">
+           <a href="https://www.facebook.com/facialaesthetics#"><img style="margin:0 6px 0 0;" src="https://media.secondstreetapp.com/77318?width=300&height=120" width="40" height="40" border="0" alt="Facebook Icon" /></a>
+                     <a href="https://twitter.com/FacialAesthetic"><img style="margin:0 6px 0 0;" src="https://media.secondstreetapp.com/77266?width=300&height=120" width="40" height="40" border="0" alt="Twitter Icon" /></a>
+                     <a href="https://www.instagram.com/facialaesthetics/"><img style="margin:0 6px 0 0;" src="https://media.secondstreetapp.com/77274?width=300&height=120" width="40" height="40" border="0" alt="instagram Icon" /></a>
+                     <a href="https://www.pinterest.com/gpsandfa/"><img style="margin:0 6px 0 0;" src="https://media.secondstreetapp.com/77269?width=300&height=120" width="40" height="40" border="0" alt="Pinterest Icon" /></a>
+
+          </td>
+        </tr>
+      </table>
+      <!-- End Social Icons -->
+
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of footer -->
+
+<!-- Start of Postfooter -->
+<table style="text-align:center;" width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" align="center" border="0" id="backgroundTable" st-sortable="postfooter" >
+   <tbody>
+      <tr>
+         <td style="text-align:center;" width="600">
+            <table style="text-align:center;" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <!-- Spacing -->
+                  <tr>
+                     <td style="max-width:600px;" height="20"></td>
+                  </tr>
+                  <!-- Spacing -->
+                   <tr>
+                   	 <td align="center" style="text-align:center; height:auto;" width="100%" >
+                                    <!-- Start Footer Image -->
+
+                                      <table style="text-align:center; margin-left: auto; margin-right: auto; width:300px;" width="300" height="auto" class="footer-img" border="0" align="center" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                          <td style="background-color:#ffffff; padding:10px; text-align:center; margin-left: auto; margin-right: auto; height:140px; width:240px;">
+                                          <a style="text-align:center; max-width:300px; height:auto;" href="http://www.alice1059.com">
+
+                                          <img height="auto" style="display:block; outline:none; text-align:center; margin-left: auto; margin-right: auto;" src="https://media.secondstreetapp.com/110505?width=300" width="inherit" border="0" class="footerImage" alt="My Email Offers - Alice 105.9 FM" /></a></td>
+                                        </tr>
+                                      </table>
+
+                                    <!-- End Footer Image -->
+
+                    </td>
+                  </tr>
+
+
+                               <!-- Spacing -->
+                              <tr>
+                                 <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <!-- Spacing -->
+
+
+
+                                                      <!-- Start disclaimer text -->
+
+                                                        <tr>
+                                                      		<td style="text-align:center; border-top:1px dotted #a7a9ac; width:100%;">
+
+
+                                                                  <table style="max-width:560px;" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                      <td class="disclaimer-copy" style="text-align:left; font-family: Helvetica, Arial, sans-serif; font-size:10px; line-height:16px; color:#a7a9ac;; padding:20px 5px;"><strong>About My Email Offers</strong><br>
+
+My Email Offers is an informational, commercial or marketing e-mail from Alice 105.9 that features content, promotions and information from the station and premium advertisers.  Some e-mails often extend exclusive offers to listeners that are not available to the public any other way. Entercom Denver does not endorse, represent or warrant the quality of any products, information or other materials displayed in this email.
+<strong><br>
+<br>
+Text Campaigns &amp; Contests
+</strong><br>
+Message &amp; data rates may apply.  Frequency of automated marketing messages to your number is recurring &amp; varies.  Text
+<strong><span style="color: rgb(255, 0, 0);" data-redactor-tag="span">STOP</span></strong><span style="color: rgb(255, 0, 0);"></span> to cancel.  <span style="color:#1C1C1C;font-weight:bold">
+<a href="http://www.entercom.com/terms-and-conditions" target="_blank">Terms &amp; conditions</a>. </span><strong><br>
+<br>
+How to Change Your Subscription
+</strong><br>
+KALC-FM – Alice 105.9 does not send unsolicited e-mail. You received this message because you signed up by joining our listener clubs or entering a contest with the understanding that your e-mail address would be put on this list. You may unsubscribe from this newsletter at any time. <span style="color:#1C1C1C;font-weight:bold">{{System.OptOutText}}</span>
+<br>
+<br>
+<strong>How to Advertise</strong><br>
+For more information on how to advertise with us, simply contact us at 303-967-2700.
+<br>
+<br>
+Copyright 2016 Entercom Denver</td>
+                                                                    </tr>
+                                                                  </table>
+
+                                                             </td>
+                                                      </tr>
+                                                       <!-- End disclaimer text -->
+
+                  <tr>
+                  		<td width="100%">
+                     		    <table style="margin:0px auto; text-align:center;" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                          <td style="text-align:center;">
+
+                                                <table border="0" cellspacing="0" cellpadding="0" align="center" style="max-width:500px;margin:0px auto; text-align:center;">
+                                                <!-- <tr>
+                                                        <td class="opt-out" style="text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:9px; color:#a7a9ab; padding:10px 0 10px 10px; text-decoration:none;">{{System.OptOutText}}</td></tr>
+                                                        <tr> -->
+                                                	<tr>
+
+                                                       <td style="text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:9px; color:#a7a9ab; padding:10px;"><strong>Alice 105.9 FM</strong>  | <span id="blurb_body"><strong>4700 South Syracuse Street, Suite 1050, Denver, CO 80237</strong></span></td>
+                                                    </tr>
+                                                </table>
+                                        </td>
+                                    </tr>
+                                  </table>
+                       </td>
+                  </tr>
+                  <!-- Spacing -->
+
+                  <tr>
+                     <td width="100%" height="20"></td>
+                  </tr>
+                  <!-- Spacing -->
+
+            </table>
+
+ <!-- Fix for gmail app -->
+      <table class="mobi-hide" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="background-color:#dddddd; line-height:1px;" height="1px; min-width: 600px;"><img src="https://media.secondstreetapp.com/77691?width=1" height="1" width="600" style="max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;"/></td>
+        </tr>
+      </table>
+      <!-- End Fix for gmail app -->
+
+         </td>
+      </tr>
+
+   </tbody>
+</table>
+<!-- End of postfooter -->
+   </body>
+   </html>">
+              <table id="shipmentStatusTable" class="table table-bordered table-condensed" data-page-length="50" data-fixed-header="true">
+                <thead>
+                  <tr>
+                    <th>Customer</th>
+                    <th>SCAC</th>
+                    <th>Carrier Move</th>
+                    <th>Stops</th>
+                    <th>Type</th>
+                    <th>Full Pallets</th>
+                    <th>Picks</th>
+                    <th>Cases</th>
+                    <th>CPP</th>
+                    <th>Appt Time</th>
+                    <th>Status</th>
+                    <th>Dest Loc</th>
+                    <th>Door/ Yard</th>
+                    <th>Ord Qty</th>
+                    <th>% Staged</th>
+                    <th>% Loaded</th>
+                    <th>Aval for Load</th>
+                    <th>Begin Load</th>
+                    <th>Trailer</th>
+                    <th>Alloc</th>
+                    <th>BSDD</th>
+                    <th>TLC Customer</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr >
+                    <td>TOTALS</td>
+                    <td></td>
+                    <td>36</td>
+                    <td></td>
+                    <td></td>
+                    <td>59</td>
+                    <td>71</td>
+                    <td>1658</td>
+                    <td>23.4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>10194</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td><a href="#">CUSTOMER83497</a></td>
+                    <td>LNNP</td>
+                    <td>8745245</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>3:10:52</td>
+                    <td><a href="#">SHRT</a></td>
+                    <td></td>
+                    <td></td>
+                    <td>33</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER12864</a></td>
+                    <td>CRFS</td>
+                    <td>8745662</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>56</td>
+                    <td>14</td>
+                    <td>5:23:28</td>
+                    <td><a href="#">SHRT</a></td>
+                    <td>STG147</td>
+                    <td></td>
+                    <td>56</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER75997</a></td>
+                    <td>PRIJ</td>
+                    <td>8746540</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>48</td>
+                    <td>24</td>
+                    <td>11:5:17</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG348</td>
+                    <td></td>
+                    <td>388</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER76738</a></td>
+                    <td>KLMI</td>
+                    <td>8746542</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>64</td>
+                    <td>21.3</td>
+                    <td>5:34:37</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG340</td>
+                    <td>D340</td>
+                    <td>694</td>
+                    <td>100%</td>
+                    <td>15%</td>
+                    <td>05/09 00:00</td>
+                    <td>05/10 00:00</td>
+                    <td>124196</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER76123</a></td>
+                    <td>PRIJ</td>
+                    <td>8746546</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6:6:40</td>
+                    <td><a href="#">SHRT</a></td>
+                    <td>STG346</td>
+                    <td></td>
+                    <td>430</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER01106</a></td>
+                    <td>ENGD</td>
+                    <td>8746800</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2:23:42</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG153</td>
+                    <td>D153</td>
+                    <td>72</td>
+                    <td>100%</td>
+                    <td>0%</td>
+                    <td>05/11 00:00</td>
+                    <td></td>
+                    <td>21102</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83148</a></td>
+                    <td>CLXD</td>
+                    <td>8747673</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">POOL</a></td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>7:55:19</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG353</td>
+                    <td></td>
+                    <td>8</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER00648</a></td>
+                    <td>CLXD</td>
+                    <td>8747991</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>212</td>
+                    <td>30.3</td>
+                    <td>8:7:52</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG151</td>
+                    <td></td>
+                    <td>252</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER76996</a></td>
+                    <td>LNNP</td>
+                    <td>8748025</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5:7:13</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG350</td>
+                    <td>D350</td>
+                    <td>320</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td>05/11 00:00</td>
+                    <td>5370</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER76996</a></td>
+                    <td>WTTY</td>
+                    <td>8748027</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>10:28:55</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG145</td>
+                    <td></td>
+                    <td>88</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83162</a></td>
+                    <td>LNNP</td>
+                    <td>8748041</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>54</td>
+                    <td>9</td>
+                    <td>3:56:35</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG353</td>
+                    <td>D353</td>
+                    <td>54</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td>2575 WASHED</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER75930</a></td>
+                    <td>CRFS</td>
+                    <td>8748060</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>82</td>
+                    <td>20.5</td>
+                    <td>0:12:42</td>
+                    <td><a href="#">SHRT</a></td>
+                    <td>STG143</td>
+                    <td></td>
+                    <td>122</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER16483</a></td>
+                    <td>LNNP</td>
+                    <td>8748134</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">POOL</a></td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>97</td>
+                    <td>12.1</td>
+                    <td>11:12:14</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG355</td>
+                    <td></td>
+                    <td>137</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83792</a></td>
+                    <td>CPU</td>
+                    <td>8748244</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>48</td>
+                    <td>24</td>
+                    <td>8:16:49</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG143</td>
+                    <td></td>
+                    <td>208</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER04435</a></td>
+                    <td>SRFI</td>
+                    <td>8748344</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>128</td>
+                    <td>32</td>
+                    <td>8:59:56</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG354</td>
+                    <td></td>
+                    <td>128</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER75370</a></td>
+                    <td>ENGC</td>
+                    <td>8748349</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>55</td>
+                    <td>11</td>
+                    <td>3:35:15</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG372</td>
+                    <td>D372</td>
+                    <td>55</td>
+                    <td>40%</td>
+                    <td>0%</td>
+                    <td>05/10 00:00</td>
+                    <td></td>
+                    <td>20809</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER75542</a></td>
+                    <td>CLXD</td>
+                    <td>8748355</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5:23:19</td>
+                    <td><a href="#">SHRT</a></td>
+                    <td>STG350</td>
+                    <td></td>
+                    <td>160</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER77176</a></td>
+                    <td>BTAK</td>
+                    <td>8748406</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">POOL</a></td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>56</td>
+                    <td>56</td>
+                    <td>2:23:41</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG352</td>
+                    <td></td>
+                    <td>216</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER74790</a></td>
+                    <td>LNNP</td>
+                    <td>8748416</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">POOL</a></td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>5:11:21</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG153</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER76617</a></td>
+                    <td>SHAF</td>
+                    <td>8748555</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>32</td>
+                    <td>32</td>
+                    <td>10:30:55</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG313</td>
+                    <td></td>
+                    <td>442</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83142</a></td>
+                    <td>LNNP</td>
+                    <td>8748567</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>27</td>
+                    <td>27</td>
+                    <td>3:8:5</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG109</td>
+                    <td></td>
+                    <td>27</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER77102</a></td>
+                    <td>KLMI</td>
+                    <td>8748580</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>32</td>
+                    <td>32</td>
+                    <td>0:56:29</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG335</td>
+                    <td>D335</td>
+                    <td>482</td>
+                    <td>55%</td>
+                    <td>35%</td>
+                    <td>05/09 00:00</td>
+                    <td></td>
+                    <td>87837</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83142</a></td>
+                    <td>ENGD</td>
+                    <td>8748805</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>9:55:18</td>
+                    <td><a href="#">RLSD</a></td>
+                    <td>STG331</td>
+                    <td></td>
+                    <td>2320</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83142</a></td>
+                    <td>ENGD</td>
+                    <td>8748807</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>5:10:58</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG325</td>
+                    <td>D325</td>
+                    <td>44</td>
+                    <td>54%</td>
+                    <td>7%</td>
+                    <td>05/11 00:00</td>
+                    <td></td>
+                    <td>21658</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83142</a></td>
+                    <td>WTTY</td>
+                    <td>8749211</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5:4:49</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG357</td>
+                    <td></td>
+                    <td>1440</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER75020</a></td>
+                    <td>LNNP</td>
+                    <td>8749213</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>7:53:13</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG339</td>
+                    <td></td>
+                    <td>7</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER75120</a></td>
+                    <td>LNNP</td>
+                    <td>8749221</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>97</td>
+                    <td>24.3</td>
+                    <td>7:14:56</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG145</td>
+                    <td></td>
+                    <td>97</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83904</a></td>
+                    <td>ENGC</td>
+                    <td>8749223</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>82</td>
+                    <td>20.5</td>
+                    <td>5:9:16</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG340</td>
+                    <td></td>
+                    <td>162</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER74730</a></td>
+                    <td>LNNP</td>
+                    <td>8749225</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>180</td>
+                    <td>90</td>
+                    <td>4:44:57</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG345</td>
+                    <td></td>
+                    <td>460</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER16486</a></td>
+                    <td>PRIJ</td>
+                    <td>8749231</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>123</td>
+                    <td>61.5</td>
+                    <td>9:43:0</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG129</td>
+                    <td></td>
+                    <td>123</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER82937</a></td>
+                    <td>NALC</td>
+                    <td>8749430</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>60</td>
+                    <td>60</td>
+                    <td>3:34:59</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG343</td>
+                    <td></td>
+                    <td>60</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER01199</a></td>
+                    <td>CLXD</td>
+                    <td>8749446</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">POOL</a></td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>181</td>
+                    <td>22.6</td>
+                    <td>5:42:59</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG359</td>
+                    <td></td>
+                    <td>221</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER83796</a></td>
+                    <td>MTEN</td>
+                    <td>8749992</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>30</td>
+                    <td>30</td>
+                    <td>8:34:17</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG348</td>
+                    <td></td>
+                    <td>270</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER75888</a></td>
+                    <td>MTEN</td>
+                    <td>8750531</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>43</td>
+                    <td>8.6</td>
+                    <td>4:3:37</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG151</td>
+                    <td>D151</td>
+                    <td>79</td>
+                    <td>73%</td>
+                    <td>37%</td>
+                    <td>05/11 00:00</td>
+                    <td></td>
+                    <td>20960</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER74674</a></td>
+                    <td>CPU</td>
+                    <td>8751439</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">WHSE</a></td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>9:34:57</td>
+                    <td><a href="#">SHIP</a></td>
+                    <td>STG345</td>
+                    <td></td>
+                    <td>75</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">CUSTOMER74405</a></td>
+                    <td>MTEN</td>
+                    <td>8751449</td>
+                    <td>Test Stop</td>
+                    <td><a href="#">TNFR</a></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>228</td>
+                    <td>228</td>
+                    <td>2:0:15</td>
+                    <td><a href="#">PEND</a></td>
+                    <td>STG337</td>
+                    <td>D337</td>
+                    <td>460</td>
+                    <td>95%</td>
+                    <td>1%</td>
+                    <td>05/11 00:00</td>
+                    <td></td>
+                    <td>21619</td>
+                    <td>T</td>
+                    <td><a href="#">View</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h3>Customer Name Here</h3>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Include jQuery (required) and the JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../dist/toolbox.js"></script>
+  <script>
+  $(document).ready( function () {
+    $.extend( $.fn.dataTable.defaults, {
+        searching: false
+    } );
+    $('#shipmentStatusTable').DataTable();
+  } );
+  </script>
+
+
+</body>
+
+</html>

@@ -11,6 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
     <link href="../dist/toolbox.css" rel="stylesheet">
+    <link href="../dist/datatables.css" rel="stylesheet">
 
 </head>
 
@@ -485,7 +486,7 @@
       </div>
       <div class="table-full">
         <div class="table-responsive">
-          <table class="table table-bordered table-condensed" data-sort="table">
+          <table class="table table-bordered table-condensed table-datatable">
           	<thead>
           		<tr>
           			<th>Customer</th>
@@ -1416,6 +1417,12 @@
   <!-- Include jQuery (required) and the JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="../dist/toolbox.js"></script>
+  <script>
+  $(document).ready( function () {
+    $('.table-datatable').DataTable();
+  } );
+  </script>
+
 
 </body>
 
