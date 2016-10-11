@@ -1,14 +1,14 @@
-/*
- * This combined file was created by the DataTables downloader builder:
- *   https://datatables.net/download
- *
- * To rebuild or modify this file with the latest versions of the included
- * software please visit:
- *   https://datatables.net/download/#bs/dt-1.10.12/b-1.2.2/b-colvis-1.2.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2
- *
- * Included libraries:
- *   DataTables 1.10.12, Buttons 1.2.2, Column visibility 1.2.2, FixedColumns 3.2.2, FixedHeader 3.1.2, Responsive 2.1.0, Scroller 1.4.2
- */
+
+
+
+
+
+
+
+
+
+
+
 
 table.dataTable {
   clear: both;
@@ -105,7 +105,7 @@ table.dataTable thead .sorting_desc_disabled:after {
   bottom: 8px;
   right: 8px;
   display: block;
-  font-family: 'Glyphicons Halflings';
+  font-family: 'toolkit-entypo';
   opacity: 0.5;
 }
 table.dataTable thead .sorting:after {
@@ -123,7 +123,7 @@ table.dataTable thead .sorting_desc:after {
 }
 table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:after {
-  color: #eee;
+  color: @gray-lighter;
 }
 
 div.dataTables_scrollHead table.dataTable {
@@ -150,7 +150,7 @@ div.dataTables_scrollFoot table {
   border-top: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: @screen-xs-max) {
   div.dataTables_wrapper div.dataTables_length,
   div.dataTables_wrapper div.dataTables_filter,
   div.dataTables_wrapper div.dataTables_info,
@@ -196,6 +196,8 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
   padding-right: 0;
 }
 
+//NEW
+
 
 div.dt-button-info {
   position: fixed;
@@ -205,7 +207,7 @@ div.dt-button-info {
   margin-top: -100px;
   margin-left: -200px;
   background-color: white;
-  border: 2px solid #111;
+  border: 2px solid @gray-darker;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   text-align: center;
@@ -215,7 +217,7 @@ div.dt-button-info h2 {
   padding: 0.5em;
   margin: 0;
   font-weight: normal;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid @table-border-color;
   background-color: #f3f3f3;
 }
 div.dt-button-info > div {
@@ -288,7 +290,7 @@ div.dt-button-background {
   z-index: 2001;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: @screen-xs-max) {
   div.dt-buttons {
     float: none;
     width: 100%;
@@ -402,12 +404,12 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
   font-family: 'Courier New', Courier, monospace;
   line-height: 14px;
   content: '+';
-  background-color: #337ab7;
+  background-color: @brand-info;
 }
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
   content: '-';
-  background-color: #d33333;
+  background-color: @brand-danger;
 }
 table.dataTable.dtr-inline.collapsed > tbody > tr.child td:before {
   display: none;
@@ -450,12 +452,12 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
   font-family: 'Courier New', Courier, monospace;
   line-height: 14px;
   content: '+';
-  background-color: #337ab7;
+  background-color: @brand-info;
 }
 table.dataTable.dtr-column > tbody > tr.parent td.control:before,
 table.dataTable.dtr-column > tbody > tr.parent th.control:before {
   content: '-';
-  background-color: #d33333;
+  background-color: @brand-danger;
 }
 table.dataTable > tbody > tr.child {
   padding: 0.5em 1em;
@@ -470,7 +472,7 @@ table.dataTable > tbody > tr.child ul {
   padding: 0;
 }
 table.dataTable > tbody > tr.child ul li {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid @table-border-color;
   padding: 0.5em 0;
 }
 table.dataTable > tbody > tr.child ul li:first-child {
@@ -507,7 +509,7 @@ div.dtr-modal div.dtr-modal-display {
   margin: auto;
   z-index: 102;
   overflow: auto;
-  background-color: #f5f5f7;
+  background-color: @gray-lighter;
   border: 1px solid black;
   border-radius: 0.5em;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
@@ -522,15 +524,15 @@ div.dtr-modal div.dtr-modal-close {
   right: 6px;
   width: 22px;
   height: 22px;
-  border: 1px solid #eaeaea;
-  background-color: #f9f9f9;
+  border: 1px solid @gray-light;
+  background-color: @gray-lighter;
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
   z-index: 12;
 }
 div.dtr-modal div.dtr-modal-close:hover {
-  background-color: #eaeaea;
+  background-color: @gray-lighter;
 }
 div.dtr-modal div.dtr-modal-background {
   position: fixed;
@@ -542,7 +544,7 @@ div.dtr-modal div.dtr-modal-background {
   background: rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: @screen-xs-max) {
   div.dtr-modal div.dtr-modal-display {
     width: 95%;
   }
