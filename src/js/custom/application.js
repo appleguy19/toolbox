@@ -6,7 +6,6 @@ var App = {
     App._tableSorters()
     App._tooltips()
     App._quickLinksSearch()
-    App._calendar()
     App._dataTables()
 
     $(window).on('resize', App._tooltips)
@@ -40,21 +39,6 @@ var App = {
     $('#quick-links-search').quickSearch($('#quick-links-content'));
   },
 
-  _calendar: function() {
-    $('#calendar').fullCalendar({
-      header : {  left:   '',
-                  center: '',
-                  right:  ''
-               },
-     });
-     if ($(window).width() > 768) {
-       $('#calendar').fullCalendar('option', 'aspectRatio', 1.7)
-
-     } else{
-       $('#calendar').fullCalendar('option', 'aspectRatio', .9)
-     }
-   },
-
    _dataTables: function() {
      $.extend( $.fn.dataTable.defaults, {
          searching: false,
@@ -65,6 +49,8 @@ var App = {
      var dtTables = $('.table-datatable').DataTable( {
          responsive: {
              details: {
+               type: 'column',
+               target: 'tr',
                renderer: function ( api, rowIdx, columns ) {
                    var data = $.map( columns, function ( col, i ) {
                        return col.hidden ?
@@ -78,7 +64,13 @@ var App = {
                    return data ?
                        $('<div/>').append( data ) :
                        false;
-               }
+               },
+               display: $.fn.dataTable.Responsive.display.modal( {
+                header: function ( row ) {
+                    var data = row.data();
+                    return 'Details for '+data.clientName;
+                }
+               } )
              }
          }
      } );

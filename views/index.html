@@ -486,14 +486,6 @@
                     <h6 class="dashhead-subtitle">Homepage</h6>
                     <h3 class="dashhead-title">August 2016</h3>
                 </div>
-
-                <div class="dashhead-toolbar">
-                    <div class="btn-group dashhead-toolbar-item btn-group-thirds">
-                        <button type="button" class="btn btn-primary-outline">Day</button>
-                        <button type="button" class="btn btn-primary-outline">Week</button>
-                        <button type="button" class="btn btn-primary-outline active">Month</button>
-                    </div>
-                </div>
             </div>
             <div id="calendar">
             </div>
@@ -510,6 +502,36 @@
   <!-- Include jQuery (required) and the JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="../dist/toolbox.js"></script>
+  <script>
+    $(document).ready(function() {
+      var options = {
+        header : {  left:   ''
+                    ,center: ''
+                    ,right:  'agendaDay,agendaWeek,month'
+               },
+        eventColor: '#E12027',
+        buttonText: {
+          today:    'Today',
+          month:    'Month',
+          week:     'Week',
+          day:      'Day'
+        }
+        //theme: true
+      };
+      $('#calendar').fullCalendar(options);
+      if ($(window).width() > 768) {
+       $('#calendar').fullCalendar('option', 'aspectRatio', 1.7)
+
+      } else{
+       $('#calendar').fullCalendar('option', 'aspectRatio', .9)
+      }
+
+      //$('.fc-toolbar').find('.fc-button-group').addClass('btn-group');
+      //$('.fc-toolbar').find('button[class*="fc-button"]').addClass('btn btn-primary-outline');
+
+
+    });
+  </script>
 
 </body>
 
