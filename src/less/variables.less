@@ -33,8 +33,10 @@
 
 
 @brand-success:          #1BC98E;
-@brand-info:             #2C3E50; //was #9F86FF
+@brand-info:             #2C3E50;
+@brand-info-alt:         #3498DB; //Was #9F86FF
 @brand-warning:          #E4D836;
+@brand-caution:          #E67E22;
 @brand-danger:           #E64759;
 
 // Overrides Bootstrap defaults.
@@ -54,6 +56,18 @@
 @state-info-text:                @brand-info;
 @state-warning-text:             @brand-warning;
 @state-danger-text:              @brand-danger;
+
+// New states
+//
+// Custom states for our custom colors
+@state-info-alt-text:                @brand-info-alt;
+@state-info-alt-bg:                  #d9edf7;
+@state-info-alt-border:              darken(spin(@state-info-alt-bg, -10), 7%);
+
+@state-caution-text:                @brand-caution;
+@state-caution-bg:                  #d9edf7;
+@state-caution-border:              darken(spin(@state-caution-bg, -10), 7%);
+
 
 // Spacing
 //
@@ -130,6 +144,11 @@
 
 @badge-color:                 #fff;
 
+// Progress Bars
+//
+// Add to Bootstrap defaults.
+@progress-bar-info-alt-bg:       @brand-info-alt;
+@progress-bar-caution-bg:        @brand-caution;
 
 // Alerts
 //
@@ -143,9 +162,17 @@
 @alert-info-text:             lighten(@brand-info, 50%);
 @alert-info-border:           @alert-info-bg;
 
+@alert-info-alt-bg:           @brand-info-alt;
+@alert-info-alt-text:         lighten(@brand-info-alt, 50%);
+@alert-info-alt-border:       @alert-info-alt-bg;
+
 @alert-warning-bg:            @brand-warning;
 @alert-warning-text:          lighten(@brand-warning, 50%);
 @alert-warning-border:        @alert-warning-bg;
+
+@alert-caution-bg:            @brand-caution;
+@alert-caution-text:          lighten(@brand-caution, 45%);
+@alert-caution-border:        @alert-caution-bg;
 
 @alert-danger-bg:             @brand-danger;
 @alert-danger-text:           lighten(@brand-danger, 45%);
@@ -164,9 +191,17 @@
 @panel-info-border:           @state-info-text;
 @panel-info-heading-bg:       @state-info-text;
 
+@panel-info-alt-text:         #fff;
+@panel-info-alt-border:       @state-info-alt-text;
+@panel-info-alt-heading-bg:   @state-info-alt-text;
+
 @panel-warning-text:          #fff;
 @panel-warning-border:        @state-warning-text;
 @panel-warning-heading-bg:    @state-warning-text;
+
+@panel-caution-text:          #fff;
+@panel-caution-border:        @state-caution-text;
+@panel-caution-heading-bg:    @state-caution-text;
 
 @panel-danger-text:           #fff;
 @panel-danger-border:         @state-danger-text;

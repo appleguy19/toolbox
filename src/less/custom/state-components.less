@@ -1,0 +1,55 @@
+// Contextual Alert Variations
+//
+// Works just like Bootstrap alert states
+// see ../bootstrap/alerts.less lines 55 - 73
+.alert-info-alt {
+  .alert-variant(@alert-info-alt-bg; @alert-info-alt-border; @alert-info-alt-text);
+}
+.alert-caution {
+  .alert-variant(@alert-caution-bg; @alert-caution-border; @alert-caution-text);
+}
+
+// Contextual Panel Variations
+//
+// Works just like Bootstrap panel states
+// see ../bootstrap/panels.less lines 253 - 271
+.panel-info-alt {
+  .panel-variant(@panel-info-alt-border; @panel-info-alt-text; @panel-info-alt-heading-bg; @panel-info-alt-border);
+}
+.panel-caution {
+  .panel-variant(@panel-caution-border; @panel-caution-text; @panel-caution-heading-bg; @panel-caution-border);
+}
+.panel-outline {
+  background: @body-bg;
+  .panel-variant(@table-border-color; @text-color; @body-bg; @table-border-color);
+}
+
+// Table backgrounds
+//
+// Works just like Bootstrap table states
+// see ../bootstrap/tables.less lines 152 - 162
+.table-row-variant(info-alt; @state-info-alt-bg);
+.table-row-variant(caution; @state-caution-bg);
+
+// Progress bars
+//
+// Works just like Bootstrap progress bars
+// see ../bootstrap/progress-bars.less lines 70 - 88
+.progress-bar-info-alt {
+  .progress-bar-variant(@progress-bar-info-alt-bg);
+}
+.progress-bar-caution {
+  .progress-bar-variant(@progress-bar-caution-bg);
+}
+
+
+// Text Variants
+//
+// Works just like Bootstrap text variations
+// see ../boostrap/type.less lines 101 - 119
+.text-info-alt {
+  .text-emphasis-variant(@brand-info-alt);
+}
+.text-caution {
+  .text-emphasis-variant(@brand-caution);
+}

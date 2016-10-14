@@ -480,14 +480,14 @@
     <div class="container-fluid container-fluid-spacious">
       <div class="dashhead">
           <div class="dashhead-titles">
-              <h6 class="dashhead-subtitle">Report ran on Monday, August 22nd at 10am</h6>
+              <h6 class="dashhead-subtitle">Report ran on Tuesday, October 11th at 9:54pm</h6>
               <h3 class="dashhead-title">Shipment Status</h3>
           </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <h2>This is where data for the whole day will be displayed.</h2>
-          <table>
+          <h2>Tuesday, October 11th</h2>
+          <!-- <table>
             <tr >
               <td>TOTALS</td>
               <td></td>
@@ -512,27 +512,63 @@
               <td></td>
               <td></td>
             </tr>
-          </table>
+          </table> -->
         </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="statcard statcard-danger p-a-md m-b">
+            <h2 class="statcard-number">4</h2>
+            <span class="statcard-desc">short</span>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="statcard statcard-caution p-a-md m-b">
+            <h2 class="statcard-number">3</h2>
+              <span class="statcard-desc">stuck</span>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="statcard statcard-info-alt p-a-md m-b">
+            <h2 class="statcard-number">3</h2>
+            <span class="statcard-desc">Staged</span>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="statcard statcard-success p-a-md m-b">
+            <h2 class="statcard-number">0</h2>
+            <span class="statcard-desc">loading</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
       </div>
       <div class="row">
         <div id="carrier-move-table" class="col-md-8">
           <div class="table-fullx">
             <div class="table-responsive">
-              <table id="shipmentStatusTable" class="table table-bordered table-condensed table-hover no-wrap table-datatable" data-page-length="50" data-fixed-header="true">
+              <table id="shipmentStatusTable" class="table table-bordered table-hover no-wrap table-datatable" data-page-length="50" data-fixed-header="true">
                 <thead>
                   <tr>
                     <th>Carrier Move</th>
                     <th>Customer</th>
                     <th>SCAC</th>
                     <th>Stops</th>
-                    <th>Type</th>
+                    <th>Appt Time</th>
+                    <th>Status</th>
+                    <th>Allocated?</th>
+
+                  </tr>
+
+
+                    <!-- <th>Type</th>
                     <th>Full Pallets</th>
                     <th>Picks</th>
                     <th>Cases</th>
                     <th>CPP</th>
-                    <th>Appt Time</th>
-                    <th>Status</th>
+
+
                     <th>Dest Loc</th>
                     <th>Door/ Yard</th>
                     <th>Ord Qty</th>
@@ -541,763 +577,387 @@
                     <th>Aval for Load</th>
                     <th>Begin Load</th>
                     <th>Trailer</th>
-                    <th>Alloc</th>
-                    <th>BSDD</th>
-                    <th>TLC Customer</th>
-                  </tr>
+                    <th>BSDD</th> -->
+
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>8745245</td>
-                    <td><a href="#">CUSTOMER83497</a></td>
-                    <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>3:10:52</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td></td>
-                    <td></td>
-                    <td>33</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8745662</td>
-                    <td><a href="#">CUSTOMER12864</a></td>
-                    <td>CRFS</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>0</td>
-                    <td>4</td>
-                    <td>56</td>
-                    <td>14</td>
-                    <td>5:23:28</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td>STG147</td>
-                    <td></td>
-                    <td>56</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8746540</td>
-                    <td><a href="#">CUSTOMER75997</a></td>
-                    <td>PRIJ</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>4</td>
+                  <tr class="danger">
+                    <td>0009229617</td>
+                    <td><span class="icon icon-new"></span>&nbsp;GORDMANS INC</td>
+                    <td>WENP</td>
                     <td>2</td>
-                    <td>48</td>
-                    <td>24</td>
-                    <td>11:5:17</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG348</td>
-                    <td></td>
-                    <td>388</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>05:00</td>
+                    <td>SHRT</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
-                  <tr>
-                    <td>8746542</td>
-                    <td><a href="#">CUSTOMER76738</a></td>
-                    <td>KLMI</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>9</td>
-                    <td>3</td>
-                    <td>64</td>
-                    <td>21.3</td>
-                    <td>5:34:37</td>
-                    <td><a href="#">PEND</a></td>
-                    <td>STG340</td>
-                    <td>D340</td>
-                    <td>694</td>
-                    <td>100%</td>
-                    <td>15%</td>
-                    <td>05/09 00:00</td>
-                    <td>05/10 00:00</td>
-                    <td>124196</td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8746546</td>
-                    <td><a href="#">CUSTOMER76123</a></td>
-                    <td>PRIJ</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>6:6:40</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td>STG346</td>
-                    <td></td>
-                    <td>430</td>
+
+
+                    <!-- <td>WHSE</td>
+                    <td>28</td>
+                    <td>20</td>
+                    <td>823</td>
+                    <td>41.2</td>
+
+                    <td>STG1443</td>
+                    <td>D143</td>
+                    <td>1564</td>
+                    <td>91.75%</td>
                     <td>0%</td>
-                    <td>0%</td>
+                    <td>10/10 13:34</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
+                    <td>28966</td>
+
+                    <td>View</td> -->
+
+
                   <tr>
-                    <td>8746800</td>
-                    <td><a href="#">CUSTOMER01106</a></td>
-                    <td>ENGD</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>3</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>2:23:42</td>
-                    <td><a href="#">PEND</a></td>
-                    <td>STG153</td>
-                    <td>D153</td>
-                    <td>72</td>
-                    <td>100%</td>
-                    <td>0%</td>
-                    <td>05/11 00:00</td>
-                    <td></td>
-                    <td>21102</td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8747673</td>
-                    <td><a href="#">CUSTOMER83148</a></td>
-                    <td>CLXD</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">POOL</a></td>
-                    <td>0</td>
+                    <td>0009234290</td>
+                    <td>PEYTON MID-SOUTH</td>
+                    <td>SHAF</td>
                     <td>1</td>
-                    <td>8</td>
-                    <td>8</td>
-                    <td>7:55:19</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG353</td>
-                    <td></td>
-                    <td>8</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>5:00</td>
+                    <td>STAG</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
-                  <tr>
-                    <td>8747991</td>
-                    <td><a href="#">CUSTOMER00648</a></td>
-                    <td>CLXD</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>1</td>
-                    <td>7</td>
-                    <td>212</td>
-                    <td>30.3</td>
-                    <td>8:7:52</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG151</td>
-                    <td></td>
-                    <td>252</td>
+
+
+                    <!-- <td>WHSE</td>
+                    <td>41</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+
+
+                    <td>STG155</td>
+                    <td>D155</td>
+                    <td>164</td>
+                    <td>97.56%</td>
                     <td>0%</td>
-                    <td>0%</td>
+                    <td>10/11 01:18</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748025</td>
-                    <td><a href="#">CUSTOMER76996</a></td>
+                    <td>837079</td>
+
+                    <td>View</td> -->
+
+                  <tr class="danger">
+                    <td>0009234349</td>
+                    <td>SAVE-A-LOT</td>
                     <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>4</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>5:7:13</td>
-                    <td><a href="#">PEND</a></td>
-                    <td>STG350</td>
-                    <td>D350</td>
-                    <td>320</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td>05/11 00:00</td>
-                    <td>5370</td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748027</td>
-                    <td><a href="#">CUSTOMER76996</a></td>
-                    <td>WTTY</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
                     <td>1</td>
-                    <td>2</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>10:28:55</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG145</td>
-                    <td></td>
-                    <td>88</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>05:00</td>
+                    <td>SHRT</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
-                  <tr>
-                    <td>8748041</td>
-                    <td><a href="#">CUSTOMER83162</a></td>
-                    <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>0</td>
+
+                    <!-- <td>WHSE</td>
                     <td>6</td>
-                    <td>54</td>
-                    <td>9</td>
-                    <td>3:56:35</td>
-                    <td><a href="#">PEND</a></td>
-                    <td>STG353</td>
-                    <td>D353</td>
-                    <td>54</td>
+                    <td>49</td>
+                    <td>1486</td>
+                    <td>30.3</td>
+
+                    <td>STG347</td>
+                    <td>D347</td>
+                    <td>1726</td>
+                    <td>93.51%</td>
                     <td>0%</td>
-                    <td>0%</td>
+                    <td>10/11 15:45</td>
                     <td></td>
-                    <td></td>
-                    <td>2575 WASHED</td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748060</td>
-                    <td><a href="#">CUSTOMER75930</a></td>
-                    <td>CRFS</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
+                    <td>2703</td>
+                    <td>View</td> -->
+
+                  <tr class="info-alt">
+                    <td>0009234356</td>
+                    <td>AFFILIATED FOODS MID</td>
+                    <td>SHAF</td>
                     <td>1</td>
-                    <td>4</td>
-                    <td>82</td>
-                    <td>20.5</td>
-                    <td>0:12:42</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>122</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>05:00</td>
+                    <td>STAG</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
-                  <tr>
-                    <td>8748134</td>
-                    <td><a href="#">CUSTOMER16483</a></td>
-                    <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">POOL</a></td>
+
+                    <!-- <td>WHSE</td>
+                    <td>17</td>
+                    <td>102</td>
+                    <td>1686</td>
+                    <td>16.5</td>
+
+
+                    <td>STG345</td>
+                    <td>D345</td>
+                    <td>2506</td>
+                    <td>100%</td>
+                    <td>0%</td>
+                    <td>10/11 06:25</td>
+                    <td></td>
+                    <td>837826</td>
+                    <td>View</td> -->
+
+                  <tr class="danger">
+                    <td>0009238159</td>
+                    <td>ASSOC WHOL GROCERS</td>
+                    <td>CLXD</td>
                     <td>1</td>
-                    <td>8</td>
-                    <td>97</td>
-                    <td>12.1</td>
-                    <td>11:12:14</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG355</td>
-                    <td></td>
-                    <td>137</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>05:00</td>
+                    <td>SHRT</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
-                  <tr>
-                    <td>8748244</td>
-                    <td><a href="#">CUSTOMER83792</a></td>
-                    <td>CPU</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>48</td>
-                    <td>24</td>
-                    <td>8:16:49</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>208</td>
+
+                    <!-- <td>WHSE</td>
+                    <td>1</td>
+                    <td>80</td>
+                    <td>540</td>
+                    <td>6.8</td>
+
+
+                    <td>STG337</td>
+                    <td>D337</td>
+                    <td>570</td>
+                    <td>97.72%</td>
                     <td>0%</td>
-                    <td>0%</td>
+                    <td>10/11 17:17</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>2514 WASHED</td>
+                    <td>View</td> -->
+
+                  <tr class="info-alt">
+                    <td>0009226487</td>
+                    <td>MCLANE WESTERN</td>
+                    <td>BTAK</td>
+                    <td>1</td>
+                    <td>05:01</td>
+                    <td>STAG</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
-                  <tr>
-                    <td>8748344</td>
-                    <td><a href="#">CUSTOMER04435</a></td>
+
+                    <!-- <td>WHSE</td>
+                    <td>19</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>6</td>
+
+
+                    <td>STG359</td>
+                    <td>D359</td>
+                    <td>976</td>
+                    <td>100%</td>
+                    <td>0%</td>
+                    <td>10/11 11:25</td>
+                    <td></td>
+                    <td>1125</td>
+                    <td>View</td> -->
+
+                  <tr class="info-alt">
+                    <td>0009234396</td>
+                    <td>FERRERO USA INC</td>
                     <td>SRFI</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
+                    <td>1</td>
+                    <td>05:01</td>
+                    <td>STAG</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
+                  </tr>
+
+                    <!-- <td>WHSE</td>
+                    <td>20</td>
                     <td>0</td>
-                    <td>4</td>
-                    <td>128</td>
-                    <td>32</td>
-                    <td>8:59:56</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG354</td>
-                    <td></td>
-                    <td>128</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748060</td>
-                    <td><a href="#">CUSTOMER75930</a></td>
-                    <td>CRFS</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>82</td>
-                    <td>20.5</td>
-                    <td>0:12:42</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>122</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748134</td>
-                    <td><a href="#">CUSTOMER16483</a></td>
-                    <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">POOL</a></td>
-                    <td>1</td>
-                    <td>8</td>
-                    <td>97</td>
-                    <td>12.1</td>
-                    <td>11:12:14</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG355</td>
-                    <td></td>
-                    <td>137</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748244</td>
-                    <td><a href="#">CUSTOMER83792</a></td>
-                    <td>CPU</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>48</td>
-                    <td>24</td>
-                    <td>8:16:49</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>208</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748344</td>
-                    <td><a href="#">CUSTOMER04435</a></td>
-                    <td>SRFI</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
                     <td>0</td>
-                    <td>4</td>
-                    <td>128</td>
-                    <td>32</td>
-                    <td>8:59:56</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG354</td>
-                    <td></td>
-                    <td>128</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748060</td>
-                    <td><a href="#">CUSTOMER75930</a></td>
-                    <td>CRFS</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>1</td>
-                    <td>4</td>
-                    <td>82</td>
-                    <td>20.5</td>
-                    <td>0:12:42</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>122</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748134</td>
-                    <td><a href="#">CUSTOMER16483</a></td>
-                    <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">POOL</a></td>
-                    <td>1</td>
-                    <td>8</td>
-                    <td>97</td>
-                    <td>12.1</td>
-                    <td>11:12:14</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG355</td>
-                    <td></td>
-                    <td>137</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748244</td>
-                    <td><a href="#">CUSTOMER83792</a></td>
-                    <td>CPU</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>48</td>
-                    <td>24</td>
-                    <td>8:16:49</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>208</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748344</td>
-                    <td><a href="#">CUSTOMER04435</a></td>
-                    <td>SRFI</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
                     <td>0</td>
-                    <td>4</td>
-                    <td>128</td>
-                    <td>32</td>
-                    <td>8:59:56</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG354</td>
+
+
+                    <td>STG365</td>
                     <td></td>
-                    <td>128</td>
-                    <td>0%</td>
+                    <td>3690</td>
+                    <td>100%</td>
                     <td>0%</td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
+                    <td>View</td> -->
+
                   <tr>
-                    <td>8748060</td>
-                    <td><a href="#">CUSTOMER75930</a></td>
-                    <td>CRFS</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
                     <td>1</td>
-                    <td>4</td>
-                    <td>82</td>
-                    <td>20.5</td>
-                    <td>0:12:42</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>122</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
+
+
                   <tr>
-                    <td>8748134</td>
-                    <td><a href="#">CUSTOMER16483</a></td>
-                    <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">POOL</a></td>
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
                     <td>1</td>
-                    <td>8</td>
-                    <td>97</td>
-                    <td>12.1</td>
-                    <td>11:12:14</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG355</td>
-                    <td></td>
-                    <td>137</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
                   <tr>
-                    <td>8748244</td>
-                    <td><a href="#">CUSTOMER83792</a></td>
-                    <td>CPU</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>48</td>
-                    <td>24</td>
-                    <td>8:16:49</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>208</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748344</td>
-                    <td><a href="#">CUSTOMER04435</a></td>
-                    <td>SRFI</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>0</td>
-                    <td>4</td>
-                    <td>128</td>
-                    <td>32</td>
-                    <td>8:59:56</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG354</td>
-                    <td></td>
-                    <td>128</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8748060</td>
-                    <td><a href="#">CUSTOMER75930</a></td>
-                    <td>CRFS</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
                     <td>1</td>
-                    <td>4</td>
-                    <td>82</td>
-                    <td>20.5</td>
-                    <td>0:12:42</td>
-                    <td><a href="#">SHRT</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>122</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
                   <tr>
-                    <td>8748134</td>
-                    <td><a href="#">CUSTOMER16483</a></td>
-                    <td>LNNP</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">POOL</a></td>
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
                     <td>1</td>
-                    <td>8</td>
-                    <td>97</td>
-                    <td>12.1</td>
-                    <td>11:12:14</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG355</td>
-                    <td></td>
-                    <td>137</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
                   <tr>
-                    <td>8748244</td>
-                    <td><a href="#">CUSTOMER83792</a></td>
-                    <td>CPU</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>48</td>
-                    <td>24</td>
-                    <td>8:16:49</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG143</td>
-                    <td></td>
-                    <td>208</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
+                    <td>1</td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
                   <tr>
-                    <td>8748344</td>
-                    <td><a href="#">CUSTOMER04435</a></td>
-                    <td>SRFI</td>
-                    <td>Test Stop</td>
-                    <td><a href="#">WHSE</a></td>
-                    <td>0</td>
-                    <td>4</td>
-                    <td>128</td>
-                    <td>32</td>
-                    <td>8:59:56</td>
-                    <td><a href="#">SHIP</a></td>
-                    <td>STG354</td>
-                    <td></td>
-                    <td>128</td>
-                    <td>0%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>T</td>
-                    <td><a href="#">View</a></td>
-                    <td></td>
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
+                    <td>1</td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
                   </tr>
+                  <tr>
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
+                    <td>1</td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
+                  </tr>
+                  <tr class="active">
+                    <td>0009231686</td>
+                    <td>TARGET DC 557</td>
+                    <td>WTTY</td>
+                    <td>1</td>
+                    <td>07:00</td>
+                    <td>RLSD</td>
+                    <td class="text-center"><span class="icon icon-check"></span></td>
+                  </tr>
+
+                    <!-- <td>WHSE</td>
+                    <td>35</td>
+                    <td>46</td>
+                    <td>969</td>
+                    <td>21.1</td>
+
+
+                    <td>STG366</td>
+                    <td>D366</td>
+                    <td>1605</td>
+                    <td>61.74%</td>
+                    <td>0%</td>
+                    <td>10/11 00:05</td>
+                    <td></td>
+                    <td>R1313 - PLACARD</td>
+                    <td>View</td> -->
                 </tbody>
               </table>
             </div>
           </div>
         </div>
         <div id="carrier-move-details" class="col-md-4">
-          <h2>Details view</h2>
+          <div class="panel panel-outline">
+            <div class="panel-body">
+              <div class="dashhead">
+                <div class="dashhead-titles">
+                  <h6 class="dashhead-subtitle">0009231686</h6>
+                  <h3 class="dashhead-title">Target DC 557</h3>
+                </div>
+
+                <div class="dashhead-toolbar">
+                  <!-- <div class="input-with-icon dashhead-toolbar-item">
+                    <input type="text" value="08/15/16 - 08/21/16" class="form-control" data-provide="datepicker">
+                    <span class="icon icon-calendar"></span>
+                  </div> -->
+                  <span class="dashhead-toolbar-divider hidden-xs"></span>
+                    <button type="button" class="btn btn-info-outline">BSDD</button>
+                </div>
+              </div>
+              <span class="icon icon-location"></span>&nbsp;Oconomowoc, Wisconsin
+              <div class="hr-divider m-t-md m-b">
+                <h3 class="hr-divider-content hr-divider-heading">
+                  Shipment Details
+                </h3>
+              </div>
+              <table class="table table-condensed text-center">
+                <thead>
+                  <tr>
+                    <td>Full Pallets</td>
+                    <td>Picks</td>
+                    <td>Cases</td>
+                    <td>Pieces</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>35</td>
+                    <td>46</td>
+                    <td>969</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="well well-sm">
+                <div class="row">
+                  <div class="col-xs-6 text-center">
+                    <strong>21.1</strong> Cases / Pick
+                  </div>
+                  <div class="col-xs-6 text-center">
+                    <strong>XX.X</strong> Pieces / Pick
+                  </div>
+                </div>
+              </div>
+              <div class="hr-divider m-t-md m-b">
+                <h3 class="hr-divider-content hr-divider-heading">
+                  Shipment Status
+                </h3>
+              </div>
+              <h5>Available for Loading on 10/11 at 00:05 </h5>
+              <span class="text-info-alt">Staging Progress</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-info-alt" role="progressbar" aria-valuenow="61.74" aria-valuemin="0" aria-valuemax="100" style="width: 61.74%;">
+                  61.74%
+                </div>
+              </div>
+              <span class="text-success">Loading Progress</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow=0 aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                  0%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <th>Type</th>
+          <th>Full Pallets</th>
+          <th>Picks</th>
+          <th>Cases</th>
+          <th>CPP</th>
+
+
+          <th>Dest Loc</th>
+          <th>Door/ Yard</th>
+          <th>Ord Qty</th>
+          <th>% Staged</th>
+          <th>% Loaded</th>
+          <th>Aval for Load</th>
+          <th>Begin Load</th>
+          <th>Trailer</th>
+          <th>BSDD</th> -->
         </div>
       </div>
     </div>
@@ -1309,38 +969,60 @@
   <!-- Include jQuery (required) and the JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="../dist/toolbox.js"></script>
-  <!-- <script>
+  <script>
   $(document).ready( function () {
-    $.extend( $.fn.dataTable.defaults, {
-        searching: false,
+    var dTable = $('#shipmentStatusTable').DataTable( {
         lengthChange: false,
         paging: false,
-        info: false
+        info: false,
+        "order": [[ 4, 'asc' ], [ 5, 'asc' ], [ 0, 'asc' ]],
+        "columns": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          { "orderable": false }
+        ]
+        // responsive: {
+        //     details: {
+        //       type: 'column',
+        //       target: 'tr',
+        //       renderer: function ( api, rowIdx, columns ) {
+        //           var data = $.map( columns, function ( col, i ) {
+        //               return col.hidden ?
+        //                   '<div class="row" data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+        //                       '<div class="col-sm-6">'+col.title+':'+'</div> '+
+        //                       '<div class="col-sm-6">'+col.data+'</div>'+
+        //                   '</div>' :
+        //                   '';
+        //           } ).join('');
+        //
+        //           return data ?
+        //               $('<div/>').append( data ) :
+        //               false;
+        //       },
+        //       display: $.fn.dataTable.Responsive.display.modal( {
+        //        header: function ( row ) {
+        //            var data = row.data();
+        //            return 'Details for '+data.clientName;
+        //        }
+        //       } )
+        //     }
+        // }
     } );
-    $('#shipmentStatusTable').DataTable( {
-        responsive: {
-            details: {
-              type: 'column',
-              target: 'tr',
-              renderer: function ( api, rowIdx, columns ) {
-                  var data = $.map( columns, function ( col, i ) {
-                      return col.hidden ?
-                          '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                              '<td>'+col.title+':'+'</td> '+
-                              '<td>'+col.data+'</td>'+
-                          '</tr>' :
-                          '';
-                  } ).join('');
 
-                  return data ?
-                      $('<table/>').append( data ) :
-                      false;
-              }
-            }
-        }
-    } );
+    function reDrawreCalc() {
+      dTable.draw();
+      dTable.columns.adjust();
+      console.log('Redrawn!');
+    }
+    $(window).on('resize', reDrawreCalc)
+
   } );
-  </script> -->
+
+  </script>
 
 
 </body>
