@@ -477,16 +477,15 @@
       </div>
     </nav>
 
-    <div class="container-fluid container-fluid-spacious">
-      <div class="dashhead">
+    <div class="container-fluid">
+      <div class="dashhead hidden-xs">
           <div class="dashhead-titles">
               <h6 class="dashhead-subtitle">Report ran on Tuesday, October 11th at 9:54pm</h6>
-              <h3 class="dashhead-title">Shipment Status</h3>
+              <h3 class="dashhead-title">Shipment Insights</h3>
           </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <h2>Tuesday, October 11th</h2>
           <!-- <table>
             <tr >
               <td>TOTALS</td>
@@ -516,450 +515,652 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3">
-          <div class="statcard statcard-danger p-a-md m-b">
-            <h2 class="statcard-number">4</h2>
-            <span class="statcard-desc">short</span>
+        <div class="col-sm-12">
+          <div class="hr-divider">
+            <ul class="nav nav-pills hr-divider-content hr-divider-nav m-y-md">
+              <li role="presentation" class="active">
+                <a href="#daily-overview" aria-controls="daily-overview" role="tab" data-toggle="tab">Daily Overview</a>
+              </li>
+              <li role="presentation">
+                <a href="#report" aria-controls="report" role="tab" data-toggle="tab">Report</a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="statcard statcard-caution p-a-md m-b">
-            <h2 class="statcard-number">3</h2>
-              <span class="statcard-desc">stuck</span>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="statcard statcard-info-alt p-a-md m-b">
-            <h2 class="statcard-number">3</h2>
-            <span class="statcard-desc">Staged</span>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="statcard statcard-success p-a-md m-b">
-            <h2 class="statcard-number">0</h2>
-            <span class="statcard-desc">loading</span>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-
-      </div>
-      <div class="row">
-        <div id="carrier-move-table" class="col-md-8">
-          <div class="table-fullx">
-            <div class="table-responsive">
-              <table id="shipmentStatusTable" class="table table-bordered table-hover no-wrap table-datatable" data-page-length="50" data-fixed-header="true">
-                <thead>
-                  <tr>
-                    <th>Carrier Move</th>
-                    <th>Customer</th>
-                    <th>SCAC</th>
-                    <th>Stops</th>
-                    <th>Appt Time</th>
-                    <th>Status</th>
-                    <th>Allocated?</th>
-
-                  </tr>
-
-
-                    <!-- <th>Type</th>
-                    <th>Full Pallets</th>
-                    <th>Picks</th>
-                    <th>Cases</th>
-                    <th>CPP</th>
-
-
-                    <th>Dest Loc</th>
-                    <th>Door/ Yard</th>
-                    <th>Ord Qty</th>
-                    <th>% Staged</th>
-                    <th>% Loaded</th>
-                    <th>Aval for Load</th>
-                    <th>Begin Load</th>
-                    <th>Trailer</th>
-                    <th>BSDD</th> -->
-
-                </thead>
-                <tbody>
-                  <tr class="danger">
-                    <td>0009229617</td>
-                    <td><span class="icon icon-new"></span>&nbsp;GORDMANS INC</td>
-                    <td>WENP</td>
-                    <td>2</td>
-                    <td>05:00</td>
-                    <td>SHRT</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-
-                    <!-- <td>WHSE</td>
-                    <td>28</td>
-                    <td>20</td>
-                    <td>823</td>
-                    <td>41.2</td>
-
-                    <td>STG1443</td>
-                    <td>D143</td>
-                    <td>1564</td>
-                    <td>91.75%</td>
-                    <td>0%</td>
-                    <td>10/10 13:34</td>
-                    <td></td>
-                    <td>28966</td>
-
-                    <td>View</td> -->
-
-
-                  <tr>
-                    <td>0009234290</td>
-                    <td>PEYTON MID-SOUTH</td>
-                    <td>SHAF</td>
-                    <td>1</td>
-                    <td>5:00</td>
-                    <td>STAG</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-
-                    <!-- <td>WHSE</td>
-                    <td>41</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-
-
-                    <td>STG155</td>
-                    <td>D155</td>
-                    <td>164</td>
-                    <td>97.56%</td>
-                    <td>0%</td>
-                    <td>10/11 01:18</td>
-                    <td></td>
-                    <td>837079</td>
-
-                    <td>View</td> -->
-
-                  <tr class="danger">
-                    <td>0009234349</td>
-                    <td>SAVE-A-LOT</td>
-                    <td>LNNP</td>
-                    <td>1</td>
-                    <td>05:00</td>
-                    <td>SHRT</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-                    <!-- <td>WHSE</td>
-                    <td>6</td>
-                    <td>49</td>
-                    <td>1486</td>
-                    <td>30.3</td>
-
-                    <td>STG347</td>
-                    <td>D347</td>
-                    <td>1726</td>
-                    <td>93.51%</td>
-                    <td>0%</td>
-                    <td>10/11 15:45</td>
-                    <td></td>
-                    <td>2703</td>
-                    <td>View</td> -->
-
-                  <tr class="info-alt">
-                    <td>0009234356</td>
-                    <td>AFFILIATED FOODS MID</td>
-                    <td>SHAF</td>
-                    <td>1</td>
-                    <td>05:00</td>
-                    <td>STAG</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-                    <!-- <td>WHSE</td>
-                    <td>17</td>
-                    <td>102</td>
-                    <td>1686</td>
-                    <td>16.5</td>
-
-
-                    <td>STG345</td>
-                    <td>D345</td>
-                    <td>2506</td>
-                    <td>100%</td>
-                    <td>0%</td>
-                    <td>10/11 06:25</td>
-                    <td></td>
-                    <td>837826</td>
-                    <td>View</td> -->
-
-                  <tr class="danger">
-                    <td>0009238159</td>
-                    <td>ASSOC WHOL GROCERS</td>
-                    <td>CLXD</td>
-                    <td>1</td>
-                    <td>05:00</td>
-                    <td>SHRT</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-                    <!-- <td>WHSE</td>
-                    <td>1</td>
-                    <td>80</td>
-                    <td>540</td>
-                    <td>6.8</td>
-
-
-                    <td>STG337</td>
-                    <td>D337</td>
-                    <td>570</td>
-                    <td>97.72%</td>
-                    <td>0%</td>
-                    <td>10/11 17:17</td>
-                    <td></td>
-                    <td>2514 WASHED</td>
-                    <td>View</td> -->
-
-                  <tr class="info-alt">
-                    <td>0009226487</td>
-                    <td>MCLANE WESTERN</td>
-                    <td>BTAK</td>
-                    <td>1</td>
-                    <td>05:01</td>
-                    <td>STAG</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-                    <!-- <td>WHSE</td>
-                    <td>19</td>
-                    <td>2</td>
-                    <td>12</td>
-                    <td>6</td>
-
-
-                    <td>STG359</td>
-                    <td>D359</td>
-                    <td>976</td>
-                    <td>100%</td>
-                    <td>0%</td>
-                    <td>10/11 11:25</td>
-                    <td></td>
-                    <td>1125</td>
-                    <td>View</td> -->
-
-                  <tr class="info-alt">
-                    <td>0009234396</td>
-                    <td>FERRERO USA INC</td>
-                    <td>SRFI</td>
-                    <td>1</td>
-                    <td>05:01</td>
-                    <td>STAG</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-                    <!-- <td>WHSE</td>
-                    <td>20</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-
-
-                    <td>STG365</td>
-                    <td></td>
-                    <td>3690</td>
-                    <td>100%</td>
-                    <td>0%</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>View</td> -->
-
-                  <tr>
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-
-                  <tr>
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-                  <tr>
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-                  <tr>
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-                  <tr>
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-                  <tr>
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-                  <tr>
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-                  <tr class="active">
-                    <td>0009231686</td>
-                    <td>TARGET DC 557</td>
-                    <td>WTTY</td>
-                    <td>1</td>
-                    <td>07:00</td>
-                    <td>RLSD</td>
-                    <td class="text-center"><span class="icon icon-check"></span></td>
-                  </tr>
-
-                    <!-- <td>WHSE</td>
-                    <td>35</td>
-                    <td>46</td>
-                    <td>969</td>
-                    <td>21.1</td>
-
-
-                    <td>STG366</td>
-                    <td>D366</td>
-                    <td>1605</td>
-                    <td>61.74%</td>
-                    <td>0%</td>
-                    <td>10/11 00:05</td>
-                    <td></td>
-                    <td>R1313 - PLACARD</td>
-                    <td>View</td> -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div id="carrier-move-details" class="col-md-4">
-          <div class="panel panel-outline">
-            <div class="panel-body">
-              <div class="dashhead">
-                <div class="dashhead-titles">
-                  <h6 class="dashhead-subtitle">0009231686</h6>
-                  <h3 class="dashhead-title">Target DC 557</h3>
-                </div>
-
-                <div class="dashhead-toolbar">
-                  <!-- <div class="input-with-icon dashhead-toolbar-item">
-                    <input type="text" value="08/15/16 - 08/21/16" class="form-control" data-provide="datepicker">
-                    <span class="icon icon-calendar"></span>
-                  </div> -->
-                  <span class="dashhead-toolbar-divider hidden-xs"></span>
-                    <button type="button" class="btn btn-info-outline">BSDD</button>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="daily-overview">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h1 class="m-b-md">67 Total Shipments <small>for Tuesday, October 11th</small></h1>
                 </div>
               </div>
-              <span class="icon icon-location"></span>&nbsp;Oconomowoc, Wisconsin
-              <div class="hr-divider m-t-md m-b">
-                <h3 class="hr-divider-content hr-divider-heading">
-                  Shipment Details
-                </h3>
-              </div>
-              <table class="table table-condensed text-center">
-                <thead>
-                  <tr>
-                    <td>Full Pallets</td>
-                    <td>Picks</td>
-                    <td>Cases</td>
-                    <td>Pieces</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>35</td>
-                    <td>46</td>
-                    <td>969</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="well well-sm">
-                <div class="row">
-                  <div class="col-xs-6 text-center">
-                    <strong>21.1</strong> Cases / Pick
-                  </div>
-                  <div class="col-xs-6 text-center">
-                    <strong>XX.X</strong> Pieces / Pick
+              <div class="row">
+                <div class="col-sm-12 m-b-lg">
+                  <h3>Shipments per Hour</h3>
+                  <div class="table-responsive">
+                    <table class="table table-responsive shipments-per-hour-table">
+                    <thead>
+                      <tr>
+                        <th>00:00</th>
+                        <th>01:00</th>
+                        <th>02:00</th>
+                        <th>03:00</th>
+                        <th>04:00</th>
+                        <th>05:00</th>
+                        <th>06:00</th>
+                        <th>07:00</th>
+                        <th>08:00</th>
+                        <th>09:00</th>
+                        <th>10:00</th>
+                        <th>11:00</th>
+                        <th>12:00</th>
+                        <th>13:00</th>
+                        <th>14:00</th>
+                        <th>15:00</th>
+                        <th>16:00</th>
+                        <th>17:00</th>
+                        <th>18:00</th>
+                        <th>19:00</th>
+                        <th>20:00</th>
+                        <th>21:00</th>
+                        <th>22:00</th>
+                        <th>23:00</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="level-0">0</td>
+                        <td class="level-0">0</td>
+                        <td class="level-1">2</td>
+                        <td class="level-1">3</td>
+                        <td class="level-2">4</td>
+                        <td class="level-3">7</td>
+                        <td class="level-4">11</td>
+                        <td class="level-5">13</td>
+                        <td class="level-6">23</td>
+                        <td class="level-6">24</td>
+                        <td class="level-4">10</td>
+                        <td class="level-5">13</td>
+                        <td class="level-5">14</td>
+                        <td class="level-6">21</td>
+                        <td class="level-5">14</td>
+                        <td class="level-4">15</td>
+                        <td class="level-4">12</td>
+                        <td class="level-3">9</td>
+                        <td class="level-3">8</td>
+                        <td class="level-2">5</td>
+                        <td class="level-2">3</td>
+                        <td class="level-1">1</td>
+                        <td class="level-0">0</td>
+                        <td class="level-0">0</td>
+                      </tr>
+                    </tbody>
+                  </table>
                   </div>
                 </div>
               </div>
-              <div class="hr-divider m-t-md m-b">
-                <h3 class="hr-divider-content hr-divider-heading">
-                  Shipment Status
-                </h3>
-              </div>
-              <h5>Available for Loading on 10/11 at 00:05 </h5>
-              <span class="text-info-alt">Staging Progress</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-info-alt" role="progressbar" aria-valuenow="61.74" aria-valuemin="0" aria-valuemax="100" style="width: 61.74%;">
-                  61.74%
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="col-xs-6 col-sm-12  ">
+                    <div class="statcard statcard-danger p-a-md m-b">
+                      <h2 class="statcard-number">4</h2>
+                      <span class="statcard-desc">short</span>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-12">
+                    <div class="statcard statcard-caution p-a-md m-b">
+                      <h2 class="statcard-number">3</h2>
+                        <span class="statcard-desc">stuck</span>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-12">
+                    <div class="statcard statcard-info-alt p-a-md m-b">
+                      <h2 class="statcard-number">3</h2>
+                      <span class="statcard-desc">Staged</span>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-12">
+                    <div class="statcard statcard-success p-a-md m-b">
+                      <h2 class="statcard-number">0</h2>
+                      <span class="statcard-desc">loading</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <span class="text-success">Loading Progress</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow=0 aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                  0%
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-xs-4 col-sm-2">
+                      <div class="statcard p-a m-b">
+                        <h2 class="statcard-number">59</h2>
+                        <span class="statcard-desc">full pallets</span>
+                      </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                      <div class="statcard p-a m-b">
+                        <h2 class="statcard-number">71</h2>
+                        <span class="statcard-desc">cases</span>
+                      </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                      <div class="statcard p-a m-b">
+                        <h2 class="statcard-number">1658</h2>
+                        <span class="statcard-desc">picks</span>
+                      </div>
+                    </div>
+                    <div class="clearfix visible-xs-block"></div>
+                    <div class="col-xs-4 col-sm-2">
+                      <div class="statcard p-a m-b">
+                        <h2 class="statcard-number">XXX</h2>
+                        <span class="statcard-desc">pieces</span>
+                      </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                      <div class="statcard p-a m-b">
+                        <h2 class="statcard-number">23.48</h2>
+                        <span class="statcard-desc">cases / pick</span>
+                      </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                      <div class="statcard p-a m-b">
+                        <h2 class="statcard-number">XX.XX</h2>
+                        <span class="statcard-desc">pieces / pick</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <table class="table table-bordered table-condensed" title="Dock">
+                      	<thead>
+                          <tr class="active">
+                            <th colspan="2">
+                              <h4 class="text-center">Shipments per Carrier</h4>
+                            </th>
+                          </tr>
+                      		<tr>
+                      			<th>Carrier</th>
+                      			<th>Count</th>
+                      		</tr>
+                      	</thead>
+                      	<tbody>
+                      		<tr>
+                      			<td>ACME</td>
+                      			<td>1</td>
+                      		</tr>
+                      		<tr>
+                      			<td>BTAK</td>
+                      			<td>2</td>
+                      		</tr>
+                          <tr>
+                            <td>BNZL</td>
+                            <td>4</td>
+                          </tr>
+                      		<tr>
+                      			<td>CLXD</td>
+                      			<td>5</td>
+                      		</tr>
+                      		<tr>
+                      			<td>LNNP</td>
+                      			<td>1</td>
+                      		</tr>
+                      		<tr>
+                      			<td>SHAF</td>
+                      			<td>2</td>
+                      		</tr>
+                      		<tr>
+                      			<td>SRFI</td>
+                      			<td>5</td>
+                      		</tr>
+                      		<tr>
+                      			<td>WENP</td>
+                      			<td>6</td>
+                      		</tr>
+                      		<tr>
+                      			<td>WTTY</td>
+                      			<td>12</td>
+                      		</tr>
+                      	</tbody>
+                      </table>
+                    </div>
+                    <div class="col-sm-6">
+                      <table class="table table-bordered table-condensed" title="Dock">
+                        <thead>
+                          <tr class="active">
+                            <th colspan="2">
+                              <h4 class="text-center">Another userful table here?</h4>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th>Carrier</th>
+                            <th>Count</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>This</td>
+                            <td>That</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>2</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>5</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>2</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>5</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>6</td>
+                          </tr>
+                          <tr>
+                            <td>NNNN</td>
+                            <td>12</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div role="tabpanel" class="tab-pane" id="report">
+              <div class="row">
+                <div id="carrier-move-table" class="col-md-12 m-t-md">
+                  <div class="table-responsive">
+                      <table id="shipmentStatusTable" class="table table-bordered table-hover no-wrap table-datatable table-progress-bars" data-page-length="50" data-fixed-header="true">
+                        <thead>
+                          <tr>
+                            <th>Carrier Move</th>
+                            <th>Customer</th>
+                            <th>SCAC</th>
+                            <th>Stops</th>
+                            <th>Appt Time</th>
+                            <th>Status</th>
+                            <th>Allocated?</th>
+
+                          </tr>
+
+
+                            <!-- <th>Type</th>
+                            <th>Full Pallets</th>
+                            <th>Picks</th>
+                            <th>Cases</th>
+                            <th>CPP</th>
+
+
+                            <th>Dest Loc</th>
+                            <th>Door/ Yard</th>
+                            <th>Ord Qty</th>
+                            <th>% Staged</th>
+                            <th>% Loaded</th>
+                            <th>Aval for Load</th>
+                            <th>Begin Load</th>
+                            <th>Trailer</th>
+                            <th>BSDD</th> -->
+
+                        </thead>
+                        <tbody>
+                          <tr class="danger">
+                            <td>0009229617</td>
+                            <td><span class="icon icon-new"></span>&nbsp;GORDMANS INC</td>
+                            <td>WENP</td>
+                            <td>2</td>
+                            <td>05:00</td>
+                            <td>SHRT</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+
+                            <!-- <td>WHSE</td>
+                            <td>28</td>
+                            <td>20</td>
+                            <td>823</td>
+                            <td>41.2</td>
+
+                            <td>STG1443</td>
+                            <td>D143</td>
+                            <td>1564</td>
+                            <td>91.75%</td>
+                            <td>0%</td>
+                            <td>10/10 13:34</td>
+                            <td></td>
+                            <td>28966</td>
+
+                            <td>View</td> -->
+
+
+                          <tr>
+                            <td>0009234290</td>
+                            <td>PEYTON MID-SOUTH</td>
+                            <td>SHAF</td>
+                            <td>1</td>
+                            <td>5:00</td>
+                            <td>STAG</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+
+                            <!-- <td>WHSE</td>
+                            <td>41</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+
+
+                            <td>STG155</td>
+                            <td>D155</td>
+                            <td>164</td>
+                            <td>97.56%</td>
+                            <td>0%</td>
+                            <td>10/11 01:18</td>
+                            <td></td>
+                            <td>837079</td>
+
+                            <td>View</td> -->
+
+                          <tr class="danger">
+                            <td>0009234349</td>
+                            <td>SAVE-A-LOT</td>
+                            <td>LNNP</td>
+                            <td>1</td>
+                            <td>05:00</td>
+                            <td>SHRT</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+                            <!-- <td>WHSE</td>
+                            <td>6</td>
+                            <td>49</td>
+                            <td>1486</td>
+                            <td>30.3</td>
+
+                            <td>STG347</td>
+                            <td>D347</td>
+                            <td>1726</td>
+                            <td>93.51%</td>
+                            <td>0%</td>
+                            <td>10/11 15:45</td>
+                            <td></td>
+                            <td>2703</td>
+                            <td>View</td> -->
+
+                            <tr data-progress="100">
+                              <td><div class="table-progress info-alt"></div>0009234356</td>
+                            <td>AFFILIATED FOODS MID</td>
+                            <td>SHAF</td>
+                            <td>1</td>
+                            <td>05:00</td>
+                            <td>STAG</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+                            <!-- <td>WHSE</td>
+                            <td>17</td>
+                            <td>102</td>
+                            <td>1686</td>
+                            <td>16.5</td>
+
+
+                            <td>STG345</td>
+                            <td>D345</td>
+                            <td>2506</td>
+                            <td>100%</td>
+                            <td>0%</td>
+                            <td>10/11 06:25</td>
+                            <td></td>
+                            <td>837826</td>
+                            <td>View</td> -->
+
+                          <tr class="danger">
+                            <td>0009238159</td>
+                            <td>ASSOC WHOL GROCERS</td>
+                            <td>CLXD</td>
+                            <td>1</td>
+                            <td>05:00</td>
+                            <td>SHRT</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+                            <!-- <td>WHSE</td>
+                            <td>1</td>
+                            <td>80</td>
+                            <td>540</td>
+                            <td>6.8</td>
+
+
+                            <td>STG337</td>
+                            <td>D337</td>
+                            <td>570</td>
+                            <td>97.72%</td>
+                            <td>0%</td>
+                            <td>10/11 17:17</td>
+                            <td></td>
+                            <td>2514 WASHED</td>
+                            <td>View</td> -->
+
+                            <tr data-progress="100">
+                              <td><div class="table-progress info-alt"></div>0009226487</td>
+                            <td>MCLANE WESTERN</td>
+                            <td>BTAK</td>
+                            <td>1</td>
+                            <td>05:01</td>
+                            <td>STAG</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+                            <!-- <td>WHSE</td>
+                            <td>19</td>
+                            <td>2</td>
+                            <td>12</td>
+                            <td>6</td>
+
+
+                            <td>STG359</td>
+                            <td>D359</td>
+                            <td>976</td>
+                            <td>100%</td>
+                            <td>0%</td>
+                            <td>10/11 11:25</td>
+                            <td></td>
+                            <td>1125</td>
+                            <td>View</td> -->
+
+                            <tr data-progress="100">
+                              <td><div class="table-progress info-alt"></div>0009234396</td>
+                            <td>FERRERO USA INC</td>
+                            <td>SRFI</td>
+                            <td>1</td>
+                            <td>05:01</td>
+                            <td>STAG</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+                            <!-- <td>WHSE</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+
+
+                            <td>STG365</td>
+                            <td></td>
+                            <td>3690</td>
+                            <td>100%</td>
+                            <td>0%</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>View</td> -->
+
+                          <tr data-progress="61.74">
+                            <td><div class="table-progress info-alt"></div>0009231686</td>
+                            <td>TARGET DC 557</td>
+                            <td>WTTY</td>
+                            <td>1</td>
+                            <td>07:00</td>
+                            <td>RLSD</td>
+                            <td class="text-center"><span class="icon icon-check"></span></td>
+                          </tr>
+
+
+                            <!-- <td>WHSE</td>
+                            <td>35</td>
+                            <td>46</td>
+                            <td>969</td>
+                            <td>21.1</td>
+
+
+                            <td>STG366</td>
+                            <td>D366</td>
+                            <td>1605</td>
+                            <td>61.74%</td>
+                            <td>0%</td>
+                            <td>10/11 00:05</td>
+                            <td></td>
+                            <td>R1313 - PLACARD</td>
+                            <td>View</td> -->
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+                <div id="0009231686" class="carrier-move-details col-md-4 m-t-md" style="display:none;">
+                  <div class="panel panel-outline">
+                    <div class="panel-body">
+                      <div class="dashhead">
+                        <div class="dashhead-titles">
+                          <h6 class="dashhead-subtitle">0009231686</h6>
+                          <h3 class="dashhead-title">Target DC 557</h3>
+                        </div>
+
+                        <div class="dashhead-toolbar">
+                          <span class="dashhead-toolbar-divider hidden-xs"></span>
+                            <button type="button" class="btn btn-info-outline">BSDD</button>
+                        </div>
+                      </div>
+                      <span class="icon icon-location"></span>&nbsp;Oconomowoc, Wisconsin
+                      <div class="hr-divider m-t-md m-b">
+                        <h3 class="hr-divider-content hr-divider-heading">
+                          Shipment Status
+                        </h3>
+                      </div>
+                      <h5><span class="icon icon-clock"></span>&nbsp;Available for Loading on 10/11 at 00:05 </h5>
+                      <div class="w-lg m-x-auto m-b-lg">
+                        <canvas
+                          class="ex-graph"
+                          width="200" height="200"
+                          data-chart="doughnut"
+                          data-value="[{ value: 61.74, color: '#3498DB', label: 'Staged' }, { value: 38.26, color: '#f5f5f5', label: 'Remaining' }]"
+                          data-segment-stroke-color="#eee"
+                          data-responsive="false">
+                        </canvas>
+                        <h5 class="doughnut-inner text-info-alt text-center">61.74% Staged</h5>
+                      </div>
+                      <div class="hr-divider m-t-lg m-b">
+                        <h3 class="hr-divider-content hr-divider-heading">
+                          Shipment Details
+                        </h3>
+                      </div>
+                      <table class="table table-condensed text-center">
+                        <thead>
+                          <tr>
+                            <td>Full Pallets</td>
+                            <td>Picks</td>
+                            <td>Cases</td>
+                            <td>Pieces</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>35</td>
+                            <td>46</td>
+                            <td>969</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="well well-sm">
+                        <div class="row">
+                          <div class="col-xs-6 text-center">
+                            <strong>21.1</strong> Cases / Pick
+                          </div>
+                          <div class="col-xs-6 text-center">
+                            <strong>XX.X</strong> Pieces / Pick
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <span class="text-info-alt">Staging Progress</span>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-info-alt" role="progressbar" aria-valuenow="61.74" aria-valuemin="0" aria-valuemax="100" style="width: 61.74%;">
+                          61.74%
+                        </div>
+                      </div>
+                      <span class="text-success">Loading Progress</span>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow=0 aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                          0%
+                        </div>
+                      </div> -->
+                      <div class="text-right">
+                        <a role="button" data-toggle="collapse" href="#orderLines" aria-expanded="false" aria-controls="orderLines">
+                          Show Order <span class="caret"></span>
+                        </a>
+                      </div>
+                        <div class="collapse" id="orderLines">
+                          <h4>Order line table will go here</h4>
+                          <table class="table table-condensed">
+                            <thead>
+                              <tr>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>A</td>
+                                <td>B</td>
+                                <td>C</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <th>Type</th>
+                  <th>Full Pallets</th>
+                  <th>Picks</th>
+                  <th>Cases</th>
+                  <th>CPP</th>
+
+
+                  <th>Dest Loc</th>
+                  <th>Door/ Yard</th>
+                  <th>Ord Qty</th>
+                  <th>% Staged</th>
+                  <th>% Loaded</th>
+                  <th>Aval for Load</th>
+                  <th>Begin Load</th>
+                  <th>Trailer</th>
+                  <th>BSDD</th> -->
+                </div>
+            </div>
           </div>
-
-          <!-- <th>Type</th>
-          <th>Full Pallets</th>
-          <th>Picks</th>
-          <th>Cases</th>
-          <th>CPP</th>
-
-
-          <th>Dest Loc</th>
-          <th>Door/ Yard</th>
-          <th>Ord Qty</th>
-          <th>% Staged</th>
-          <th>% Loaded</th>
-          <th>Aval for Load</th>
-          <th>Begin Load</th>
-          <th>Trailer</th>
-          <th>BSDD</th> -->
         </div>
       </div>
+
     </div>
 
   </div>
@@ -975,16 +1176,20 @@
         lengthChange: false,
         paging: false,
         info: false,
-        "order": [[ 4, 'asc' ], [ 5, 'asc' ], [ 0, 'asc' ]],
-        "columns": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          { "orderable": false }
-        ]
+        'order': [[ 4, 'asc' ], [ 5, 'asc' ], [ 0, 'asc' ]],
+        'columns': [
+          {'name': 'carrier-move-id'},
+          {'name': 'customer-name'},
+          {'name': 'scac'},
+          {'name': 'stops-amount'},
+          {'name': 'appt-time'},
+          {'name': 'status'},
+          {
+            'name' : 'allocation-flag',
+            'orderable': false
+          }
+        ],
+         select: 'single'
         // responsive: {
         //     details: {
         //       type: 'column',
@@ -1012,16 +1217,52 @@
         //     }
         // }
     } );
+    dTable.on( 'select', function ( e, dt, type, index ) {
+      if ( type === 'row' ) {
+        var wrapper = $('#carrier-move-table');
+        //var row = dTable.row(index).data();
+        //var carrierMoveId = dTable.cells(row, carrier-move-id).data();
+        carrierMoveId = '#0009231686';
+        console.log(carrierMoveId);
+        if(wrapper.hasClass('col-md-12')){
+          wrapper.removeClass('col-md-12').addClass('col-md-8');
+        }
+        $(carrierMoveId).slideToggle( 'fast', 'swing' ,function() {
+          $(document).trigger('redraw.bs.charts');
+          reDrawreCalc();
+        });
+        // do something with the ID of the selected items
+    }
+      dTable[ type ]( index ).nodes().to$().toggleClass( 'active' ).siblings().removeClass('active');
+    } );
 
     function reDrawreCalc() {
       dTable.draw();
       dTable.columns.adjust();
       console.log('Redrawn!');
     }
-    $(window).on('resize', reDrawreCalc)
-
+    $(window).on('resize', reDrawreCalc);
+    $('#orderLines').on('shown.bs.collapse', reDrawreCalc);
   } );
 
+  </script>
+  <script>
+  //All of this needs to be moved to the application script
+  var updateProgress = function () {
+  var trs = document.querySelectorAll('.table-progress-bars tbody tr');
+  for (var i=0; i<trs.length; i++) {
+      var tr = trs[i];
+      var pr = tr.querySelector('.table-progress');
+      if(pr) {
+        pr.style.left = (tr.dataset.progress - 100)+'%';
+        pr.style.height = tr.clientHeight + 'px';
+      }
+  }
+}
+
+setInterval(function(){
+  updateProgress();
+}, 1000);
   </script>
 
 
