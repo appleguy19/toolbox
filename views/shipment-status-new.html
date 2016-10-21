@@ -15,6 +15,23 @@
 
 </head>
 
+<!-- <th>Type</th>
+<th>Full Pallets</th>
+<th>Picks</th>
+<th>Cases</th>
+<th>CPP</th>
+
+
+<th>Dest Loc</th>
+<th>Door/ Yard</th>
+<th>Ord Qty</th>
+<th>% Staged</th>
+<th>% Loaded</th>
+<th>Aval for Load</th>
+<th>Begin Load</th>
+<th>Trailer</th>
+<th>BSDD</th> -->
+
 <body class="has-drawer">
   <div id="quick-links-drawer" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="quick-links-drawer">
       <div class="drawer-contents">
@@ -775,7 +792,7 @@
             </div>
             <div role="tabpanel" class="tab-pane" id="report">
               <div class="row">
-                <div id="carrier-move-table" class="col-md-12 m-t-md">
+                <div class="col-md-7 m-t-md" id="carrier-move-table">
                   <div class="table-responsive">
                       <table id="shipmentStatusTable" class="table table-bordered table-hover no-wrap table-datatable table-progress-bars" data-page-length="50" data-fixed-header="true">
                         <thead>
@@ -1024,7 +1041,7 @@
                       </table>
                     </div>
                 </div>
-                <div id="0009231686" class="carrier-move-details col-md-4 m-t-md" style="display:none;">
+                <div class="col-md-5 m-t-md carrier-move-details " id="0009231686">
                   <div class="panel panel-outline">
                     <div class="panel-body">
                       <div class="dashhead">
@@ -1102,59 +1119,54 @@
                         </div>
                       </div> -->
                       <div class="text-right">
-                        <a role="button" data-toggle="collapse" href="#orderLines" aria-expanded="false" aria-controls="orderLines">
-                          Show Order <span class="caret"></span>
+                        <a role="button" data-toggle="modal" data-target="#0009231686-modal" href="#orderLines" aria-expanded="false" aria-controls="orderLines">
+                          Show Order
                         </a>
-                      </div>
-                        <div class="collapse" id="orderLines">
-                          <h4>Order line table will go here</h4>
-                          <table class="table table-condensed">
-                            <thead>
-                              <tr>
-                                <th>1</th>
-                                <th>2</th>
-                                <th>3</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>A</td>
-                                <td>B</td>
-                                <td>C</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
                       </div>
                     </div>
                   </div>
+                </div>  <!--/.col-md-5 -->
+              </div> <!--/.row -->
+            </div> <!--/.tab-panel -->
+          </div> <!--/.tab-content -->
+        </div> <!--/.col-sm-12 -->
+      </div> <!--/.row -->
 
-                  <!-- <th>Type</th>
-                  <th>Full Pallets</th>
-                  <th>Picks</th>
-                  <th>Cases</th>
-                  <th>CPP</th>
+    </div> <!--/.container-fluid -->
+
+  </div> <!--/.with-icon-nav -->
 
 
-                  <th>Dest Loc</th>
-                  <th>Door/ Yard</th>
-                  <th>Ord Qty</th>
-                  <th>% Staged</th>
-                  <th>% Loaded</th>
-                  <th>Aval for Load</th>
-                  <th>Begin Load</th>
-                  <th>Trailer</th>
-                  <th>BSDD</th> -->
-                </div>
-            </div>
-          </div>
+  <!-- There will need to be a modal for each order, unless you want to ansynchronously get the data with javascript. (probably should) -->
+  <div class="modal fade" id="0009231686-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Orders for 0009231686</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Order line table will go here</h4>
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-
     </div>
-
   </div>
-
 
 
   <!-- Include jQuery (required) and the JS -->
@@ -1208,16 +1220,13 @@
         var wrapper = $('#carrier-move-table');
         //var row = dTable.row(index).data();
         //var carrierMoveId = dTable.cells(row, carrier-move-id).data();
-        carrierMoveId = '#0009231686';
-        console.log(carrierMoveId);
-        if(wrapper.hasClass('col-md-12')){
-          wrapper.removeClass('col-md-12').addClass('col-md-8');
-        }
-        $(carrierMoveId).slideToggle( 'fast', 'swing' ,function() {
-          $(document).trigger('redraw.bs.charts');
-          reDrawreCalc();
-        });
-        // do something with the ID of the selected items
+        carrierMoveDetails = '#' + '0009231686';
+        console.log(carrierMoveDetails);
+        $('html, body').animate({
+                      scrollTop: $(carrierMoveDetails).offset().top
+                    }, 350);
+        // have the details pane be named with an id of the carrierMoveId
+        // switch to that details pane when the corresponding item is clicked
     }
       dTable[ type ]( index ).nodes().to$().toggleClass( 'active' ).siblings().removeClass('active');
     } );
