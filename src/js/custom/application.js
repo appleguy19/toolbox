@@ -11,7 +11,7 @@ var App = {
     $(window).on('resize', App._dataTables)
 
     $(document).on('shown.bs.tab', function () {
-      $(document).trigger('redraw.bs.charts')
+      $(document).trigger('redraw.bs.charts');
     })
   },
 
@@ -35,7 +35,20 @@ var App = {
 
   _quickLinksSearch: function() {
     $('#quick-links-search').quickSearch($('#quick-links-content'));
-  }
+  },
+
+	_updateProgressBars: function() {
+		var trs = document.querySelectorAll('.table-progress-bars tbody tr');
+		for (var i=0; i<trs.length; i++) {
+			var tr = trs[i];
+			var pr = tr.querySelector('.table-progress');
+			if(pr) {
+				pr.style.left = (tr.dataset.progress - 100)+'%';
+				pr.style.height = tr.clientHeight + 'px';
+			}
+		}
+	}
+
  }
 
 App.init()
