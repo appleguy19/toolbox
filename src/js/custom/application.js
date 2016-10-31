@@ -6,13 +6,12 @@ var App = {
     App._tableSorters()
     App._tooltips()
     App._quickLinksSearch()
-    App._calendar()
 
     $(window).on('resize', App._tooltips)
-    $(window).on('resize', App._calendar)
+    $(window).on('resize', App._dataTables)
 
     $(document).on('shown.bs.tab', function () {
-      $(document).trigger('redraw.bs.charts')
+      $(document).trigger('redraw.bs.charts');
     })
   },
 
@@ -38,20 +37,18 @@ var App = {
     $('#quick-links-search').quickSearch($('#quick-links-content'));
   },
 
-  _calendar: function() {
-    $('#calendar').fullCalendar({
-      header : {  left:   '',
-                  center: '',
-                  right:  ''
-               },
-     });
-     if ($(window).width() > 768) {
-       $('#calendar').fullCalendar('option', 'aspectRatio', 1.7)
+	_updateProgressBars: function() {
+		var trs = document.querySelectorAll('.table-progress-bars tbody tr');
+		for (var i=0; i<trs.length; i++) {
+			var tr = trs[i];
+			var pr = tr.querySelector('.table-progress');
+			if(pr) {
+				pr.style.left = (tr.dataset.progress - 100)+'%';
+				pr.style.height = tr.clientHeight + 'px';
+			}
+		}
+	}
 
-     } else{
-       $('#calendar').fullCalendar('option', 'aspectRatio', .9)
-     }
-   }
  }
 
 App.init()

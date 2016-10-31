@@ -16,12 +16,23 @@
 
   // Hover states for `.table-hover`
   // Note: this is not available for cells or rows within `thead` or `tfoot`.
-  .table-hover > tbody > tr {
+  .table-hover > tbody > tr when not (@state = active) {
     > td.@{state}:hover,
     > th.@{state}:hover,
     &.@{state}:hover > td,
     &:hover > .@{state},
     &.@{state}:hover > th {
+      background-color: darken(@background, 5%);
+    }
+  }
+
+  // Active states for table variants
+  .table-hover > tbody > tr when not (@state = active) {
+    > td.@{state}.active,
+    > th.@{state}.active,
+    &.@{state}.active > td,
+    &.active > .@{state},
+    &.@{state}.active > th {
       background-color: darken(@background, 5%);
     }
   }

@@ -47,7 +47,9 @@
 .statcard-primary,
 .statcard-success,
 .statcard-info,
+.statcard-info-alt,
 .statcard-warning,
+.statcard-caution,
 .statcard-danger {
   color: #fff;
   border-radius: 3px;
@@ -71,8 +73,14 @@
   }
 }
 
-.statcard-primary { background-color: @brand-primary; }
-.statcard-success { background-color: @brand-success; }
-.statcard-info    { background-color: @brand-info; }
-.statcard-warning { background-color: @brand-warning; }
-.statcard-danger  { background-color: @brand-danger; }
+.statcard[data-filter] {
+  cursor: pointer;
+}
+
+.statcard-primary  { background-color: @brand-primary; }
+.statcard-success  { background-color: @brand-success; }
+.statcard-info     { background-color: @brand-info; }
+.statcard-info-alt { background-color: @brand-info-alt; }
+.statcard-warning  { background-color: @brand-warning; }
+.statcard-caution  { background-color: @brand-caution; }
+.statcard-danger   { background-color: @brand-danger; }

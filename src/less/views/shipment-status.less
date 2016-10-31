@@ -1,0 +1,55 @@
+@media only screen and (max-device-width: @screen-sm) {
+  #carrier-move-table {
+    max-height: 40vh;
+    overflow-x: scroll;
+  }
+  .carrier-move-details {
+    transition: all 2.5s ease;
+  }
+}
+
+.shipments-per-hour-table {
+
+  thead > tr > th {
+    line-height: 1;
+    border-bottom: none;
+    font-size: .8em;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  td {
+  font-weight: 600;
+  text-align: center;
+
+    &.level-0 {
+      background-color: @body-bg;
+      color: @gray-base;
+    }
+    &.level-1 {
+      background-color: lighten(@brand-info,24%);
+      color: #FFF;
+    }
+    &.level-2 {
+      background-color: lighten(@brand-info,17%);
+      color: #FFF;
+    }
+    &.level-3 {
+      background-color: lighten(@brand-info,11%);
+      color: #FFF
+    }
+    &.level-4 {
+      background-color: lighten(@brand-info,5%);
+      color: #FFF
+    }
+    &.level-5 {
+      background-color: @brand-info;
+      color: #FFF
+    }
+    &.level-6 {
+      background-color: darken(@brand-info,5%);
+      color: #FFF
+    }
+  }
+
+}

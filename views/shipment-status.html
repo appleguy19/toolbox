@@ -437,9 +437,9 @@
             </a>
           </li>
           <li>
-            <a href="#" title="Reports" data-toggle="tooltip" data-placement="right" data-container="body">
-              <span class="icon icon-clipboard"></span>
-              <small class="iconav-nav-label visible-xs-block">Reports</small>
+            <a href="shipment-status-new.html" title="SS-New" data-toggle="tooltip" data-placement="right" data-container="body">
+              <span class="icon icon-aircraft"></span>
+              <small class="iconav-nav-label visible-xs-block">SS-New</small>
             </a>
           </li>
           <li>
@@ -485,7 +485,7 @@
       </div>
       <div class="table-full">
         <div class="table-responsive">
-          <table class="table table-bordered table-condensed" data-sort="table">
+          <table class="table table-bordered table-condensed table-datatable">
           	<thead>
           		<tr>
           			<th>Customer</th>
@@ -1416,6 +1416,12 @@
   <!-- Include jQuery (required) and the JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="../dist/toolbox.js"></script>
+  <script>
+  $(document).ready( function () {
+    $('.table-datatable').DataTable();
+  } );
+  </script>
+
 
 </body>
 
