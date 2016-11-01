@@ -10,8 +10,10 @@
     <title>Home &middot; Logistics Toolbox</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
-    <link href="../dist/vendor/fullcalendar.min.css" rel="stylesheet">
+    <link href="../dist/fullcalendar.custom.css" rel="stylesheet">
     <link href="../dist/toolbox.css" rel="stylesheet">
+		<!-- Include this if you want people to print their calendar
+		<link href="../dist/fullcalendar.print.css" rel="stylesheet"> -->
 
 </head>
 
@@ -504,8 +506,8 @@
   <script>
     $(document).ready(function() {
       var options = {
-        header : {  left:   ''
-                    ,center: ''
+        header : {  left:   'title'
+                    ,center: 'prev,today,next'
                     ,right:  'agendaDay,agendaWeek,month'
                },
         eventColor: '#E12027',
@@ -514,8 +516,28 @@
           month:    'Month',
           week:     'Week',
           day:      'Day'
+        },
+				events: [
+        {
+            title : 'Meeting',
+            start : '2016-11-01T12:30:00',
+						end : '2016-11-01T14:30:00',
+        },
+				{
+            title : 'Busy',
+            start : '2016-11-04'
+        },
+				{
+            title : 'Out of Office',
+            start : '2016-11-08',
+						allDay: true,
+        },
+        {
+            title : 'Busy Busy',
+            start : '2016-11-17T12:30:00',
+            allDay : false // will make the time show
         }
-        //theme: true
+    ]
       };
       $('#calendar').fullCalendar(options);
       if ($(window).width() > 768) {
