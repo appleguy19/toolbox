@@ -10,7 +10,6 @@
     <title>Home &middot; Logistics Toolbox</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
-    <link href="../dist/vendor/fullcalendar.min.css" rel="stylesheet">
     <link href="../dist/toolbox.css" rel="stylesheet">
 
 </head>
@@ -576,6 +575,60 @@
 					</form>
         </div>
       </div>
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>Below is an alternative UI</h1>
+					<form>
+						<div class="row">
+							<div class="form-group col-xs-6 col-sm-4">
+						    <label for="start">Start</label>
+						    <input type="text" value="10/31/2016" class="form-control" id="start" data-provide="datepicker">
+						  </div>
+							<div class="form-group col-xs-6 col-sm-4">
+						    <label for="start">End</label>
+						    <input type="text" value="10/31/2016" class="form-control" id="end" data-provide="datepicker">
+						  </div>
+							<div class="clearfix visible-xs-block"></div>
+							<div class="form-group col-sm-4">
+						    <label for="item">Item</label>
+						    <input type="text" class="form-control" id="item" placeholder="123-456-7890">
+						  </div>
+							<div class="clearfix visible-sm-block"></div>
+							<div class="form-group col-sm-3">
+						    <label for="customer">Customer #</label>
+						    <input type="text" class="form-control" id="customer" placeholder="15789">
+						  </div>
+							<div class="form-group col-sm-3">
+						    <label for="lpn">LPN #</label>
+						    <input type="text" class="form-control" id="lpn" placeholder="123456789000">
+						  </div>
+							<div class="form-group col-sm-3">
+						    <label for="carrier-move">Carrier Move #</label>
+						    <input type="text" class="form-control" id="carrier-move" placeholder="0009229617">
+						  </div>
+							<div class="form-group col-sm-3">
+						    <label for="order">Order #</label>
+						    <input type="text" class="form-control" id="order" placeholder="0009229617">
+						  </div>
+						</div>
+						<div class="row">
+							<div class="form-group col-sm-12">
+								<a class="btn btn-xs btn-primary-outline" role="button" data-toggle="collapse" href="#lotSearch" aria-expanded="false" aria-controls="collapseExample">
+								  Search by Lot #
+								</a>
+						  </div>
+						</div>
+						<div class="row collapse" id="lotSearch">
+							<div class="form-group col-sm-12">
+						    <label for="lot-all">Enter lot numbers separated by commas</label>
+						    <!-- <input type="text" class="form-control" id="lot-all" placeholder="123, 456, 789, etc."> -->
+								<textarea rows="2" class="form-control" id="lot-all" placeholder="123, 456, 789, etc."></textarea>
+						  </div>
+						</div>
+					  <button type="submit" class="btn btn-info pull-right">Submit</button>
+					</form>
+				</div>
+			</div>
 
     </div>
 
