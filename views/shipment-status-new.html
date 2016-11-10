@@ -1088,9 +1088,7 @@
 	<script>
 	$(document).ready( function () {
 		var dTable = $('#shipmentStatusTable').DataTable( {
-				lengthChange: false,
-				paging: false,
-				info: false,
+				destroy: true, //all .table-datatables are already initialized, so we have to destroy this before we can rebuild it see application.js
 				buttons: {
 					buttons: [
 						{
@@ -1155,7 +1153,7 @@
 
 	$(document).on('shown.bs.tab', function () {
 		// reset the position of the sticky details pane
-		stickyDetails.affix('checkPosition');
+		//stickyDetails.affix('checkPosition');
 		//animate the table row progress bars
 		setInterval(function(){	App._updateProgressBars() }, 1000);
 	})
