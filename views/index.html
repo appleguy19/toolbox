@@ -553,6 +553,16 @@
 
     });
   </script>
+	<script>
+		$(document).on('click touch', function (e) {
+			var container = $("#quick-links-drawer");
+				if (!container.is(e.target) // if the target of the click isn't the container...
+						&& container.has(e.target).length === 0) // ... nor a descendant of the container
+				{
+					container.drawer('hide');
+				}
+		});
+	</script>
 
 </body>
 
