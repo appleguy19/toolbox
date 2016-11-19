@@ -1093,6 +1093,7 @@
 					buttons: [
 						{
 							text: 'Clear filters',
+							className: 'btn btn-sm',
 							action: function ( e, dt, node, config ) {
 								dt.columns().eq( 0 ).each( function ( colIdx ) {
 										dt.columns(colIdx).search( '', true ); //clear column filters
@@ -1101,6 +1102,11 @@
 								.search('') //clear table filter
 								.draw(); //finally draw the table
 							}
+						},
+						{
+							extend: 'print',
+							text: '<span class="icon icon-print" title="print"></span>',
+	            className: 'btn btn-info-outline btn-sm'
 						}
 					],
 					dom: {

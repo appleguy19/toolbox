@@ -18,9 +18,10 @@ var App = {
 		$(document).on('click touch', function (e) {
 			var container = $("#quick-links-drawer");
       if (!container.is(e.target) // if the target of the click isn't the container...
-          && container.has(e.target).length === 0) // ... nor a descendant of the container
+          && container.has(e.target).length === 0 // ... nor a descendant of the container
+					&& container.hasClass("open")) //is open
       {
-          container.drawer('hide');
+        container.drawer('hide');
       }
 		});
   },
@@ -52,6 +53,12 @@ var App = {
 			lengthChange: false,
 			paging: false,
 			info: false,
+			buttons: [
+        {
+            extend: 'print',
+            className: 'btn'
+        }
+    ]
 		} );
 
 		$('.table-datatable').DataTable();
