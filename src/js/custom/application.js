@@ -54,10 +54,11 @@ var App = {
 			paging: false,
 			info: false,
 			buttons: [
-        {
-            extend: 'print',
-            className: 'btn'
-        }
+				{
+					extend: 'print',
+					text: '<span class="icon icon-print" title="print"></span>',
+					className: 'btn btn-info-outline btn-sm'
+				}
     ]
 		} );
 
