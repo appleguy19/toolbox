@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<!-- These meta tags come first. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Labor Summary &middot; Logistics Toolbox</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+		<link href="../dist/toolbox.css" rel="stylesheet">
+
+</head>
+<body class="has-drawer">
+	<div id="quick-links-drawer" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="quick-links-drawer">
+			<div class="drawer-contents">
+					<div class="drawer-heading row">
+							<div class="col-sm-9">
+								<div class="input-group">
+									<span class="input-group-addon" id="sizing-addon2"><span class="icon icon-magnifying-glass"></span></span>
+									<input type="search" id="quick-links-search" class="form-control" placeholder="Search">
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<a href="#quick-links-drawer" data-toggle="drawer" aria-foldedopen="false" aria-controls="quick-links-drawer" class="btn btn-primary pull-right">Close</a>
+							</div>
+					</div>
+					<ul id="quick-links-content" class="drawer-fullnav nav">
+						<li class="nav-header">Web Links</li>
+						<li>
+							<a href="#" class="quick-link">Linked In</a>
+						</li>
+						<li>
+							<a href="#" class="quick-link">MacGregor Partners</a>
+						</li>
+						<li>
+							<a href="#" class="quick-link">Ogden Intranet</a>
+						</li>
+						<li>
+							<a href="#" class="quick-link">Request a Report</a>
+						</li>
+						<li>
+							<a href="#" class="quick-link">SAP</a>
+						</li>
+
+						<li class="nav-header">Departments</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#casepick-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Casepick <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="casepick-menu">
+								<li><a href="#" class="quick-link">Aged Product in Pickface</a></li>
+								<li><a href="#" class="quick-link">Casepick Totals</a></li>
+								<li><a href="#" class="quick-link">Items in Multiple Pickfaces</a></li>
+								<li><a href="#" class="quick-link">Items Not Forecast</a></li>
+								<li><a href="#" class="quick-link">Pick Zone Map by Crush Class</a></li>
+								<li><a href="#" class="quick-link">Pickface Data</a></li>
+								<li><a href="#" class="quick-link">Slotting Tool</a></li>
+								<li><a href="#" class="quick-link">Uncommitted Unassigned Pickfaces</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#co-pack-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Co-pack <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="co-pack-menu">
+								<li><a href="#" class="quick-link">Co-Pack Pallets Picked</a></li>
+								<li><a href="#" class="quick-link">Co-Pack Pallets Received</a></li>
+								<li><a href="#" class="quick-link">Co-Pack Status</a></li>
+								<li><a href="#" class="quick-link">Compare Copack &amp; Dlx</a></li>
+								<li><a href="#" class="quick-link">Delete and Insert Compare Data</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#ferrero-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Ferrero <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="ferrero-menu">
+								<li><a href="#" class="quick-link">Ferrero Cycle Counts</a></li>
+								<li><a href="#" class="quick-link">Ferrero Inbounds Received</a></li>
+								<li><a href="#" class="quick-link">Ferrero Inventory Adjustments</a></li>
+								<li><a href="#" class="quick-link">Ferrero Inventory Snapshot</a></li>
+								<li><a href="#" class="quick-link">Ferrero Inventory Status Changes - Yesterday</a></li>
+								<li><a href="#" class="quick-link">Ferrero Order Cuts</a></li>
+								<li><a href="#" class="quick-link">Ferrero Potential Shorts</a></li>
+								<li><a href="#" class="quick-link">Inbound and Outbound Pallets</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#hr-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								HR <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="hr-menu">
+								<li><a href="#" class="quick-link">Teammate Name Game</a></li>
+								<li><a href="#" class="quick-link">Change Employee Password</a></li>
+								<li><a href="#" class="quick-link">Manage Employees</a></li>
+								<li><a href="#" class="quick-link">Add Employee</a></li>
+								<li><a href="#" class="quick-link">Add Employer</a></li>
+								<li><a href="#" class="quick-link">Add Event</a></li>
+								<li><a href="#" class="quick-link">Add Point</a></li>
+								<li><a href="#" class="quick-link">Add Point Type</a></li>
+								<li><a href="#" class="quick-link">Add Position</a></li>
+								<li><a href="#" class="quick-link">Add Shift</a></li>
+								<li><a href="#" class="quick-link">Add Teammate</a></li>
+								<li><a href="#" class="quick-link">Add Term</a></li>
+								<li><a href="#" class="quick-link">Add Type</a></li>
+								<li><a href="#" class="quick-link">Add Vacation Type</a></li>
+								<li><a href="#" class="quick-link">Add Work Status</a></li>
+								<li><a href="#" class="quick-link">Change Teammate Password</a></li>
+								<li><a href="#" class="quick-link">Custom Roster</a></li>
+								<li><a href="#" class="quick-link">Employee Dashboard</a></li>
+								<li><a href="#" class="quick-link">Employee Roster</a></li>
+								<li><a href="#" class="quick-link">Manage Employers</a></li>
+								<li><a href="#" class="quick-link">Manage Point Types</a></li>
+								<li><a href="#" class="quick-link">Manage Positions</a></li>
+								<li><a href="#" class="quick-link">Manage Teammates</a></li>
+								<li><a href="#" class="quick-link">Manage Terms</a></li>
+								<li><a href="#" class="quick-link">Manage Types</a></li>
+								<li><a href="#" class="quick-link">Manage Vacation Types</a></li>
+								<li><a href="#" class="quick-link">Manage Work Statuses</a></li>
+								<li><a href="#" class="quick-link">Perfect Attendance</a></li>
+								<li><a href="#" class="quick-link">Point Report</a></li>
+								<li><a href="#" class="quick-link">Seminar Calendar - Supervisors</a></li>
+								<li><a href="#" class="quick-link">Set Maximum Vacation Slots</a></li>
+								<li><a href="#" class="quick-link">Submit Counsel Form</a></li>
+								<li><a href="#" class="quick-link">Supervisor Assignments</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar - First Shift</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar - Salaried</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar - Second Shift</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar - Support Staff</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar - Weekend Shfit</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar Count - First Shift</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar Count - Second Shift</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar Count - Support</a></li>
+								<li><a href="#" class="quick-link">Vacation Calendar Count - Weekend Shift</a></li>
+								<li><a href="#" class="quick-link">Vacation Report</a></li>
+								<li><a href="#" class="quick-link">View Counsel Forms</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#inventory-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Inventory <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="inventory-menu">
+								<li><a href="#" class="quick-link">Active Holds</a></li>
+								<li><a href="#" class="quick-link">All Inventory on Hold</a></li>
+								<li><a href="#" class="quick-link">Area Honeycombing</a></li>
+								<li><a href="#" class="quick-link">Available Inventory in IHLD Status</a></li>
+								<li><a href="#" class="quick-link">Available Putaway Locations</a></li>
+								<li><a href="#" class="quick-link">Count History Detail &amp; Summary</a></li>
+								<li><a href="#" class="quick-link">Create Barcode</a></li>
+								<li><a href="#" class="quick-link">Cycle Count Totals</a></li>
+								<li><a href="#" class="quick-link">Damage Locations</a></li>
+								<li><a href="#" class="quick-link">Damage Summary Report</a></li>
+								<li><a href="#" class="quick-link">Delete Item Footprint</a></li>
+								<li><a href="#" class="quick-link">Empty Double-Deep Locations</a></li>
+								<li><a href="#" class="quick-link">Empty or Partial Locations by Row</a></li>
+								<li><a href="#" class="quick-link">Full Pallets in Partial Racks</a></li>
+								<li><a href="#" class="quick-link">Hold History</a></li>
+								<li><a href="#" class="quick-link">IHLD Inventory in Available Status</a></li>
+								<li><a href="#" class="quick-link">Inventory Adjustments in Pickface</a></li>
+								<li><a href="#" class="quick-link">Inventory by Row</a></li>
+								<li><a href="#" class="quick-link">Inventory In BARRELDROP</a></li>
+								<li><a href="#" class="quick-link">Inventory in Crescent Rack</a></li>
+								<li><a href="#" class="quick-link">Inventory on Future Hold</a></li>
+								<li><a href="#" class="quick-link">Inventory on Hold</a></li>
+								<li><a href="#" class="quick-link">Inventory on Inverters</a></li>
+								<li><a href="#" class="quick-link">Inventory on Wrappers</a></li>
+								<li><a href="#" class="quick-link">KPMG Inventory Summary</a></li>
+								<li><a href="#" class="quick-link">Last Rack Location for LPN</a></li>
+								<li><a href="#" class="quick-link">Locations in Error</a></li>
+								<li><a href="#" class="quick-link">Locations Last Cycle Count by Date</a></li>
+								<li><a href="#" class="quick-link">Locations with Counts in Progress</a></li>
+								<li><a href="#" class="quick-link">Locations with Inventory Not Counted in X Days</a></li>
+								<li><a href="#" class="quick-link">Locked Inventory Older than Oldest Available</a></li>
+								<li><a href="#" class="quick-link">Locked Pickfaces</a></li>
+								<li><a href="#" class="quick-link">Locked Rack Locations</a></li>
+								<li><a href="#" class="quick-link">Locked Staging Lanes</a></li>
+								<li><a href="#" class="quick-link">LPN Inventory</a></li>
+								<li><a href="#" class="quick-link">LPN Tracking Add</a></li>
+								<li><a href="#" class="quick-link">LPN Tracking List</a></li>
+								<li><a href="#" class="quick-link">LPN Tracking Manage</a></li>
+								<li><a href="#" class="quick-link">MWDC Inventory Snapshot</a></li>
+								<li><a href="#" class="quick-link">Pending Counts</a></li>
+								<li><a href="#" class="quick-link">QRC Retrieval</a></li>
+								<li><a href="#" class="quick-link">QRC Retrieval - Storage Trailers</a></li>
+								<li><a href="#" class="quick-link">Rack Locations by Inventory Status</a></li>
+								<li><a href="#" class="quick-link">Recoup Status Change Activity</a></li>
+								<li><a href="#" class="quick-link">Update Speed Aisles</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#it-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								IT <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="it-menu">
+								<li><a href="#" class="quick-link">Archive Verification</a></li>
+								<li><a href="#" class="quick-link">Check For Database Locks</a></li>
+								<li><a href="#" class="quick-link">Check for Hub Errors</a></li>
+								<li><a href="#" class="quick-link">DLx Users-Operations</a></li>
+								<li><a href="#" class="quick-link">DLx Users-Roles</a></li>
+								<li><a href="#" class="quick-link">HVAC Cisco Mediator</a></li>
+								<li><a href="#" class="quick-link">I.T. Asset Management DB</a></li>
+								<li><a href="#" class="quick-link">Integrator Errors</a></li>
+								<li><a href="#" class="quick-link">iPad Assets</a></li>
+								<li><a href="#" class="quick-link">IT Tag Out</a></li>
+								<li><a href="#" class="quick-link">Item Master Compare and Update</a></li>
+								<li><a href="#" class="quick-link">Item Master Comparison</a></li>
+								<li><a href="#" class="quick-link">Open Report Requests</a></li>
+								<li><a href="#" class="quick-link">Oracle DB Comments</a></li>
+								<li><a href="#" class="quick-link">Super Users</a></li>
+								<li><a href="#" class="quick-link">Users with Inventory Adjustment</a></li>
+								<li><a href="#" class="quick-link">Verification Code Generator</a></li>
+								<li><a href="#" class="quick-link">Camera - Battery Room</a></li>
+								<li><a href="#" class="quick-link">Camera - Breakroom 1</a></li>
+								<li><a href="#" class="quick-link">Camera - Breakroom 2</a></li>
+								<li><a href="#" class="quick-link">Camera - Maintenance 1</a></li>
+								<li><a href="#" class="quick-link">Camera - Maintenance 2 </a></li>
+								<li><a href="#" class="quick-link">Camera - Welcome Center</a></li>
+								<li><a href="#" class="quick-link">APC Portal - Server Room A</a></li>
+								<li><a href="#" class="quick-link">APC Portal - Server Room B</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#leads-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Leads <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="leads-menu">
+								<li><a href="#" class="quick-link">Lead Training Op</a></li>
+								<li><a href="#" class="quick-link">Pallet Tally</a></li>
+								<li><a href="#" class="quick-link">Red Light - Check &amp; Override Log</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#maintenance-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Maintenance <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="maintenance-menu">
+								<li><a href="#" class="quick-link">Daily Job Report
+								<li><a href="#" class="quick-link">HVAC Summary</a></li>
+								<li><a href="#" class="quick-link">MHE Dashboard</a></li>
+								<li><a href="#" class="quick-link">Red Light/Chock &amp; Override Log</a></li>
+								<li><a href="#" class="quick-link">Truck Hours Until PM Due</a></li>
+								<li><a href="#" class="quick-link">Trucks Due for PM</a></li>
+								<li><a href="#" class="quick-link">Update Truck Hours</a></li>
+								<li><a href="#" class="quick-link">Vehicle History</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#recoup-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Recoup <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="recoup-menu">
+								<li><a href="#" class="quick-link">Components Needing Ordered</a></li>
+								<li><a href="#" class="quick-link">Forms Login</a></li>
+								<li><a href="#" class="quick-link">Items to Pull</a></li>
+								<li><a href="#" class="quick-link">Items to Pull - FAKE</a></li>
+								<li><a href="#" class="quick-link">Manage Components</a></li>
+								<li><a href="#" class="quick-link">Repack Items</a></li>
+								<li><a href="#" class="quick-link">Unneeded Orders</a></li>
+								<li><a href="#" class="quick-link">Unreceived Orders</a></li>
+								<li><a href="#" class="quick-link">Unreceived Orders by Plant</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#supervisors-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Supervisors <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="supervisors-menu">
+								<li><a href="#" class="quick-link">Components Needing Ordered</a></li>
+								<li><a href="#" class="quick-link">Labor Daily Detail</a></li>
+								<li><a href="#" class="quick-link">Labor Observation Report</a></li>
+								<li><a href="#" class="quick-link">Labor Report by Hire Date</a></li>
+								<li><a href="#" class="quick-link">Labor Report with Numbers by Hire Date</a></li>
+								<li><a href="#" class="quick-link">Labor Summary Reports</a></li>
+								<li><a href="#" class="quick-link">Metrics Report</a></li>
+								<li><a href="#" class="quick-link">Facility Performance Report</a></li>
+								<li><a href="#" class="quick-link">Facility Performance - Indirect</a></li>
+								<li><a href="#" class="quick-link">On Time Loading</a></li>
+								<li><a href="#" class="quick-link">On Time Unloading</a></li>
+								<li><a href="#" class="quick-link">Damage &amp; Recoup Totals</a></li>
+								<li><a href="#" class="quick-link">Historic Inbounds per Shift</a></li>
+								<li><a href="#" class="quick-link">Historic Outbounds per Shift</a></li>
+								<li><a href="#" class="quick-link">Kronos Hours by Paycode</a></li>
+								<li><a href="#" class="quick-link">Labor Metrics</a></li>
+								<li><a href="#" class="quick-link">Labor Planning Tool</a></li>
+								<li><a href="#" class="quick-link">Morning Report Archive</a></li>
+								<li><a href="#" class="quick-link">Shift Hand-Off</a></li>
+								<li><a href="#" class="quick-link">Shift Hand-Off Archive</a></li>
+								<li><a href="#" class="quick-link">Tag Out Vehicle</a></li>
+								<li><a href="#" class="quick-link">Teammates Using Indirect Codes</a></li>
+								<li><a href="#" class="quick-link">Training Opportunity</a></li>
+								<li><a href="#" class="quick-link">Training Opportunity History</a></li>
+								<li><a href="#" class="quick-link">Update Single Truck</a></li>
+								<li><a href="#" class="quick-link">Vehicle Type Snapshot</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#supply-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Supply <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="supply-menu">
+								<li><a href="#" class="quick-link">Accident Form</a></li>
+								<li><a href="#" class="quick-link">Add Employee Certification</a></li>
+								<li><a href="#" class="quick-link">Add Employee Qualification</a></li>
+								<li><a href="#" class="quick-link">Certification Report</a></li>
+								<li><a href="#" class="quick-link">Equipment Damage Form</a></li>
+								<li><a href="#" class="quick-link">Find Accident Forms</a></li>
+								<li><a href="#" class="quick-link">Hours by Date</a></li>
+								<li><a href="#" class="quick-link">Import Data Files</a></li>
+								<li><a href="#" class="quick-link">Injury Form</a></li>
+								<li><a href="#" class="quick-link">Order Filling</a></li>
+								<li><a href="#" class="quick-link">Order Filling by BLDG/DATE/SUP</a></li>
+								<li><a href="#" class="quick-link">Qualification Report</a></li>
+								<li><a href="#" class="quick-link">Receiving</a></li>
+								<li><a href="#" class="quick-link">Register Vehicle</a></li>
+								<li><a href="#" class="quick-link">RSR</a></li>
+								<li><a href="#" class="quick-link">RSR By BLDG/DATE/SUP</a></li>
+								<li><a href="#" class="quick-link">Search Accident Forms</a></li>
+								<li><a href="#" class="quick-link">Shipping</a></li>
+								<li><a href="#" class="quick-link">Shipping by BLDG/DTE/SUP</a></li>
+								<li><a href="#" class="quick-link">Vehicle Pass Report</a></li>
+								<li><a href="#" class="quick-link">View Equipment Damage</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#transportation-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Transportation <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="transportation-menu">
+								<li><a href="#" class="quick-link">Carrier Loading</a></li>
+								<li><a href="#" class="quick-link">Carrier On-Time Arrival</a></li>
+								<li><a href="#" class="quick-link">CPU Weekly Report</a></li>
+								<li><a href="#" class="quick-link">Inbound LTO Questions &amp; Answers</a></li>
+								<li><a href="#" class="quick-link">Outbound LTO Questions &amp; Answers</a></li>
+								<li><a href="#" class="quick-link">Peco Pallet Count</a></li>
+								<li><a href="#" class="quick-link">Peco Pallet Report</a></li>
+								<li><a href="#" class="quick-link">Peco Requirements</a></li>
+								<li><a href="#" class="quick-link">PLMC Trailer Status</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#welcome-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								Welcome <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="welcome-menu">
+								<li><a href="#" class="quick-link">Duplicate Smart Search eBOLs</a></li>
+								<li><a href="#" class="quick-link">eBOL History</a></li>
+								<li><a href="#" class="quick-link">Inspected Inbounds: Not in Dlx</a></li>
+								<li><a href="#" class="quick-link">Orders Shipped</a></li>
+								<li><a href="#" class="quick-link">Outbound Pallet Count</a></li>
+								<li><a href="#" class="quick-link">Remove SS License</a></li>
+								<li><a href="#" class="quick-link">Trailer History</a></li>
+								<li><a href="#" class="quick-link">Trailer Inspection (iPad Only)</a></li>
+								<li><a href="#" class="quick-link">View EBOL</a></li>
+								<li><a href="#" class="quick-link">Yard Audits Performed</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="dropdown">
+							<a data-toggle="collapse" href="#wms-menu" role="button" aria-haspopup="true" aria-expanded="false">
+								WMS <span class="caret"></span>
+							</a>
+							<ul class="collapse" id="wms-menu">
+								<li><a href="#" class="quick-link">Best Suggested Dock Door Configuration</a></li>
+								<li><a href="#" class="quick-link">Calculate Putaway</a></li>
+								<li><a href="#" class="quick-link">Carrier Move Status Display</a></li>
+								<li><a href="#" class="quick-link">Closed Trailers by Date</a></li>
+								<li><a href="#" class="quick-link">Dispatch Storage Trailer</a></li>
+								<li><a href="#" class="quick-link">Dispatched Trailers with Uncompleted Receipts</a></li>
+								<li><a href="#" class="quick-link">Fix RFT Location</a></li>
+								<li><a href="#" class="quick-link">Fix Trailer In Transit</a></li>
+								<li><a href="#" class="quick-link">Inactive Devices Still Logged In</a></li>
+								<li><a href="#" class="quick-link">Inventory Activity</a></li>
+								<li><a href="#" class="quick-link">Inventory Display</a></li>
+								<li><a href="#" class="quick-link">Inventory Movements</a></li>
+								<li><a href="#" class="quick-link">Items Received on Same Inbound &amp; Slotted for Different Buildings</a></li>
+								<li><a href="#" class="quick-link">Location Lock Out</a></li>
+								<li><a href="#" class="quick-link">Master Receipt Detail</a></li>
+								<li><a href="#" class="quick-link">Multiple Lockout Location</a></li>
+								<li><a href="#" class="quick-link">Order Analysis</a></li>
+								<li><a href="#" class="quick-link">Order Status Display</a></li>
+								<li><a href="#" class="quick-link">Over, Short, and Damage</a></li>
+								<li><a href="#" class="quick-link">Override Shipment Confirmation</a></li>
+								<li><a href="#" class="quick-link">Pick Work Report</a></li>
+								<li><a href="#" class="quick-link">Print BOL</a></li>
+								<li><a href="#" class="quick-link">Putaway Location Short Report</a></li>
+								<li><a href="#" class="quick-link">Rand Daily Shipment Report</a></li>
+								<li><a href="#" class="quick-link">Receipt Needing Closed</a></li>
+								<li><a href="#" class="quick-link">Receive RF Messages</a></li>
+								<li><a href="#" class="quick-link">Receiving by Item and Date</a></li>
+								<li><a href="#" class="quick-link">Receiving by Item and Date with Original LPN</a></li>
+								<li><a href="#" class="quick-link">Receiving by Vendor and Date</a></li>
+								<li><a href="#" class="quick-link">Send Message to RF</a></li>
+								<li><a href="#" class="quick-link">Shipped History</a></li>
+								<li><a href="#" class="quick-link">Trailer Activity</a></li>
+								<li><a href="#" class="quick-link">Untied Orders Previously Tied</a></li>
+								<li><a href="#" class="quick-link">Update Staging Lane Resource Code</a></li>
+								<li><a href="#" class="quick-link">Update Trailer Number</a></li>
+								<li><a href="#" class="quick-link">Work Queue Display</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="drawer-footer">
+							<small>&copy; Macgregor Partners</small>
+					</div>
+			</div>
+	</div>
+	<div class="with-iconav">
+
+		<nav class="iconav">
+			<a class="iconav-brand" href="index.html">
+				<svg width="40" height="46" class="iconav-brand-icon">
+					<use xlink:href="../img/icons.svg#logo"></use>
+				</svg>
+			</a>
+			<div class="iconav-slider">
+				<ul class="nav nav-pills iconav-nav">
+					<li>
+						<a href="#quick-links-drawer" title="Quick Links" data-toggle="drawer" data-placement="right" data-container="body">
+							<span class="icon icon-menu"></span>
+							<small class="iconav-nav-label visible-xs-block">Quick Links</small>
+						</a>
+					</li>
+					<li >
+						<a href="dashboard.html" title="Dashboard" data-toggle="tooltip" data-placement="right" data-container="body">
+							<span class="icon icon-gauge"></span>
+							<small class="iconav-nav-label visible-xs-block">Dashboard</small>
+						</a>
+					</li>
+					<li>
+						<a href="shipment-status.html" title="Shipment Status" data-toggle="tooltip" data-placement="right" data-container="body">
+							<span class="icon icon-address"></span>
+							<small class="iconav-nav-label visible-xs-block">Shipment Status</small>
+						</a>
+					</li>
+					<li class="active">
+						<a href="shipment-status-new.html" title="SS-New" data-toggle="tooltip" data-placement="right" data-container="body">
+							<span class="icon icon-aircraft"></span>
+							<small class="iconav-nav-label visible-xs-block">SS-New</small>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="More Charts" data-toggle="tooltip" data-placement="right" data-container="body">
+							<span class="icon icon-area-graph"></span>
+							<small class="iconav-nav-label visible-xs-block">More Charts</small>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Captain's Log" data-toggle="tooltip" data-placement="right" data-container="body">
+							<span class="icon icon-open-book"></span>
+							<small class="iconav-nav-label visible-xs-block">Captain's Log</small>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Quick Stats" data-toggle="tooltip" data-placement="right" data-container="body">
+							<span class="icon icon-flash"></span>
+							<small class="iconav-nav-label visible-xs-block">Quick Stats</small>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Signed in as applej" data-toggle="tooltip" data-placement="right" data-container="body">
+							<img src="../img/misc/avatar-applej.png" alt="" class="img-circle img-responsive">
+							<small class="iconav-nav-label visible-xs-block">applej</small>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Logout" data-toggle="tooltip" data-placement="right" data-container="body">
+							<span class="icon icon-log-out"></span>
+							<small class="iconav-nav-label visible-xs-block">Logout</small>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<h6 class="dashhead-subtitle">Detail</h6>
+					<h3 class="dashhead-title">Labor Report</h3>
+				</div>
+				<div class="col-sm-5 col-sm-offset-1">
+					<div class="btn-toolbar">
+						<div class="input-group input-group-sm input-daterange btn-toolbar-item">
+							<span class="input-group-addon"><span class="icon icon-calendar"></span></span>
+							<input type="text" class="form-control" value="10/01/2016" data-provide="datepicker">
+							<span class="input-group-addon">to</span>
+							<input type="text" class="form-control" value="10/31/2016" data-provide="datepicker">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-sm-12">
+					<div class="hr-divider">
+						<ul class="nav nav-pills hr-divider-content hr-divider-nav m-y-md">
+							<li role="presentation" class="active">
+								<a href="#facility" aria-controls="facility" role="tab" data-toggle="tab">Whole Facility</a>
+							</li>
+							<li role="presentation">
+								<a href="#shift1" aria-controls="shift1" role="tab" data-toggle="tab">Shift 1</a>
+							</li>
+							<li role="presentation">
+								<a href="#shift2" aria-controls="shift2" role="tab" data-toggle="tab">Shift 2</a>
+							</li>
+							<li role="presentation">
+								<a href="#shift3" aria-controls="shift3" role="tab" data-toggle="tab">Shift 3</a>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="facility">
+							<div class="row">
+								<div class="col-sm-12">
+									<h2 class="m-t-lg">Top Labor Performers</h2>
+								</div>
+								<div class="col-md-12">
+									<table id="topPerformersTable" class="table table-datatable">
+										<thead>
+											<tr>
+												<th>Date</th>
+												<th>Trucks Shipped</th>
+												<th>Trucks Received</th>
+												<th>Cases Shipped</th>
+												<th>Cases Received</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>10/1/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/2/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/3/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/4/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/5/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/6/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/7/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/8/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/9/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/10/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/11/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/12/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/13/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/14/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/15/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/16/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/17/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/18/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/19/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/20/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/21/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/22/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/23/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/24/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/25/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/26/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/27/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/28/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/29/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/30/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+											<tr>
+												<td>10/31/2016</td>
+												<td>27</td>
+												<td>29</td>
+												<td>68</td>
+												<td>89</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="shift1">
+						</div>
+						<div role="tabpanel" class="tab-pane" id="shift2">
+						</div>
+						<div role="tabpanel" class="tab-pane" id="shift3">
+						</div> <!--/.tab-panel -->
+					</div> <!--/.tab-content -->
+				</div> <!--/.col-sm-12 -->
+			</div> <!--/.row -->
+
+		</div> <!--/.container-fluid -->
+
+	</div> <!--/.with-icon-nav -->
+
+
+
+	<!-- Include jQuery (required) and the JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../dist/toolbox.js"></script>
+	<script>
+	var dTable;
+	$(document).ready( function () {
+		dTable = $('#shippingTable').DataTable( {
+				destroy: true, //all .table-datatables are already initialized, so we have to destroy this before we can rebuild it see application.js
+				lengthChange: true,
+				paging: true,
+				buttons: {
+					buttons: [
+						{
+							extend: 'print',
+							text: '<span class="icon icon-print" title="print"></span>',
+							className: 'btn btn-info-outline btn-sm'
+						}
+					],
+					dom: {
+						container: {
+								className: 'text-right'
+						}
+					}
+				},
+				dom: "<'row'<'col-sm-6'l><'col-sm-4'f><'col-sm-2'B>>" +
+							"<'row'<'col-sm-12'tr>>" +
+							"<'row'<'col-sm-5'i><'col-sm-7'p>>"
+		} );
+	});
+	function reDrawreCalc() {
+		dTable.draw();
+		dTable.columns.adjust();
+	}
+	$(window).on('resize', reDrawreCalc);
+	</script>
+</body>
+</html>
