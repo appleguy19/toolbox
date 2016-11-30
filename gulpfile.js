@@ -32,6 +32,8 @@ var Paths = {
       './src/js/bootstrap/tab.js',
       './src/js/custom/vendor/modernizr-custom.js',
       './src/js/custom/vendor/chart.js',
+			// './src/js/custom/vendor/chart.stackedarea.js',
+			'./src/js/custom/vendor/chart.stackedbar.js',
       './src/js/custom/vendor/datepicker.js',
       './src/js/custom/vendor/drawer.js',
       './src/js/custom/vendor/moment.min.js',
