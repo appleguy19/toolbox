@@ -61,6 +61,43 @@ $(function () {
       new Chart(element.getContext('2d')).Bar(data, options)
     },
 
+		'stacked-bar': function (element) {
+      var attrData = $.extend({}, $(element).data())
+
+      var data = {
+        labels   : eval(attrData.labels),
+        datasets : eval(attrData.value).map(function (set, index) {
+          return $.extend({
+            fillColor   : (index % 2 ? '#3498DB' : '#1BC98E'),
+            strokeColor : 'transparent'
+          }, set)
+        })
+      }
+
+      Charts._cleanAttr(attrData)
+
+      var options = $.extend({
+        responsive: true,
+        animation: false,
+				relativeBars : false,
+				scaleShowGridLines : false,
+        scaleShowVerticalLines: false,
+        scaleOverride: true,
+        scaleSteps: 4,
+        scaleStepWidth: 25,
+        scaleStartValue: 0,
+        barValueSpacing: 10,
+				barShowStroke: false,
+        scaleFontColor: 'rgba(0,0,0,.4)',
+        scaleFontSize: 14,
+        scaleLineColor: 'rgba(0,0,0,.05)',
+        scaleGridLineColor: 'rgba(0,0,0,.05)',
+        barDatasetSpacing: 2
+      }, attrData)
+
+      new Chart(element.getContext('2d')).StackedBar(data, options)
+    },
+
     line: function (element) {
       var attrData = $.extend({}, $(element).data())
 
