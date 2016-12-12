@@ -6,6 +6,7 @@ var App = {
     App._tableSorters()
     App._tooltips()
     App._quickLinksSearch()
+		App._dateTimePicker()
 		App._dataTables()
 
     $(window).on('resize', App._tooltips)
@@ -42,6 +43,22 @@ var App = {
 
   _tableSorters: function () {
     $('[data-sort="table"]').tablesorter( {sortList: [[1,0]]} );
+  },
+
+	_dateTimePicker: function () {
+		$('.datetimepicker').datetimepicker({
+			icons : {
+				time: 'icon icon-clock',
+				date: 'icon icon-calendar',
+				up: 'icon icon-chevron-up',
+				down: 'icon icon-chevron-down',
+				previous: 'icon icon-chevron-left',
+				next: 'icon icon-chevron-right',
+				today: 'icon icon-flag',
+				clear: 'icon icon-trash',
+				close: 'icon icon-cross'
+			}
+		});
   },
 
   _quickLinksSearch: function() {
