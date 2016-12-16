@@ -15,6 +15,7 @@ var Paths = {
   DIST                 : 'dist',
   DIST_TOOLBOX_JS      : 'dist/toolbox.js',
   CSS                  : './src/css/**',
+	SWF									 : './src/swf/**',
   LESS_TOOLBOX_SOURCES : './src/less/toolbox*',
   LESS                 : './src/less/**/**',
   JS                   : [
@@ -93,5 +94,7 @@ gulp.task('js-min', ['js'], function () {
 
 gulp.task('move', function(){
   gulp.src(Paths.CSS)
+  .pipe(gulp.dest(Paths.DIST));
+	gulp.src(Paths.SWF)
   .pipe(gulp.dest(Paths.DIST));
 });

@@ -66,20 +66,31 @@ var App = {
   },
 
 	_dataTables: function() {
+		$.fn.dataTable.Buttons.swfPath = 'flashExport.swf';
 		$.extend( $.fn.dataTable.defaults, {
-			lengthChange: false,
-			paging: false,
-			info: false,
-			buttons: [
-				{
-					extend: 'print',
-					text: '<span class="icon icon-print" title="print"></span>',
-					className: 'btn btn-info-outline btn-sm'
-				}
-    ]
-		} );
+			lengthChange: true,
+			pageLength: 50,
+			info: true,
+			buttons: {
+        buttons: [
+					{ extend: 'excel', text: '<span class="icon icon-download" title="copy"></span>', className: 'btn btn-info-outline btn-sm' },
+					{ extend: 'copy', text: '<span class="icon icon-clipboard" title="copy"></span>', className: 'btn btn-info-outline btn-sm' },
+					{ extend: 'print', text: '<span class="icon icon-print" title="print"></span>', className: 'btn btn-info-outline btn-sm' }
+        ],
+        dom: {
+          container: {
+              className: 'text-right'
+          }
+        }
+      },
+			dom: "<'row'<'col-sm-6'l><'col-sm-4'f><'col-sm-2'B>>" +
+            "<'row'<'col-sm-12'tr>>" +
+            "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+		});
 
 		$('.table-datatable').DataTable();
+		// Needed to format empty cells in DataTables in Safari browser
+		$('td:empty').html('&nbsp;');
 	},
 
 	_updateProgressBars: function() {

@@ -760,28 +760,7 @@
 	<script>
 	var dTable;
 	$(document).ready( function () {
-		dTable = $('#shippingTable').DataTable( {
-				destroy: true, //all .table-datatables are already initialized, so we have to destroy this before we can rebuild it see application.js
-				lengthChange: true,
-				paging: true,
-				buttons: {
-					buttons: [
-						{
-							extend: 'print',
-							text: '<span class="icon icon-print" title="print"></span>',
-							className: 'btn btn-info-outline btn-sm'
-						}
-					],
-					dom: {
-						container: {
-								className: 'text-right'
-						}
-					}
-				},
-				dom: "<'row'<'col-sm-6'l><'col-sm-4'f><'col-sm-2'B>>" +
-							"<'row'<'col-sm-12'tr>>" +
-							"<'row'<'col-sm-5'i><'col-sm-7'p>>"
-		} );
+		dTable = $('#shippingTable').DataTable();
 	});
 	function reDrawreCalc() {
 		dTable.draw();
