@@ -3,6 +3,10 @@ var App = {
   _isWithTooltips: false,
 
   init: function () {
+		$(function() {
+		    FastClick.attach(document.body);
+		});
+
     App._tableSorters()
     App._tooltips()
     App._quickLinksSearch()
@@ -15,8 +19,7 @@ var App = {
       $(document).trigger('redraw.bs.charts');
     });
 
-		$('#quick-links-drawer').on('shown.bs.drawer', function() {
-			console.log('drawer opened!')
+		$('#quick-links-drawer').on('show.bs.drawer', function() {
 	    $('#quick-links-search').focus();
 		});
 
@@ -51,6 +54,7 @@ var App = {
   },
 
 	_dateTimePicker: function () {
+		$('.datetimepicker').parent().css("position", "relative");
 		$('.datetimepicker').datetimepicker({
 			icons : {
 				time: 'icon icon-clock',
@@ -73,9 +77,10 @@ var App = {
 	_dataTables: function() {
 		$.fn.dataTable.Buttons.swfPath = 'flashExport.swf';
 		$.extend( $.fn.dataTable.defaults, {
-			lengthChange: true,
-			pageLength: 50,
-			info: true,
+			lengthChange: false,
+			paging: false,
+			info: false,
+			order: [],
 			buttons: {
         buttons: [
 					{ extend: 'excel', text: '<span class="icon icon-download" title="copy"></span>', className: 'btn btn-info-outline btn-sm' },

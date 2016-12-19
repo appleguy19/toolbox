@@ -19,6 +19,7 @@ var Paths = {
   LESS_TOOLBOX_SOURCES : './src/less/toolbox*',
   LESS                 : './src/less/**/**',
   JS                   : [
+			'./src/js/custom/vendor/fastclick.js',
       './src/js/bootstrap/transition.js',
       './src/js/bootstrap/alert.js',
       './src/js/bootstrap/affix.js',
