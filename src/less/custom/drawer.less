@@ -175,7 +175,15 @@ body.has-drawer {
 
 .drawer-footer {
     padding: @drawer-footer-padding;
-    text-align: right;
+
+		.company-branding {
+			.center-block();
+			max-height: @line-height-computed*2;
+		}
+
+		.white-label {
+			text-align: right;
+		}
 
     &.locked {
         position:   absolute;
