@@ -3,9 +3,14 @@ var App = {
   _isWithTooltips: false,
 
   init: function () {
+		$(function() {
+		    FastClick.attach(document.body);
+		});
+
     App._tableSorters()
     App._tooltips()
     App._quickLinksSearch()
+		App._dateTimePicker()
 		App._dataTables()
 
     $(window).on('resize', App._tooltips)
@@ -13,6 +18,10 @@ var App = {
     $(document).on('shown.bs.tab', function () {
       $(document).trigger('redraw.bs.charts');
     });
+
+		$('#quick-links-drawer').on('show.bs.drawer', function() {
+	    $('#quick-links-search').focus();
+		});
 
 		//close the drawer when we get a click outside of it
 		$(document).on('click touch', function (e) {
@@ -44,25 +53,54 @@ var App = {
     $('[data-sort="table"]').tablesorter( {sortList: [[1,0]]} );
   },
 
+	_dateTimePicker: function () {
+		$('.datetimepicker').parent().css("position", "relative");
+		$('.datetimepicker').datetimepicker({
+			icons : {
+				time: 'icon icon-clock',
+				date: 'icon icon-calendar',
+				up: 'icon icon-chevron-up',
+				down: 'icon icon-chevron-down',
+				previous: 'icon icon-chevron-left',
+				next: 'icon icon-chevron-right',
+				today: 'icon icon-flag',
+				clear: 'icon icon-trash',
+				close: 'icon icon-cross'
+			}
+		});
+  },
+
   _quickLinksSearch: function() {
     $('#quick-links-search').quickSearch($('#quick-links-content'));
   },
 
 	_dataTables: function() {
+		$.fn.dataTable.Buttons.swfPath = 'flashExport.swf';
 		$.extend( $.fn.dataTable.defaults, {
 			lengthChange: false,
 			paging: false,
 			info: false,
-			buttons: [
-				{
-					extend: 'print',
-					text: '<span class="icon icon-print" title="print"></span>',
-					className: 'btn btn-info-outline btn-sm'
-				}
-    ]
-		} );
+			order: [],
+			buttons: {
+        buttons: [
+					{ extend: 'excel', text: '<span class="icon icon-download" title="copy"></span>', className: 'btn btn-info-outline btn-sm' },
+					{ extend: 'copy', text: '<span class="icon icon-clipboard" title="copy"></span>', className: 'btn btn-info-outline btn-sm' },
+					{ extend: 'print', text: '<span class="icon icon-print" title="print"></span>', className: 'btn btn-info-outline btn-sm' }
+        ],
+        dom: {
+          container: {
+              className: 'text-right'
+          }
+        }
+      },
+			dom: "<'row'<'col-sm-6'l><'col-sm-4'f><'col-sm-2'B>>" +
+            "<'row'<'col-sm-12'tr>>" +
+            "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+		});
 
 		$('.table-datatable').DataTable();
+		// Needed to format empty cells in DataTables in Safari browser
+		$('td:empty').html('&nbsp;');
 	},
 
 	_updateProgressBars: function() {
@@ -78,5 +116,6 @@ var App = {
 	}
 
  }
-
-App.init()
+ $( document ).ready(function() {
+	 App.init()
+ });

@@ -15,9 +15,11 @@ var Paths = {
   DIST                 : 'dist',
   DIST_TOOLBOX_JS      : 'dist/toolbox.js',
   CSS                  : './src/css/**',
+	SWF									 : './src/swf/**',
   LESS_TOOLBOX_SOURCES : './src/less/toolbox*',
   LESS                 : './src/less/**/**',
   JS                   : [
+			'./src/js/custom/vendor/fastclick.js',
       './src/js/bootstrap/transition.js',
       './src/js/bootstrap/alert.js',
       './src/js/bootstrap/affix.js',
@@ -37,6 +39,7 @@ var Paths = {
       './src/js/custom/vendor/datepicker.js',
       './src/js/custom/vendor/drawer.js',
       './src/js/custom/vendor/moment.min.js',
+			'./src/js/custom/vendor/bootstrap.datetimepicker.js',
       './src/js/custom/vendor/fullcalendar.js',
       './src/js/custom/vendor/tablesorter.min.js',
       './src/js/custom/quickSearch.js',
@@ -92,5 +95,7 @@ gulp.task('js-min', ['js'], function () {
 
 gulp.task('move', function(){
   gulp.src(Paths.CSS)
+  .pipe(gulp.dest(Paths.DIST));
+	gulp.src(Paths.SWF)
   .pipe(gulp.dest(Paths.DIST));
 });

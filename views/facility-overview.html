@@ -473,9 +473,9 @@
 						<div class="btn-toolbar">
 							<div class="input-group input-group-sm input-daterange btn-toolbar-item">
 								<span class="input-group-addon"><span class="icon icon-calendar"></span></span>
-								<input type="text" class="form-control" value="10/01/2016" data-provide="datepicker">
+								<input type="text" class="form-control datetimepicker" value="10/01/2016">
 								<span class="input-group-addon">to</span>
-								<input type="text" class="form-control" value="10/31/2016" data-provide="datepicker">
+								<input type="text" class="form-control datetimepicker" value="10/31/2016">
 							</div>
 						</div>
 					</div>
@@ -507,7 +507,7 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-6 m-b">
-										<div class="statcard statcard-info">
+										<div class="statcard statcard-info" data-toggle="modal" data-target="#cases-per-direct-hour-throughput-avg-line-chart-modal" href="#cases-per-direct-hour-throughput-avg-line-chart-modal" aria-expanded="false" aria-controls="cases-per-direct-hour-throughput-avg-line-chart-modal">
 								      <div class="p-a">
 								        <span class="statcard-desc">Cases / Direct Hour Throughput</span>
 								        <h2 class="statcard-number">648</h2>
@@ -561,7 +561,7 @@
 									    data-scale-grid-line-color="rgba(255,255,255,.05)"
 									    data-scale-font-color="#a2a2a2"
 									    data-labels="['Oct 1','Oct 3','Oct 6','Oct 9','Oct 12','Oct 15','Oct 18','Oct 21','Oct 24','Oct 27','Oct 31']"
-									    data-value="[{label: 'Received', fillColor: 'RGBA(166, 206, 227, .5)', strokeColor: 'RGBA(31, 120, 180, 1)', data: [2500, 3300, 2512, 2775, 2498, 3512, 2925, 4275, 3507, 3825, 3445]},{label: 'Shipped', fillColor: 'RGBA(178, 223, 138, .5)', strokeColor: 'RGBA(51, 160, 44, 1)', data: [3512, 2925, 4275, 3507, 3825, 3445,2500, 3300, 2512, 2775, 2498]}]"
+									    data-value="[{label: 'Received', pointColor: 'RGBA(31, 120, 180, 1)', fillColor: 'RGBA(166, 206, 227, .5)', strokeColor: 'RGBA(31, 120, 180, 1)', data: [2500, 3300, 2512, 2775, 2498, 3512, 2925, 4275, 3507, 3825, 3445]},{label: 'Shipped', pointColor: 'RGBA(51, 160, 44, 1)', fillColor: 'RGBA(178, 223, 138, .5)', strokeColor: 'RGBA(51, 160, 44, 1)', data: [3512, 2925, 4275, 3507, 3825, 3445,2500, 3300, 2512, 2775, 2498]}]"
 											style="height:280px;margin-left:-20px">
 									  </canvas>
 							    </div>
@@ -823,6 +823,37 @@
 
 	  </div> <!--/.with-icon-nav -->
 
+		<!-- There will need to be a modal for each spark-line chart -->
+		<div class="modal fade" id="cases-per-direct-hour-throughput-avg-line-chart-modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Case per Direct Hour Throughput Average</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<canvas
+									id="trucks-over-time"
+									class="line-graph"
+									data-chart="line"
+									data-scale-steps="3"
+									data-scale-start-value="2000"
+									data-scale-step-width="1000"
+									data-scale-line-color="transparent"
+									data-scale-grid-line-color="rgba(255,255,255,.05)"
+									data-scale-font-color="#a2a2a2"
+									data-labels="['Oct 1','Oct 3','Oct 6','Oct 9','Oct 12','Oct 15','Oct 18','Oct 21','Oct 24','Oct 27','Oct 31']"
+									data-value="[{label: 'Received', fillColor: 'RGBA(166, 206, 227, .5)', strokeColor: 'RGBA(31, 120, 180, 1)', data: [2500, 3300, 2512, 2775, 2498, 3512, 2925, 4275, 3507, 3825, 3445]}]"
+									style="height:280px;">
+								</canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		<!-- Include jQuery (required) and the JS -->
@@ -859,6 +890,13 @@
 			dTable.columns.adjust();
 		}
 		$(window).on('resize', reDrawreCalc);
+
+		//We need to draw the chart when the modal is shown
+		$('.modal').on('shown.bs.modal', function (e) {
+			console.log('shown!');
+		  $(document).trigger('redraw.bs.charts');
+		});
+
 		</script>
 	</body>
 	</html>
