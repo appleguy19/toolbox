@@ -106,5 +106,6 @@ var App = {
 	}
 
  }
-
-App.init()
+ $( document ).ready(function() {
+	 App.init()
+ });
