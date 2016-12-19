@@ -555,32 +555,44 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-3">
-              <div class="statcard statcard-danger p-a-md m-b dt-filter-btn" data-filter="shrt">
-                <h2 class="statcard-number">4</h2>
-                <span class="statcard-desc">short</span>
-              </div>
-            </div>
-            <div class="col-xs-3">
-              <div class="statcard statcard-caution p-a-md m-b dt-filter-btn" data-filter="stck">
-                <h2 class="statcard-number">3</h2>
-                  <span class="statcard-desc">stuck</span>
-              </div>
-            </div>
-            <div class="col-xs-3">
-              <div class="statcard statcard-info-alt p-a-md m-b dt-filter-btn" data-filter="stag">
-                <h2 class="statcard-number">3</h2>
-                <span class="statcard-desc">Staged</span>
-              </div>
-            </div>
-            <div class="col-xs-3">
-              <div class="statcard statcard-success p-a-md m-b dt-filter-btn" data-filter="ldng">
-                <h2 class="statcard-number">0</h2>
-                <span class="statcard-desc">loading</span>
-              </div>
-            </div>
-          </div>
+					<div class="row">
+		        <div class="col-xs-6 col-sm-4 col-md-2">
+		          <div class="statcard statcard-info-alt p-a-md m-b dt-filter-btn" data-filter="stck">
+		            <h2 class="statcard-number">7</h2>
+		              <span class="statcard-desc">Pending</span>
+		          </div>
+		        </div>
+		        <div class="col-xs-6 col-sm-4 col-md-2">
+		          <div class="statcard statcard-info p-a-md m-b dt-filter-btn" data-filter="stck">
+		            <h2 class="statcard-number">6</h2>
+		              <span class="statcard-desc">Released</span>
+		          </div>
+		        </div>
+		        <div class="col-xs-6 col-sm-4 col-md-2">
+		          <div class="statcard statcard-danger p-a-md m-b dt-filter-btn" data-filter="shrt">
+		            <h2 class="statcard-number">4</h2>
+		            <span class="statcard-desc">short</span>
+		          </div>
+		        </div>
+		        <div class="col-xs-6 col-sm-4 col-md-2">
+		          <div class="statcard statcard-caution p-a-md m-b dt-filter-btn" data-filter="stck">
+		            <h2 class="statcard-number">2</h2>
+		              <span class="statcard-desc">stuck</span>
+		          </div>
+		        </div>
+		        <div class="col-xs-6 col-sm-4 col-md-2">
+		          <div class="statcard statcard-info-alt p-a-md m-b dt-filter-btn" data-filter="stag">
+		            <h2 class="statcard-number">3</h2>
+		            <span class="statcard-desc">Staged</span>
+		          </div>
+		        </div>
+		        <div class="col-xs-6 col-sm-4 col-md-2">
+		          <div class="statcard statcard-success p-a-md m-b dt-filter-btn" data-filter="ldng">
+		            <h2 class="statcard-number">0</h2>
+		            <span class="statcard-desc">loading</span>
+		          </div>
+		        </div>
+		      </div>
           <!-- <table>
             <tr >
               <td>TOTALS</td>
@@ -897,11 +909,11 @@
                       <div class="w-lg m-x-auto m-b-lg">
                         <canvas
                           class="graph"
-                          width="200" height="200"
+                          width="100" height="100"
                           data-chart="doughnut"
                           data-value="[{ value: 61.74, color: '#3498DB', label: 'Staged' }, { value: 38.26, color: '#f5f5f5', label: 'Remaining' }]"
                           data-segment-stroke-color="#eee"
-                          data-responsive="false">
+                          data-responsive="true" style="max-width:75vw;max-height:75vh">
                         </canvas>
                         <h5 class="doughnut-inner text-info-alt text-center">61.74% Staged</h5>
                       </div>
@@ -1124,7 +1136,7 @@
 		$('#shipmentStatusTable tbody').on( 'click', 'tr', function () {
 			var carrierMoveId = this.id;
 			$('#carrier-move-details').find('#'+carrierMoveId+'-details').show().siblings().hide();
-			$(document).trigger('redraw.bs.charts')
+			//$(document).trigger('redraw.bs.charts')
 			$(this).toggleClass( 'active' ).siblings().removeClass('active');
 		} );
 	} );
