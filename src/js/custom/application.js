@@ -15,6 +15,11 @@ var App = {
       $(document).trigger('redraw.bs.charts');
     });
 
+		$('#quick-links-drawer').on('shown.bs.drawer', function() {
+			console.log('drawer opened!')
+	    $('#quick-links-search').focus();
+		});
+
 		//close the drawer when we get a click outside of it
 		$(document).on('click touch', function (e) {
 			var container = $("#quick-links-drawer");
